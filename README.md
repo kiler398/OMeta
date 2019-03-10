@@ -1,2 +1,2 @@
 # OpenMyMeta
-A library to read metadata of relational databases including the schema, table, view, store proceduce,column, params ,and constraints.
+OpenMyMeta 是一个关系型数据库元数据获取工具，把数据库->schema->表->列，主键、外键、索引，触发器、存储过程、函数等抽象为对象，易于供代码生成工具使用。

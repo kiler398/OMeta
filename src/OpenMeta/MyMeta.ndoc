@@ -1,0 +1,45 @@
+<project SchemaVersion="1.3">
+    <assemblies>
+        <assembly location="C:\MyMeta\bin\Release\MyMeta.dll" documentation="C:\MyMeta\bin\Release\MyMeta.xml" />
+    </assemblies>
+    <namespaces>
+        <namespace name="MyMeta">MyMeta is the meta-data engine for the MyGeneration Code Generator written by MyGeneration Software.</namespace>
+    </namespaces>
+    <documenters>
+        <documenter name="JavaDoc">
+            <property name="OutputDirectory" value=".\doc\" />
+        </documenter>
+        <documenter name="LaTeX">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="TextFileFullName" value="Documentation.tex" />
+            <property name="TexFileBaseName" value="Documentation" />
+            <property name="LatexCompiler" value="latex" />
+            <property name="TexFileFullPath" value=".\doc\Documentation.tex" />
+        </documenter>
+        <documenter name="LinearHtml">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="Title" value="An NDoc Documented Class Library" />
+        </documenter>
+        <documenter name="MSDN">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="HtmlHelpName" value="MyMeta" />
+            <property name="Title" value="MyMeta - MyGeneration Software's meta-data engine." />
+            <property name="ShowVisualBasic" value="True" />
+            <property name="HeaderHtml" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;2&quot; height=&quot;80px&quot; background=&quot;./bg_blue01.png&quot;&gt;&lt;img align=&quot;top&quot; src=&quot;./title01.png&quot; height=&quot;80&quot; border=0 runat=&quot;server&quot;&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" />
+            <property name="FilesToInclude" value="bg_blue01.png|title01.png" />
+            <property name="DocumentProtected" value="False" />
+            <property name="AssemblyVersionInfo" value="AssemblyVersion" />
+            <property name="CopyrightText" value="Copyright 2004-2005 © MyGeneration Software. All Rights Reserved." />
+            <property name="CopyrightHref" value="http://www.mygenerationsoftware.com" />
+            <property name="FeedbackEmailAddress" value="support@mygenerationsoftware.com" />
+        </documenter>
+        <documenter name="VS.NET 2003">
+            <property name="OutputDirectory" value=".\doc\" />
+            <property name="HtmlHelpName" value="Documentation" />
+            <property name="Title" value="An NDoc documented library" />
+        </documenter>
+        <documenter name="XML">
+            <property name="OutputFile" value=".\doc\doc.xml" />
+        </documenter>
+    </documenters>
+</project>

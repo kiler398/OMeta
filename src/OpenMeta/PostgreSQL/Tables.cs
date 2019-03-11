@@ -1,0 +1,50 @@
+using System;
+using System.Data;
+using Npgsql;
+
+namespace MyMeta.PostgreSQL
+{
+#if ENTERPRISE
+	using System.Runtime.InteropServices;
+	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITables))]
+#endif 
+	public class PostgreSQLTables : Tables
+	{
+		public PostgreSQLTables()
+		{
+
+		}
+
+		override internal void LoadAll()
+		{
+			try
+			{
+				string query =
+					"SELECT CAST(current_database() AS character varying) AS table_catalog, " +
+					"CAST(nc.nspname AS character varying) AS table_schema, " +
+					"CAST(c.relname AS character varying) AS table_name, " +
+					"CAST('BASE TABLE' AS character varying) AS table_type, d.description " +
+					"FROM pg_namespace nc, pg_user u, pg_class c LEFT OUTER JOIN pg_description d ON d.objoid = c.oid AND d.objsubid = 0  " +
+					"WHERE c.relnamespace = nc.oid AND u.usesysid = c.relowner AND c.relkind= 'r'";
+
+				if(!this.dbRoot.ShowSystemData)
+				{
+					query += " AND nc.nspname <> 'pg_catalog'";
+				}
+
+				query += " ORDER BY c.relname";
+
+				NpgsqlConnection cn = ConnectionHelper.CreateConnection(this.dbRoot, this.Database.Name);
+
+				DataTable metaData = new DataTable();
+				NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, cn);
+
+				adapter.Fill(metaData);
+				cn.Close();
+		
+				PopulateArray(metaData);
+			}
+			catch {}
+		}
+	}
+}

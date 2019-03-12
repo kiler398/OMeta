@@ -35,7 +35,7 @@ OpenMyMeta 并不是一个独立开发的原创项目，这个项目主要代码
 
 下面是一个简单的使用例子
 
-
+```
 MyMeta.Connect("SQL", "Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost")
 
 MyMeta.DbTarget	= "SqlClient";
@@ -45,6 +45,7 @@ yMeta.Language = "VB.NET";
 MyMeta.LanguageMappingFileName = "C:\Program Files\MyGeneration\Settings\Languages.xml";
 
 MyMeta.UserMetaDataFileName = "C:\Program Files\MyGeneration\Settings\UserMetaData.xml";
+```
 
 
 ## 代码调试存在的问题

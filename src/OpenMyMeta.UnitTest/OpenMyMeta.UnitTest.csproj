@@ -81,7 +81,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyMetaTests.cs" />
+    <Compile Include="MyMetaMSSQLTests.cs" />
+    <Compile Include="MyMetaMYSQLTests.cs" />
+    <Compile Include="MyMetaSQLLiteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

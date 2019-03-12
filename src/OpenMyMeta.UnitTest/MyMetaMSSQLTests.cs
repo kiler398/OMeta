@@ -9,12 +9,12 @@ using Xunit;
 
 namespace MyGeneration.UnitTests
 {
-    public class MyMetaTests
+    public class MyMetaMSSQLTests
     {
 
         private dbRoot dbRoot;
 
-        public MyMetaTests()
+        public MyMetaMSSQLTests()
         {
             string basePath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 

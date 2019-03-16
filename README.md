@@ -35,6 +35,8 @@ OpenMyMeta 并不是一个独立开发的原创项目，这个项目主要代码
 
 下面是一个简单的使用例子
 
+使用 [数据库脚本](DbScripts/Northwind_MSSQL.sql) 创建SqlServer数据库
+
 ```csharp
 //初始化元数据类
 dbRoot dbRoot = new dbRoot();

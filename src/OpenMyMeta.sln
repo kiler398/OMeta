@@ -39,6 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{A33F4753-3
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScripts", "DbScripts", "{443B1FD3-6263-4F92-87DE-C24178D24FE2}"
+	ProjectSection(SolutionItems) = preProject
+		DbScripts\Northwind_MSSQL.sql = DbScripts\Northwind_MSSQL.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -49,7 +49,7 @@ Console.WriteLine("----------------------------------------");
 int i = 1;
 foreach (var table in database.Tables)
 {
-//输出表名和备注
+   //输出表名和备注
     Console.WriteLine("表"+ i.ToString("D2") + ":" + table.Name +",备注："+ table.Description);
     Console.WriteLine("---------------");
     int j = 1;

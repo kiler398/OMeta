@@ -44,6 +44,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScripts", "DbScripts", "{
 		DbScripts\Northwind_MSSQL.sql = DbScripts\Northwind_MSSQL.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{3949E3B8-ED88-4A2E-98DE-FD123B78227C}"
+	ProjectSection(SolutionItems) = preProject
+		Images\screen1.png = Images\screen1.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

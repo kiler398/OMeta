@@ -66,6 +66,7 @@ foreach (var table in database.Tables)
     i++;
 }
 ```
+运行代码输出以下结果
 
 ![输出结果](src/Images/screen1.png)
 

@@ -35,7 +35,7 @@ OpenMyMeta 并不是一个独立开发的原创项目，这个项目主要代码
 
 下面是一个简单的使用例子
 
-```
+```csharp
 //初始化元数据类
 dbRoot dbRoot = new dbRoot();
 //连接到SqlServer数据库，注意必须使用oledb连接字符串
@@ -49,7 +49,7 @@ Console.WriteLine("----------------------------------------");
 int i = 1;
 foreach (var table in database.Tables)
 {
-//输出表名和备注
+   //输出表名和备注
     Console.WriteLine("表"+ i.ToString("D2") + ":" + table.Name +",备注："+ table.Description);
     Console.WriteLine("---------------");
     int j = 1;

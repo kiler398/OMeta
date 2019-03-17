@@ -6,6 +6,9 @@ namespace MyMeta
     /// <summary>
     /// IColumn represents a column or field in your DBMS. IColumn is used to represent columns for both Tables and Views.
     /// </summary>
+    /// <summary xml:lang="zh">
+    /// IColumn 代表 DBMS（关系数据库）中的字段或者列。 IColumn 主要用于表示表和视图的字段。
+    /// </summary>
     /// <remarks>
     ///	IColumn Collections:
     /// <list type="table">

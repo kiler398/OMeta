@@ -1,0 +1,628 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPropertyCollection
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPropertyCollection
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyMeta.IPropertyCollection">
+  
+  
+  <h1 id="MyMeta_IPropertyCollection" data-uid="MyMeta.IPropertyCollection" class="text-break">Interface IPropertyCollection
+  </h1>
+  <div class="markdown level0 summary"><p>IPropertyCollection is a collection of user defined key/value pairs.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyMeta.html">MyMeta</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="MyMeta_IPropertyCollection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Guid(&quot;A1DCD293-7E94-462F-ACF3-AFA9790A02B3&quot;)]
+[InterfaceType(ComInterfaceType.InterfaceIsDual)]
+public interface IPropertyCollection</code></pre>
+  </div>
+  <h5 id="MyMeta_IPropertyCollection_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>There is a property collection on every entity in your database, you can add key/value
+pairs to the User Meta Data either through the user interface of MyGeneration or
+programmatically in your scripts.  User meta data is stored in XML and never writes to your database.</p>
+<p>This can be very useful, you might need more meta data than MyMeta supplies, in fact,
+MyMeta will eventually offer extended meta data using this feature as well. The current plan
+is that any extended data added via MyGeneration will have a key that beings with &quot;MyMeta.Something&quot;
+where 'Something' equals the description.</p>
+</div>
+  <h5 id="MyMeta_IPropertyCollection_examples"><strong>Examples</strong></h5>
+  <p>This VBScript loops though a table of your choosing and adds 6 key/value pairs to the User Meta Data on every column in table.</p>
+<pre><code>&apos;===============================================================================
+&apos; Loop through each column in the selected table and assign it some meta data
+&apos;===============================================================================
+For Each objColumn in objTable.Columns
+    objColumn.Properties.AddKeyValue objColumn.Name, &quot;The Name of this Column is &quot; + objColumn.Name
+    For i = 1 to 5
+        objColumn.Properties.AddKeyValue i, &quot;This is property &quot; + i
+    Next
+Next
+
+&apos;===============================================================================
+&apos; Loop through each column and print the meta data
+&apos;===============================================================================
+For Each objColumn in objTable.Columns
+    Set prop = objColumn.Properties.Item(objColumn.Name)
+    output.writeLn prop.Key + &quot; = &quot; + prop.Value
+Next</code></pre>
+<p>This JScript loops though a table of your choosing and adds 6 key/value pairs to the User Meta Data on every column in table.</p>
+<pre><code>//===============================================================================
+// Loop through each column in the selected table and assign it some meta data
+//===============================================================================
+for (var i = 0; i &lt; objTable.Columns.Count; i++)
+{
+    objColumn = objTable.Columns.Item(i);
+    objColumn.Properties.AddKeyValue(objColumn.Name, &quot;The Name of this Column is &quot; + objColumn.Name);
+
+    for (var j = 0; j &lt; 5; j++)
+    {
+        objColumn.Properties.AddKeyValue(j, &quot;This is property &quot; + j);
+    }
+}
+
+//===============================================================================
+// Loop through each column and print the meta data
+//===============================================================================
+for (var i = 0; i &lt; objTable.Columns.Count; i++)
+{
+    objColumn = objTable.Columns.Item(i);
+
+    var prop = objColumn.Properties.Item(objColumn.Name);
+    output.writeLn(prop.Key + &quot; = &quot; + prop.Value);
+}</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_Count.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L130">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_Count_" data-uid="MyMeta.IPropertyCollection.Count*"></a>
+  <h4 id="MyMeta_IPropertyCollection_Count" data-uid="MyMeta.IPropertyCollection.Count">Count</h4>
+  <div class="markdown level1 summary"><p>The number of items in the collection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_Current.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L114">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_Current_" data-uid="MyMeta.IPropertyCollection.Current*"></a>
+  <h4 id="MyMeta_IPropertyCollection_Current" data-uid="MyMeta.IPropertyCollection.Current">Current</h4>
+  <div class="markdown level1 summary"><p>Used to support 'foreach' sytax. Do not call this directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Current { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_IsSynchronized.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.IsSynchronized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L125">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_IsSynchronized_" data-uid="MyMeta.IPropertyCollection.IsSynchronized*"></a>
+  <h4 id="MyMeta_IPropertyCollection_IsSynchronized" data-uid="MyMeta.IPropertyCollection.IsSynchronized">IsSynchronized</h4>
+  <div class="markdown level1 summary"><p>ICollection support. Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsSynchronized { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_Item_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L75">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_Item_" data-uid="MyMeta.IPropertyCollection.Item*"></a>
+  <h4 id="MyMeta_IPropertyCollection_Item_System_String_" data-uid="MyMeta.IPropertyCollection.Item(System.String)">Item[String]</h4>
+  <div class="markdown level1 summary"><p>This method returns an IProperty from the collection using the Key to index into the collection. An error is thrown if the key doesn't exist, see <a class="xref" href="MyMeta.IPropertyCollection.html#MyMeta_IPropertyCollection_ContainsKey_System_String_">ContainsKey(String)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IProperty this[string key] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IProperty.html">IProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_SyncRoot.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.SyncRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L140">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_SyncRoot_" data-uid="MyMeta.IPropertyCollection.SyncRoot*"></a>
+  <h4 id="MyMeta_IPropertyCollection_SyncRoot" data-uid="MyMeta.IPropertyCollection.SyncRoot">SyncRoot</h4>
+  <div class="markdown level1 summary"><p>ICollection support. Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object SyncRoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_AddKeyValue_System_String_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.AddKeyValue(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L85">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_AddKeyValue_" data-uid="MyMeta.IPropertyCollection.AddKeyValue*"></a>
+  <h4 id="MyMeta_IPropertyCollection_AddKeyValue_System_String_System_String_" data-uid="MyMeta.IPropertyCollection.AddKeyValue(System.String,System.String)">AddKeyValue(String, String)</h4>
+  <div class="markdown level1 summary"><p>This method will either add or update a key value pair.  If the key already exists in the collection the value will be updated.
+If this key doesn't exist the key/value pair will be added.  If only want to update, and not add new items, use <a class="xref" href="MyMeta.IPropertyCollection.html#MyMeta_IPropertyCollection_ContainsKey_System_String_">ContainsKey(String)</a> to determine if the key already exists.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IProperty AddKeyValue(string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IProperty.html">IProperty</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_Clear.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L103">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_Clear_" data-uid="MyMeta.IPropertyCollection.Clear*"></a>
+  <h4 id="MyMeta_IPropertyCollection_Clear" data-uid="MyMeta.IPropertyCollection.Clear">Clear()</h4>
+  <div class="markdown level1 summary"><p>Removes all key/value pairs from the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_ContainsKey_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.ContainsKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L98">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_ContainsKey_" data-uid="MyMeta.IPropertyCollection.ContainsKey*"></a>
+  <h4 id="MyMeta_IPropertyCollection_ContainsKey_System_String_" data-uid="MyMeta.IPropertyCollection.ContainsKey(System.String)">ContainsKey(String)</h4>
+  <div class="markdown level1 summary"><p>Use ContainsKey to determine if a key exists in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool ContainsKey(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the desired key/value pair</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the key exists, False if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_CopyTo_System_Array_System_Int32_.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.CopyTo(System.Array%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L135">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_CopyTo_" data-uid="MyMeta.IPropertyCollection.CopyTo*"></a>
+  <h4 id="MyMeta_IPropertyCollection_CopyTo_System_Array_System_Int32_" data-uid="MyMeta.IPropertyCollection.CopyTo(System.Array,System.Int32)">CopyTo(Array, Int32)</h4>
+  <div class="markdown level1 summary"><p>ICollection support. Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CopyTo(Array array, int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Array</span></td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_GetEnumerator.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L146">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_GetEnumerator_" data-uid="MyMeta.IPropertyCollection.GetEnumerator*"></a>
+  <h4 id="MyMeta_IPropertyCollection_GetEnumerator" data-uid="MyMeta.IPropertyCollection.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"><p>Used to support 'foreach' sytax. Do not call this directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_MoveNext.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.MoveNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L119">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_MoveNext_" data-uid="MyMeta.IPropertyCollection.MoveNext*"></a>
+  <h4 id="MyMeta_IPropertyCollection_MoveNext" data-uid="MyMeta.IPropertyCollection.MoveNext">MoveNext()</h4>
+  <div class="markdown level1 summary"><p>Used to support 'foreach' sytax. Do not call this directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool MoveNext()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_RemoveKey_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.RemoveKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L91">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_RemoveKey_" data-uid="MyMeta.IPropertyCollection.RemoveKey*"></a>
+  <h4 id="MyMeta_IPropertyCollection_RemoveKey_System_String_" data-uid="MyMeta.IPropertyCollection.RemoveKey(System.String)">RemoveKey(String)</h4>
+  <div class="markdown level1 summary"><p>Removes a key/value pair from the collection, no error is thrown if the key doesn't exist.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveKey(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The key of the desired key/value pair</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection_Reset.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L109">View Source</a>
+  </span>
+  <a id="MyMeta_IPropertyCollection_Reset_" data-uid="MyMeta.IPropertyCollection.Reset*"></a>
+  <h4 id="MyMeta_IPropertyCollection_Reset" data-uid="MyMeta.IPropertyCollection.Reset">Reset()</h4>
+  <div class="markdown level1 summary"><p>Used to support 'foreach' sytax. Do not call this directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Reset()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IPropertyCollection.md&amp;value=---%0Auid%3A%20MyMeta.IPropertyCollection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IPropertyCollection.cs/#L69" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

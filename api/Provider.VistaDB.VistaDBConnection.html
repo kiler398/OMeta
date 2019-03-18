@@ -1,0 +1,1267 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VistaDBConnection
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VistaDBConnection
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Provider.VistaDB.VistaDBConnection">
+  
+  
+  <h1 id="Provider_VistaDB_VistaDBConnection" data-uid="Provider.VistaDB.VistaDBConnection" class="text-break">Class VistaDBConnection
+  </h1>
+  <div class="markdown level0 summary"><p>Connection object.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">VistaDBConnection</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.Data.IDbConnection</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Provider.VistaDB.html">Provider.VistaDB</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="Provider_VistaDB_VistaDBConnection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VistaDBConnection : Component, IComponent, IDbConnection, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection__ctor.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L35">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection__ctor_" data-uid="Provider.VistaDB.VistaDBConnection.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection__ctor" data-uid="Provider.VistaDB.VistaDBConnection.#ctor">VistaDBConnection()</h4>
+  <div class="markdown level1 summary"><p>Constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBConnection()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection__ctor_System_String_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L55">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection__ctor_" data-uid="Provider.VistaDB.VistaDBConnection.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection__ctor_System_String_" data-uid="Provider.VistaDB.VistaDBConnection.#ctor(System.String)">VistaDBConnection(String)</h4>
+  <div class="markdown level1 summary"><p>Constructor with a connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBConnection(string sConnString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sConnString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_AccessMode.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.AccessMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L643">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_AccessMode_" data-uid="Provider.VistaDB.VistaDBConnection.AccessMode*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_AccessMode" data-uid="Provider.VistaDB.VistaDBConnection.AccessMode">AccessMode</h4>
+  <div class="markdown level1 summary"><p>Connection access mode</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AccessMode AccessMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.AccessMode.html">AccessMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_CaseSensitivity.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.CaseSensitivity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L682">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_CaseSensitivity_" data-uid="Provider.VistaDB.VistaDBConnection.CaseSensitivity*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_CaseSensitivity" data-uid="Provider.VistaDB.VistaDBConnection.CaseSensitivity">CaseSensitivity</h4>
+  <div class="markdown level1 summary"><p>Returns True if opened database is case sensitive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public bool CaseSensitivity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_ClusterSize.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.ClusterSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L670">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_ClusterSize_" data-uid="Provider.VistaDB.VistaDBConnection.ClusterSize*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_ClusterSize" data-uid="Provider.VistaDB.VistaDBConnection.ClusterSize">ClusterSize</h4>
+  <div class="markdown level1 summary"><p>Opened database cluster size</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public int ClusterSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_ConnectionString.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.ConnectionString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L345">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_ConnectionString_" data-uid="Provider.VistaDB.VistaDBConnection.ConnectionString*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_ConnectionString" data-uid="Provider.VistaDB.VistaDBConnection.ConnectionString">ConnectionString</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the connection string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(true)]
+public string ConnectionString { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Provider_VistaDB_VistaDBConnection_ConnectionString_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The ConnectionString is similar to an OLE DB connection string, but is not identical. Unlike OLE DB or ADO,
+the connection string that is returned is the same as the user-set ConnectionString.
+You can use the ConnectionString property to connect to a database.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_ConnectionTimeout.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.ConnectionTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L498">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_ConnectionTimeout_" data-uid="Provider.VistaDB.VistaDBConnection.ConnectionTimeout*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_ConnectionTimeout" data-uid="Provider.VistaDB.VistaDBConnection.ConnectionTimeout">ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>Returns the connection time-out value set in the connection
+string. Zero indicates an indefinite time-out period.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ConnectionTimeout { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_CultureID.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.CultureID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L658">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_CultureID_" data-uid="Provider.VistaDB.VistaDBConnection.CultureID*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_CultureID" data-uid="Provider.VistaDB.VistaDBConnection.CultureID">CultureID</h4>
+  <div class="markdown level1 summary"><p>Opened database culture id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public int CultureID { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Cypher.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Cypher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L568">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Cypher_" data-uid="Provider.VistaDB.VistaDBConnection.Cypher*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Cypher" data-uid="Provider.VistaDB.VistaDBConnection.Cypher">Cypher</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the database encryption type, or Cypher type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CypherType Cypher { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.CypherType.html">CypherType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Database.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Database%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L537">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Database_" data-uid="Provider.VistaDB.VistaDBConnection.Database*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Database" data-uid="Provider.VistaDB.VistaDBConnection.Database">Database</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the current database or the database to be used after a connection is opened.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Database { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_DatabaseDescription.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.DatabaseDescription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L694">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_DatabaseDescription_" data-uid="Provider.VistaDB.VistaDBConnection.DatabaseDescription*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_DatabaseDescription" data-uid="Provider.VistaDB.VistaDBConnection.DatabaseDescription">DatabaseDescription</h4>
+  <div class="markdown level1 summary"><p>Opened database description</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(false)]
+public string DatabaseDescription { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_DataSource.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.DataSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L514">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_DataSource_" data-uid="Provider.VistaDB.VistaDBConnection.DataSource*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_DataSource" data-uid="Provider.VistaDB.VistaDBConnection.DataSource">DataSource</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the name of the instance of the VistaDB database to connect to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DataSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Exclusive.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Exclusive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L583">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Exclusive_" data-uid="Provider.VistaDB.VistaDBConnection.Exclusive*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Exclusive" data-uid="Provider.VistaDB.VistaDBConnection.Exclusive">Exclusive</h4>
+  <div class="markdown level1 summary"><p>Gets or sets if a database is to be opened in exclusive mode. Required for altering the database schema.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Exclusive { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_LoginPassword.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.LoginPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L628">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_LoginPassword_" data-uid="Provider.VistaDB.VistaDBConnection.LoginPassword*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_LoginPassword" data-uid="Provider.VistaDB.VistaDBConnection.LoginPassword">LoginPassword</h4>
+  <div class="markdown level1 summary"><p>Login password for server connect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LoginPassword { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_LoginUser.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.LoginUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L613">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_LoginUser_" data-uid="Provider.VistaDB.VistaDBConnection.LoginUser*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_LoginUser" data-uid="Provider.VistaDB.VistaDBConnection.LoginUser">LoginUser</h4>
+  <div class="markdown level1 summary"><p>User login name for server connect</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string LoginUser { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Password.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Password%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L552">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Password_" data-uid="Provider.VistaDB.VistaDBConnection.Password*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Password" data-uid="Provider.VistaDB.VistaDBConnection.Password">Password</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the database password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Password { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_ReadOnly.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.ReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L598">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_ReadOnly_" data-uid="Provider.VistaDB.VistaDBConnection.ReadOnly*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_ReadOnly" data-uid="Provider.VistaDB.VistaDBConnection.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>Gets or sets if a database is to be opened in readonly mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_State.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L168">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_State_" data-uid="Provider.VistaDB.VistaDBConnection.State*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_State" data-uid="Provider.VistaDB.VistaDBConnection.State">State</h4>
+  <div class="markdown level1 summary"><p>Gets the current state of the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.ConnectionState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_BeginTransaction.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.BeginTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L191">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_BeginTransaction_" data-uid="Provider.VistaDB.VistaDBConnection.BeginTransaction*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_BeginTransaction" data-uid="Provider.VistaDB.VistaDBConnection.BeginTransaction">BeginTransaction()</h4>
+  <div class="markdown level1 summary"><p>Overloaded. Begins a database transaction. Transactions may be nested.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBTransaction BeginTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBTransaction.html">VistaDBTransaction</a></td>
+        <td><p>Transaction ID</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Provider_VistaDB_VistaDBConnection_BeginTransaction_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>VistaDB always uses snapshot isolation, where each new transaction receives
+its own view of the database at the moment the transaction is started.
+Uncommitted and committed changes by other connections and transactions are
+not seen until this transaction is committed or rolled back.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_BeginTransaction_System_Data_IsolationLevel_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.BeginTransaction(System.Data.IsolationLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L201">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_BeginTransaction_" data-uid="Provider.VistaDB.VistaDBConnection.BeginTransaction*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_BeginTransaction_System_Data_IsolationLevel_" data-uid="Provider.VistaDB.VistaDBConnection.BeginTransaction(System.Data.IsolationLevel)">BeginTransaction(IsolationLevel)</h4>
+  <div class="markdown level1 summary"><p>Not supported.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDbTransaction BeginTransaction(IsolationLevel level)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IsolationLevel</span></td>
+        <td><span class="parametername">level</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbTransaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_ChangeDatabase_System_String_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.ChangeDatabase(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L209">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_ChangeDatabase_" data-uid="Provider.VistaDB.VistaDBConnection.ChangeDatabase*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_ChangeDatabase_System_String_" data-uid="Provider.VistaDB.VistaDBConnection.ChangeDatabase(System.String)">ChangeDatabase(String)</h4>
+  <div class="markdown level1 summary"><p>Not implemented.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ChangeDatabase(string dbName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">dbName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Close.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L262">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Close_" data-uid="Provider.VistaDB.VistaDBConnection.Close*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Close" data-uid="Provider.VistaDB.VistaDBConnection.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Close the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_CreateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.CreateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L286">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_CreateCommand_" data-uid="Provider.VistaDB.VistaDBConnection.CreateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_CreateCommand" data-uid="Provider.VistaDB.VistaDBConnection.CreateCommand">CreateCommand()</h4>
+  <div class="markdown level1 summary"><p>Creates and returns a VistaDBCommand object associated with the VistaDBConnection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand CreateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_Provider_VistaDB_VistaDBDatabase_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase(Provider.VistaDB.VistaDBDatabase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L312">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_" data-uid="Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_Provider_VistaDB_VistaDBDatabase_" data-uid="Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase(Provider.VistaDB.VistaDBDatabase)">CreateTemporaryDatabase(VistaDBDatabase)</h4>
+  <div class="markdown level1 summary"><p>Connects to temporary database.
+After connection created VistaDBDatabase object lose control to database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VistaDBConnection CreateTemporaryDatabase(VistaDBDatabase db)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBDatabase.html">VistaDBDatabase</a></td>
+        <td><span class="parametername">db</span></td>
+        <td><p>VistaDBDatabase object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBConnection.html">VistaDBConnection</a></td>
+        <td><p>VistaDBConnection object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L301">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_" data-uid="Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_CreateTemporaryDatabase_System_Int32_System_Boolean_" data-uid="Provider.VistaDB.VistaDBConnection.CreateTemporaryDatabase(System.Int32,System.Boolean)">CreateTemporaryDatabase(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates temporary database and connects to it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VistaDBConnection CreateTemporaryDatabase(int cultureID, bool caseSensitive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">cultureID</span></td>
+        <td><p>Database culture ID</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">caseSensitive</span></td>
+        <td><p>True if database is case sensitive</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBConnection.html">VistaDBConnection</a></td>
+        <td><p>VistaDBConnection object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L89">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Dispose_" data-uid="Provider.VistaDB.VistaDBConnection.Dispose*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Dispose_System_Boolean_" data-uid="Provider.VistaDB.VistaDBConnection.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Overloaded. Releases the resources used by the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ComponentModel.Component.Dispose(System.Boolean)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Finalize.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L80">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Finalize_" data-uid="Provider.VistaDB.VistaDBConnection.Finalize*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Finalize" data-uid="Provider.VistaDB.VistaDBConnection.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>VistaDBConnection destructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_GetRemoteService.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.GetRemoteService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L112">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_GetRemoteService_" data-uid="Provider.VistaDB.VistaDBConnection.GetRemoteService*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_GetRemoteService" data-uid="Provider.VistaDB.VistaDBConnection.GetRemoteService">GetRemoteService()</h4>
+  <div class="markdown level1 summary"><p>Returns remote service object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IVistaDBRemoteService GetRemoteService()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.IVistaDBRemoteService.html">IVistaDBRemoteService</a></td>
+        <td><p>Remote service object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_Open.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.Open%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L219">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_Open_" data-uid="Provider.VistaDB.VistaDBConnection.Open*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_Open" data-uid="Provider.VistaDB.VistaDBConnection.Open">Open()</h4>
+  <div class="markdown level1 summary"><p>Open the connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Open()</code></pre>
+  </div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_BeginTransaction.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.System%23Data%23IDbConnection%23BeginTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L176">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_BeginTransaction_" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#BeginTransaction*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_BeginTransaction" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#BeginTransaction">IDbConnection.BeginTransaction()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbTransaction IDbConnection.BeginTransaction()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbTransaction</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_ConnectionTimeout.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.System%23Data%23IDbConnection%23ConnectionTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L329">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_ConnectionTimeout_" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#ConnectionTimeout*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_ConnectionTimeout" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#ConnectionTimeout">IDbConnection.ConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>Returns the connection time-out value set in the connection
+string. Zero indicates an indefinite time-out period.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int IDbConnection.ConnectionTimeout { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_CreateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.System%23Data%23IDbConnection%23CreateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L278">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_CreateCommand_" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#CreateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_CreateCommand" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#CreateCommand">IDbConnection.CreateCommand()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbConnection.CreateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_Database.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection.System%23Data%23IDbConnection%23Database%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L527">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_Database_" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#Database*"></a>
+  <h4 id="Provider_VistaDB_VistaDBConnection_System_Data_IDbConnection_Database" data-uid="Provider.VistaDB.VistaDBConnection.System#Data#IDbConnection#Database">IDbConnection.Database</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string IDbConnection.Database { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.IComponent</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDbConnection</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBConnection.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBConnection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnConnection.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

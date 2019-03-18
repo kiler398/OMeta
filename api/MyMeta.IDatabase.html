@@ -1,0 +1,799 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IDatabase
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IDatabase
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyMeta.IDatabase">
+  
+  
+  <h1 id="MyMeta_IDatabase" data-uid="MyMeta.IDatabase" class="text-break">Interface IDatabase
+  </h1>
+  <div class="markdown level0 summary"><p>IDatabase represents a databaase in your DBMS.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyMeta.html">MyMeta</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="MyMeta_IDatabase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Guid(&quot;28390206-0D55-429D-8D17-C2DD1873AAE2&quot;)]
+[InterfaceType(ComInterfaceType.InterfaceIsDual)]
+public interface IDatabase</code></pre>
+  </div>
+  <h5 id="MyMeta_IDatabase_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>IDatabase has 5 Collections:</p>
+<table><tbody><tr><td>Tables</td><td>Contains all of the tables for the databaase</td></tr><tr><td>Views</td><td>Contains all of the views the databaase</td></tr><tr><td>Procedures</td><td>Contains all of the procedures for the databaase</td></tr><tr><td>Domains</td><td>Contains all of the domains for the database</td></tr><tr><td>Properties</td><td>A collection that can hold key/value pairs of your choosing</td></tr></tbody></table>
+</div>
+  <h5 id="MyMeta_IDatabase_examples"><strong>Examples</strong></h5>
+  <p>VBScript</p>
+<pre><code>Dim objDatabase
+For Each objDatabase in MyMeta.Databases
+    output.writeLn objDatabase.Name
+    output.writeLn objDatabase.Alias
+Next</code></pre>
+<p>JScript</p>
+<pre><code>var objDatabase;
+for (var j = 0; j &lt; MyMeta.Databases.Count; j++) 
+{
+    objDatabase = MyMeta.Databases.Item(j);
+
+    output.writeln(objDatabase.Name);
+    output.writeln(objDatabase.Alias);
+}</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Alias.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Alias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L86">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Alias_" data-uid="MyMeta.IDatabase.Alias*"></a>
+  <h4 id="MyMeta_IDatabase_Alias" data-uid="MyMeta.IDatabase.Alias">Alias</h4>
+  <div class="markdown level1 summary"><p>You can override the physical name of the Column. If you do not provide an Alias the value of 'Column.Name' is returned.
+If your column in your DBMS is 'TXT_FIRST_NAME' you might want to give it an Alias of 'FirstName' so that your business object property will be a nice name.
+You can provide an Alias the User Meta Data window. You can also set this during a script and then call MyMeta.SaveUserMetaData().
+See <a class="xref" href="MyMeta.IDatabase.html#MyMeta_IDatabase_Name">Name</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Alias { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_DefaultCharSetCatalog.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.DefaultCharSetCatalog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L113">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_DefaultCharSetCatalog_" data-uid="MyMeta.IDatabase.DefaultCharSetCatalog*"></a>
+  <h4 id="MyMeta_IDatabase_DefaultCharSetCatalog" data-uid="MyMeta.IDatabase.DefaultCharSetCatalog">DefaultCharSetCatalog</h4>
+  <div class="markdown level1 summary"><p>Catalog name of the default character set for columns and domains in the schemas.
+Blank if the provider does not support catalogs or different character sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultCharSetCatalog { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_DefaultCharSetName.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.DefaultCharSetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L124">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_DefaultCharSetName_" data-uid="MyMeta.IDatabase.DefaultCharSetName*"></a>
+  <h4 id="MyMeta_IDatabase_DefaultCharSetName" data-uid="MyMeta.IDatabase.DefaultCharSetName">DefaultCharSetName</h4>
+  <div class="markdown level1 summary"><p>Default character set name. Blank if the provider does not support different character sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultCharSetName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_DefaultCharSetSchema.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.DefaultCharSetSchema%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L119">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_DefaultCharSetSchema_" data-uid="MyMeta.IDatabase.DefaultCharSetSchema*"></a>
+  <h4 id="MyMeta_IDatabase_DefaultCharSetSchema" data-uid="MyMeta.IDatabase.DefaultCharSetSchema">DefaultCharSetSchema</h4>
+  <div class="markdown level1 summary"><p>Unqualified schema name of the default character set for columns and domains in the schemas.
+Blank if the provider does not support different character sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DefaultCharSetSchema { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Description.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L97">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Description_" data-uid="MyMeta.IDatabase.Description*"></a>
+  <h4 id="MyMeta_IDatabase_Description" data-uid="MyMeta.IDatabase.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Human-readable description of the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Domains.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Domains%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L67">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Domains_" data-uid="MyMeta.IDatabase.Domains*"></a>
+  <h4 id="MyMeta_IDatabase_Domains" data-uid="MyMeta.IDatabase.Domains">Domains</h4>
+  <div class="markdown level1 summary"><p>Contains all of the domains for the databaase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDomains Domains { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IDomains.html">IDomains</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Name.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L92">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Name_" data-uid="MyMeta.IDatabase.Name*"></a>
+  <h4 id="MyMeta_IDatabase_Name" data-uid="MyMeta.IDatabase.Name">Name</h4>
+  <div class="markdown level1 summary"><p>This is the physical column name as stored in your DBMS system. See <a class="xref" href="MyMeta.IDatabase.html#MyMeta_IDatabase_Alias">Alias</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Procedures.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Procedures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L57">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Procedures_" data-uid="MyMeta.IDatabase.Procedures*"></a>
+  <h4 id="MyMeta_IDatabase_Procedures" data-uid="MyMeta.IDatabase.Procedures">Procedures</h4>
+  <div class="markdown level1 summary"><p>Contains all of the procedures for the databaase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IProcedures Procedures { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IProcedures.html">IProcedures</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Properties.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Properties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L74">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Properties_" data-uid="MyMeta.IDatabase.Properties*"></a>
+  <h4 id="MyMeta_IDatabase_Properties" data-uid="MyMeta.IDatabase.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>The Properties for this Database. These are user defined and are typically stored in 'UserMetaData.xml' unless changed in the Default Settings dialog.
+Properties consist of key/value pairs.  You can populate this collection during your script or via the Dockable window.
+To save any data added to this collection call MyMeta.SaveUserMetaData(). See <a class="xref" href="MyMeta.IProperty.html">IProperty</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Root.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Root%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L62">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Root_" data-uid="MyMeta.IDatabase.Root*"></a>
+  <h4 id="MyMeta_IDatabase_Root" data-uid="MyMeta.IDatabase.Root">Root</h4>
+  <div class="markdown level1 summary"><p>A link back to the dbRoot object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">dbRoot Root { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.dbRoot.html">dbRoot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_SchemaName.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.SchemaName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L102">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_SchemaName_" data-uid="MyMeta.IDatabase.SchemaName*"></a>
+  <h4 id="MyMeta_IDatabase_SchemaName" data-uid="MyMeta.IDatabase.SchemaName">SchemaName</h4>
+  <div class="markdown level1 summary"><p>Unqualified schema name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SchemaName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_SchemaOwner.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.SchemaOwner%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L107">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_SchemaOwner_" data-uid="MyMeta.IDatabase.SchemaOwner*"></a>
+  <h4 id="MyMeta_IDatabase_SchemaOwner" data-uid="MyMeta.IDatabase.SchemaOwner">SchemaOwner</h4>
+  <div class="markdown level1 summary"><p>User that owns the schemas.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string SchemaOwner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Tables.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Tables%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L47">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Tables_" data-uid="MyMeta.IDatabase.Tables*"></a>
+  <h4 id="MyMeta_IDatabase_Tables" data-uid="MyMeta.IDatabase.Tables">Tables</h4>
+  <div class="markdown level1 summary"><p>Contains all of the tables for the databaase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITables Tables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.ITables.html">ITables</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_UserDataXPath.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.UserDataXPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L78">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_UserDataXPath_" data-uid="MyMeta.IDatabase.UserDataXPath*"></a>
+  <h4 id="MyMeta_IDatabase_UserDataXPath" data-uid="MyMeta.IDatabase.UserDataXPath">UserDataXPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string UserDataXPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_Views.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.Views%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L52">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_Views_" data-uid="MyMeta.IDatabase.Views*"></a>
+  <h4 id="MyMeta_IDatabase_Views" data-uid="MyMeta.IDatabase.Views">Views</h4>
+  <div class="markdown level1 summary"><p>Contains all of the views the databaase</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IViews Views { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IViews.html">IViews</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_DatabaseSpecificMetaData_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.DatabaseSpecificMetaData(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L177">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_DatabaseSpecificMetaData_" data-uid="MyMeta.IDatabase.DatabaseSpecificMetaData*"></a>
+  <h4 id="MyMeta_IDatabase_DatabaseSpecificMetaData_System_String_" data-uid="MyMeta.IDatabase.DatabaseSpecificMetaData(System.String)">DatabaseSpecificMetaData(String)</h4>
+  <div class="markdown level1 summary"><p>Fetch any database specific meta data through this generic interface by key. The keys will have to be defined by the specific database provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object DatabaseSpecificMetaData(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A key identifying the type of meta data desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A meta-data object or collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_ExecuteSql_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.ExecuteSql(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L163">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_ExecuteSql_" data-uid="MyMeta.IDatabase.ExecuteSql*"></a>
+  <h4 id="MyMeta_IDatabase_ExecuteSql_System_String_" data-uid="MyMeta.IDatabase.ExecuteSql(System.String)">ExecuteSql(String)</h4>
+  <div class="markdown level1 summary"><p>This method can execute any SQL statement against your DBMS system, including SELECT, INSERT, UPDATE, DELETE and more.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Recordset ExecuteSql(string sql)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td><p>Raw SQL statement to be executed. Regardless of your DBMS system the result set will be converted into an ADO (pre .NET) recordset.
+WARNING, you should test your query in your DMBS software before using.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ADODB.Recordset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MyMeta_IDatabase_ExecuteSql_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><pre><code>/* JScript taken from &apos;SQL_DataReplication.jgen&apos; */
+var sql = &quot;SELECT * FROM [&quot; + tablename + &quot;];&quot;;
+var rs = objDatabase.ExecuteSQL(sql);
+
+// Loop through the recordset and write out all the data into the sproc.
+if (rs != null)
+{
+    while (!rs.Eof)
+    {
+	    output.writeln(rs(&quot;FirstName&quot;).Value);
+	    rs.MoveNext();
+    }
+}
+
+&apos; VBScript Accessing a Firebird System Table
+dim rs
+set rs = database.ExecuteSQL(&quot;SELECT * FROM RDB$FIELDS&quot;)
+
+If Not rs is Nothing then
+    Do
+        For i = 0 To (rs.Fields.Count - 1)
+            output.writeLn rs(i).Name
+        Next
+        rs.MoveNext()
+    Loop Until rs.Eof
+End If</code></pre>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase_ResultColumnsFromSQL_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase.ResultColumnsFromSQL(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L170">View Source</a>
+  </span>
+  <a id="MyMeta_IDatabase_ResultColumnsFromSQL_" data-uid="MyMeta.IDatabase.ResultColumnsFromSQL*"></a>
+  <h4 id="MyMeta_IDatabase_ResultColumnsFromSQL_System_String_" data-uid="MyMeta.IDatabase.ResultColumnsFromSQL(System.String)">ResultColumnsFromSQL(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IResultColumns ResultColumnsFromSQL(string sql)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sql</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IResultColumns.html">IResultColumns</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IDatabase.md&amp;value=---%0Auid%3A%20MyMeta.IDatabase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IDatabase.cs/#L40" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

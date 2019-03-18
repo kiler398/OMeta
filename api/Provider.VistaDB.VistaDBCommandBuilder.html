@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VistaDBCommandBuilder
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VistaDBCommandBuilder
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Provider.VistaDB.VistaDBCommandBuilder">
+  
+  
+  <h1 id="Provider_VistaDB_VistaDBCommandBuilder" data-uid="Provider.VistaDB.VistaDBCommandBuilder" class="text-break">Class VistaDBCommandBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>A helper object that automatically generates and populates command properties of a VistaDBDataAdapter.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">VistaDBCommandBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Provider.VistaDB.html">Provider.VistaDB</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="Provider_VistaDB_VistaDBCommandBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VistaDBCommandBuilder : Component, IComponent, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder__ctor.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L309">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder__ctor_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder__ctor" data-uid="Provider.VistaDB.VistaDBCommandBuilder.#ctor">VistaDBCommandBuilder()</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommandBuilder()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder__ctor_Provider_VistaDB_VistaDBDataAdapter_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.%23ctor(Provider.VistaDB.VistaDBDataAdapter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L294">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder__ctor_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder__ctor_Provider_VistaDB_VistaDBDataAdapter_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.#ctor(Provider.VistaDB.VistaDBDataAdapter)">VistaDBCommandBuilder(VistaDBDataAdapter)</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommandBuilder(VistaDBDataAdapter adapter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBDataAdapter.html">VistaDBDataAdapter</a></td>
+        <td><span class="parametername">adapter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_DataAdapter.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.DataAdapter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L344">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_DataAdapter_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DataAdapter*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_DataAdapter" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DataAdapter">DataAdapter</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a VistaDBDataAdapter object for which V-SQL statements are automatically generated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBDataAdapter DataAdapter { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBDataAdapter.html">VistaDBDataAdapter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_DeleteCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.DeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L391">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_DeleteCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DeleteCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_DeleteCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DeleteCommand">DeleteCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform deletions on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand DeleteCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_InsertCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.InsertCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L369">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_InsertCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.InsertCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_InsertCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.InsertCommand">InsertCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform insertions on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand InsertCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_UpdateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.UpdateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L380">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_UpdateCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.UpdateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_UpdateCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.UpdateCommand">UpdateCommand</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform updates on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand UpdateCommand { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_DeriveParameters_Provider_VistaDB_VistaDBCommand_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.DeriveParameters(Provider.VistaDB.VistaDBCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L414">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_DeriveParameters_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DeriveParameters*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_DeriveParameters_Provider_VistaDB_VistaDBCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.DeriveParameters(Provider.VistaDB.VistaDBCommand)">DeriveParameters(VistaDBCommand)</h4>
+  <div class="markdown level1 summary"><p>Retrieves parameter information from the stored procedure specified in the VistaDBCommand and populates the Parameters collection of the specified VistaDBCommand object. Now do nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void DeriveParameters(VistaDBCommand command)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The VistaDBCommand referencing the stored procedure from which the parameter information is to be derived. The derived parameters are added to the Parameters collection of the VistaDBCommand.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L403">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_Dispose_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.Dispose*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_Dispose_System_Boolean_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Overloaded. Releases the resources used by the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>True for external disposing</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ComponentModel.Component.Dispose(System.Boolean)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_Finalize.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L325">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_Finalize_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.Finalize*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_Finalize" data-uid="Provider.VistaDB.VistaDBCommandBuilder.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>VistaDBCommandBuilder destructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_GetDeleteCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.GetDeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L439">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_GetDeleteCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetDeleteCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_GetDeleteCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetDeleteCommand">GetDeleteCommand()</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform deletions on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand GetDeleteCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_GetInsertCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.GetInsertCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L423">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_GetInsertCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetInsertCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_GetInsertCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetInsertCommand">GetInsertCommand()</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform insertions on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand GetInsertCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder_GetUpdateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder.GetUpdateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L431">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBCommandBuilder_GetUpdateCommand_" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetUpdateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBCommandBuilder_GetUpdateCommand" data-uid="Provider.VistaDB.VistaDBCommandBuilder.GetUpdateCommand">GetUpdateCommand()</h4>
+  <div class="markdown level1 summary"><p>Gets the automatically generated VistaDBCommand object required to perform updates on the database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBCommand GetUpdateCommand()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.IComponent</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBCommandBuilder.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBCommandBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnCommandBuilder.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

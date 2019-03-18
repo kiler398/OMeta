@@ -1,0 +1,936 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IParameter
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IParameter
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyMeta.IParameter">
+  
+  
+  <h1 id="MyMeta_IParameter" data-uid="MyMeta.IParameter" class="text-break">Interface IParameter
+  </h1>
+  <div class="markdown level0 summary"><p>IParameter represents a parameter of an IProcedure in your DBMS.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyMeta.html">MyMeta</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="MyMeta_IParameter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Guid(&quot;B6C01D8A-455E-421F-A20C-3EB1A70B9F18&quot;)]
+[InterfaceType(ComInterfaceType.InterfaceIsDual)]
+public interface IParameter</code></pre>
+  </div>
+  <h5 id="MyMeta_IParameter_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>IParameter Collections:</p>
+<table><tbody><tr><td>Properties</td><td>A collection that can hold key/value pairs of your choosing</td></tr><tr><td>GlobalProperties</td><td>A collection that can hold key/value pairs of your choosing for all Parameters with the same Database</td></tr><tr><td>AllProperties</td><td>A collection that combines the Properties and GlobalProperties Collections</td></tr></tbody></table>
+</div>
+  <h5 id="MyMeta_IParameter_examples"><strong>Examples</strong></h5>
+  <p>VBScript</p>
+<pre><code>Dim objParameter
+For Each objParameter in objProcedure.Parameters
+    output.writeLn objParameter.Name
+    output.writeLn objParameter.Alias
+Next</code></pre>
+<p>JScript</p>
+<pre><code>var objParameter;
+for (var j = 0; j &lt; objProcedure.Parameters; j++) 
+{
+    objParameter = objProcedure.Parameters.Item(j);
+
+    output.writeln(objParameter.Name);
+    output.writeln(objParameter.Alias);
+}</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Alias.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Alias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L99">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Alias_" data-uid="MyMeta.IParameter.Alias*"></a>
+  <h4 id="MyMeta_IParameter_Alias" data-uid="MyMeta.IParameter.Alias">Alias</h4>
+  <div class="markdown level1 summary"><p>You can override the physical name of the Table. If you do not provide an Alias the value of 'Table.Name' is returned.
+If your table in your DBMS is 'Q99AAB' you might want to give it an Alias of 'Employees' so that your business object names will make sense.
+You can provide an Alias the User Meta Data window. You can also set this during a script and then call MyMeta.SaveUserMetaData().
+See <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_Name">Name</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Alias { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_AllProperties.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.AllProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L88">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_AllProperties_" data-uid="MyMeta.IParameter.AllProperties*"></a>
+  <h4 id="MyMeta_IParameter_AllProperties" data-uid="MyMeta.IParameter.AllProperties">AllProperties</h4>
+  <div class="markdown level1 summary"><p>AllProperties is essentially a read-only collection consisting of a combination of both the <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_Properties">Properties</a> (local) collection and the <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_GlobalProperties">GlobalProperties</a> (global) collection. The local properties are added first,
+and then the global properties are added however, only global properties for which no local property exists -- are added. This makes local properties overlay global properties. Global properties can
+act as a default value which can be overridden by a local property. See <a class="xref" href="MyMeta.IProperty.html">IProperty</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection AllProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_CharacterMaxLength.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.CharacterMaxLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L173">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_CharacterMaxLength_" data-uid="MyMeta.IParameter.CharacterMaxLength*"></a>
+  <h4 id="MyMeta_IParameter_CharacterMaxLength" data-uid="MyMeta.IParameter.CharacterMaxLength">CharacterMaxLength</h4>
+  <div class="markdown level1 summary"><p>The maximum possible length of a value in the column. For character, binary, or bit columns, this is one of the following:</p>
+<ul><li></li><li></li><li></li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int CharacterMaxLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_CharacterOctetLength.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.CharacterOctetLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L178">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_CharacterOctetLength_" data-uid="MyMeta.IParameter.CharacterOctetLength*"></a>
+  <h4 id="MyMeta_IParameter_CharacterOctetLength" data-uid="MyMeta.IParameter.CharacterOctetLength">CharacterOctetLength</h4>
+  <div class="markdown level1 summary"><p>Maximum length in octets (bytes) of the column, if the type of the column is character or binary. Zero for all other types of columns.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int CharacterOctetLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_DataType.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.DataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L136">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_DataType_" data-uid="MyMeta.IParameter.DataType*"></a>
+  <h4 id="MyMeta_IParameter_DataType" data-uid="MyMeta.IParameter.DataType">DataType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DataType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_DataTypeNameComplete.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.DataTypeNameComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L142">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_DataTypeNameComplete_" data-uid="MyMeta.IParameter.DataTypeNameComplete*"></a>
+  <h4 id="MyMeta_IParameter_DataTypeNameComplete" data-uid="MyMeta.IParameter.DataTypeNameComplete">DataTypeNameComplete</h4>
+  <div class="markdown level1 summary"><p>This is the full data type name, whereas the DataType property might be 'nvarchar' the DataTypeName property would be 'nvarchar(200)', this varies from DBMS to DBMS.
+See <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_TypeName">TypeName</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DataTypeNameComplete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_DbTargetType.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.DbTargetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L157">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_DbTargetType_" data-uid="MyMeta.IParameter.DbTargetType*"></a>
+  <h4 id="MyMeta_IParameter_DbTargetType" data-uid="MyMeta.IParameter.DbTargetType">DbTargetType</h4>
+  <div class="markdown level1 summary"><p>The DbTarget Mappings window is where these are entered and they are stored in 'DbTargets.xml'.
+If your DMBS system is Microsoft SQL and your DbDriver is 'SqlClient' then nvarchar will be mapped to a SqlCleint 'SqlDbType.NVarChar'.
+See <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_LanguageType">LanguageType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DbTargetType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Default.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L126">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Default_" data-uid="MyMeta.IParameter.Default*"></a>
+  <h4 id="MyMeta_IParameter_Default" data-uid="MyMeta.IParameter.Default">Default</h4>
+  <div class="markdown level1 summary"><p>The unparsed DBMS default value.  If the default is a null then &quot;&lt;null&gt;&quot; is the value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Default { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Description.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L198">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Description_" data-uid="MyMeta.IParameter.Description*"></a>
+  <h4 id="MyMeta_IParameter_Description" data-uid="MyMeta.IParameter.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Human-readable description of the parameter.
+For example, the description of a parameter named Name in a procedure that adds a new employee might be &quot;Employee name.&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Direction.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Direction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L213">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Direction_" data-uid="MyMeta.IParameter.Direction*"></a>
+  <h4 id="MyMeta_IParameter_Direction" data-uid="MyMeta.IParameter.Direction">Direction</h4>
+  <div class="markdown level1 summary"><p>See the ParamDirection Enumeration.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ParamDirection Direction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.ParamDirection.html">ParamDirection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_GlobalProperties.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.GlobalProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L81">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_GlobalProperties_" data-uid="MyMeta.IParameter.GlobalProperties*"></a>
+  <h4 id="MyMeta_IParameter_GlobalProperties" data-uid="MyMeta.IParameter.GlobalProperties">GlobalProperties</h4>
+  <div class="markdown level1 summary"><p>The Properties for all Parameters within the same Database. These are user defined and are typically stored in 'UserMetaData.xml' unless changed in the Default Settings dialog.
+Properties consist of key/value pairs.  You can populate this collection during your script or via the Dockable window.
+To save any data added to this collection call MyMeta.SaveUserMetaData(). See <a class="xref" href="MyMeta.IProperty.html">IProperty</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection GlobalProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_HasDefault.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.HasDefault%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L121">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_HasDefault_" data-uid="MyMeta.IParameter.HasDefault*"></a>
+  <h4 id="MyMeta_IParameter_HasDefault" data-uid="MyMeta.IParameter.HasDefault">HasDefault</h4>
+  <div class="markdown level1 summary"><p>True if the parameter has a default value, False if not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasDefault { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_IsNullable.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.IsNullable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L131">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_IsNullable_" data-uid="MyMeta.IParameter.IsNullable*"></a>
+  <h4 id="MyMeta_IParameter_IsNullable" data-uid="MyMeta.IParameter.IsNullable">IsNullable</h4>
+  <div class="markdown level1 summary"><p>True if the parameter is nullable, False if not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsNullable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_LanguageType.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.LanguageType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L150">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_LanguageType_" data-uid="MyMeta.IParameter.LanguageType*"></a>
+  <h4 id="MyMeta_IParameter_LanguageType" data-uid="MyMeta.IParameter.LanguageType">LanguageType</h4>
+  <div class="markdown level1 summary"><p>The Language Mappings window is where these are entered and they are stored in 'Languages.xml'.
+If your DMBS system is Microsoft SQL and your language is C# then nvarchar will be mapped to a C# 'string'.
+Anytime that you need to expose this Parameters value to your programming language use this value.
+See <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_DbTargetType">DbTargetType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LanguageType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_LocalTypeName.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.LocalTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L208">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_LocalTypeName_" data-uid="MyMeta.IParameter.LocalTypeName*"></a>
+  <h4 id="MyMeta_IParameter_LocalTypeName" data-uid="MyMeta.IParameter.LocalTypeName">LocalTypeName</h4>
+  <div class="markdown level1 summary"><p>Localized version of 'TypeName'. Blank is returned if a localized name is not supported by the data provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LocalTypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Name.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L105">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Name_" data-uid="MyMeta.IParameter.Name*"></a>
+  <h4 id="MyMeta_IParameter_Name" data-uid="MyMeta.IParameter.Name">Name</h4>
+  <div class="markdown level1 summary"><p>This is the physical table name as stored in your DBMS system. See <a class="xref" href="MyMeta.IParameter.html#MyMeta_IParameter_Alias">Alias</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_NumericPrecision.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.NumericPrecision%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L186">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_NumericPrecision_" data-uid="MyMeta.IParameter.NumericPrecision*"></a>
+  <h4 id="MyMeta_IParameter_NumericPrecision" data-uid="MyMeta.IParameter.NumericPrecision">NumericPrecision</h4>
+  <div class="markdown level1 summary"><p>If the column's data type is of a numeric data type other than VARNUMERIC, this is the maximum precision of the column.
+The precision of columns with a data type of DBTYPE_DECIMAL or DBTYPE_NUMERIC depends on the definition of the column.
+For the precision of all other numeric data types, see (<a href="http://msdn.microsoft.com/library/en-us/oledb/htm/olprappendixa_2.asp">http://msdn.microsoft.com/library/en-us/oledb/htm/olprappendixa_2.asp</a>) &quot;Precision of Numeric Data Types&quot; in Appendix A.
+If the column's data type is not numeric or is VARNUMERIC, this is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int NumericPrecision { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_NumericScale.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.NumericScale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L192">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_NumericScale_" data-uid="MyMeta.IParameter.NumericScale*"></a>
+  <h4 id="MyMeta_IParameter_NumericScale" data-uid="MyMeta.IParameter.NumericScale">NumericScale</h4>
+  <div class="markdown level1 summary"><p>If the column's type indicator is DBTYPE_DECIMAL, DBTYPE_NUMERIC, or DBTYPE_VARNUMERIC,
+this is the number of digits to the right of the decimal point. Otherwise, this is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int NumericScale { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Ordinal.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Ordinal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L111">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Ordinal_" data-uid="MyMeta.IParameter.Ordinal*"></a>
+  <h4 id="MyMeta_IParameter_Ordinal" data-uid="MyMeta.IParameter.Ordinal">Ordinal</h4>
+  <div class="markdown level1 summary"><p>If the parameter is an input, input/output, or output parameter, this is the one-based ordinal position of the parameter in the procedure call.
+If the parameter is the return value, this is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Ordinal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_ParameterType.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.ParameterType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L116">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_ParameterType_" data-uid="MyMeta.IParameter.ParameterType*"></a>
+  <h4 id="MyMeta_IParameter_ParameterType" data-uid="MyMeta.IParameter.ParameterType">ParameterType</h4>
+  <div class="markdown level1 summary"><p>N/A</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int ParameterType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_Properties.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.Properties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L74">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_Properties_" data-uid="MyMeta.IParameter.Properties*"></a>
+  <h4 id="MyMeta_IParameter_Properties" data-uid="MyMeta.IParameter.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>The Properties for this parameter. These are user defined and are typically stored in 'UserMetaData.xml' unless changed in the Default Settings dialog.
+Properties consist of key/value pairs.  You can populate this collection during your script or via the Dockable window.
+To save any data added to this collection call MyMeta.SaveUserMetaData(). See <a class="xref" href="MyMeta.IProperty.html">IProperty</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_TypeName.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.TypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L203">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_TypeName_" data-uid="MyMeta.IParameter.TypeName*"></a>
+  <h4 id="MyMeta_IParameter_TypeName" data-uid="MyMeta.IParameter.TypeName">TypeName</h4>
+  <div class="markdown level1 summary"><p>The native data type as stored in your DBMS system, for instance a SQL 'nvarchar', or Access 'Memo'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string TypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_UserDataXPath.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.UserDataXPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L91">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_UserDataXPath_" data-uid="MyMeta.IParameter.UserDataXPath*"></a>
+  <h4 id="MyMeta_IParameter_UserDataXPath" data-uid="MyMeta.IParameter.UserDataXPath">UserDataXPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string UserDataXPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter_DatabaseSpecificMetaData_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IParameter.DatabaseSpecificMetaData(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L220">View Source</a>
+  </span>
+  <a id="MyMeta_IParameter_DatabaseSpecificMetaData_" data-uid="MyMeta.IParameter.DatabaseSpecificMetaData*"></a>
+  <h4 id="MyMeta_IParameter_DatabaseSpecificMetaData_System_String_" data-uid="MyMeta.IParameter.DatabaseSpecificMetaData(System.String)">DatabaseSpecificMetaData(String)</h4>
+  <div class="markdown level1 summary"><p>Fetch any database specific meta data through this generic interface by key. The keys will have to be defined by the specific database provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object DatabaseSpecificMetaData(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A key identifying the type of meta data desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A meta-data object or collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IParameter.md&amp;value=---%0Auid%3A%20MyMeta.IParameter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IParameter.cs/#L66" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

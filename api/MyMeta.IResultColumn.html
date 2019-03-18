@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IResultColumn
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IResultColumn
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MyMeta.IResultColumn">
+  
+  
+  <h1 id="MyMeta_IResultColumn" data-uid="MyMeta.IResultColumn" class="text-break">Interface IResultColumn
+  </h1>
+  <div class="markdown level0 summary"><p>IResultColumn represents a column in the result set returned by a Procedure.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MyMeta.html">MyMeta</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="MyMeta_IResultColumn_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Guid(&quot;1C68CD5F-E8D5-4BA2-BD79-E4CDA8DA08D6&quot;)]
+[InterfaceType(ComInterfaceType.InterfaceIsDual)]
+public interface IResultColumn</code></pre>
+  </div>
+  <h5 id="MyMeta_IResultColumn_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>IResultColumn Collections:</p>
+<table><tbody><tr><td>Properties</td><td>A collection that can hold key/value pairs of your choosing</td></tr><tr><td>GlobalProperties</td><td>A collection that can hold key/value pairs of your choosing for all ResultColumns with the same Database</td></tr><tr><td>AllProperties</td><td>A collection that combines the Properties and GlobalProperties Collections</td></tr></tbody></table>
+</div>
+  <h5 id="MyMeta_IResultColumn_examples"><strong>Examples</strong></h5>
+  <p>VBScript</p>
+<pre><code>Dim objResultColumn
+For Each objResultColumn in objProcedure.ResultColumns
+    output.writeLn objResultColumn.Name
+    output.writeLn objResultColumn.Alias
+Next</code></pre>
+<p>JScript</p>
+<pre><code>var objResultColumn;
+for (var j = 0; j &lt; objProcedure.ResultColumns; j++) 
+{
+    objResultColumn = objProcedure.ResultColumns.Item(j);
+
+    output.writeln(objResultColumn.Name);
+    output.writeln(objResultColumn.Alias);
+}</code></pre>
+
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_Alias.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.Alias%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L73">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_Alias_" data-uid="MyMeta.IResultColumn.Alias*"></a>
+  <h4 id="MyMeta_IResultColumn_Alias" data-uid="MyMeta.IResultColumn.Alias">Alias</h4>
+  <div class="markdown level1 summary"><p>You can override the physical name of the result column. If you do not provide an Alias the value of 'ResultColumn.Name' is returned.
+If your result column in your procedure  is 'Q99AAB' you might want to give it an Alias of 'Employees' so that your business object names will make sense.
+You can provide an Alias the User Meta Data window. You can also set this during a script and then call MyMeta.SaveUserMetaData().
+See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_Name">Name</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Alias { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_AllProperties.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.AllProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L61">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_AllProperties_" data-uid="MyMeta.IResultColumn.AllProperties*"></a>
+  <h4 id="MyMeta_IResultColumn_AllProperties" data-uid="MyMeta.IResultColumn.AllProperties">AllProperties</h4>
+  <div class="markdown level1 summary"><p>AllProperties is essentially a read-only collection consisting of a combination of both the <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_Properties">Properties</a> (local) collection and the <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_GlobalProperties">GlobalProperties</a> (global) collection. The local properties are added first,
+and then the global properties are added however, only global properties for which no local property exists -- are added. This makes local properties overlay global properties. Global properties can
+act as a default value which can be overridden by a local property. See <a class="xref" href="MyMeta.IProperty.html">IProperty</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection AllProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_DataType.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.DataType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L84">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_DataType_" data-uid="MyMeta.IResultColumn.DataType*"></a>
+  <h4 id="MyMeta_IResultColumn_DataType" data-uid="MyMeta.IResultColumn.DataType">DataType</h4>
+  <div class="markdown level1 summary"><p>N/A</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int DataType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_DataTypeName.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.DataTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L89">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_DataTypeName_" data-uid="MyMeta.IResultColumn.DataTypeName*"></a>
+  <h4 id="MyMeta_IResultColumn_DataTypeName" data-uid="MyMeta.IResultColumn.DataTypeName">DataTypeName</h4>
+  <div class="markdown level1 summary"><p>The native data type as stored in your DBMS system, for instance a SQL 'nvarchar', or Access 'Memo'. See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_DataTypeNameComplete">DataTypeNameComplete</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DataTypeName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_DataTypeNameComplete.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.DataTypeNameComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L95">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_DataTypeNameComplete_" data-uid="MyMeta.IResultColumn.DataTypeNameComplete*"></a>
+  <h4 id="MyMeta_IResultColumn_DataTypeNameComplete" data-uid="MyMeta.IResultColumn.DataTypeNameComplete">DataTypeNameComplete</h4>
+  <div class="markdown level1 summary"><p>This is the full data type name, whereas the DataType property might be 'nvarchar' the DataTypeName property would be 'nvarchar(200)', this varies from DBMS to DBMS.
+See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_DataTypeName">DataTypeName</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DataTypeNameComplete { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_DbTargetType.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.DbTargetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L110">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_DbTargetType_" data-uid="MyMeta.IResultColumn.DbTargetType*"></a>
+  <h4 id="MyMeta_IResultColumn_DbTargetType" data-uid="MyMeta.IResultColumn.DbTargetType">DbTargetType</h4>
+  <div class="markdown level1 summary"><p>The DbTarget Mappings window is where these are entered and they are stored in 'DbTargets.xml'.
+If your DMBS system is Microsoft SQL and your DbDriver is 'SqlClient' then nvarchar will be mapped to a SqlCleint 'SqlDbType.NVarChar'.
+See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_LanguageType">LanguageType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string DbTargetType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_GlobalProperties.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.GlobalProperties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L54">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_GlobalProperties_" data-uid="MyMeta.IResultColumn.GlobalProperties*"></a>
+  <h4 id="MyMeta_IResultColumn_GlobalProperties" data-uid="MyMeta.IResultColumn.GlobalProperties">GlobalProperties</h4>
+  <div class="markdown level1 summary"><p>The Properties for all ResultColumns within the same Database. These are user defined and are typically stored in 'UserMetaData.xml' unless changed in the Default Settings dialog.
+Properties consist of key/value pairs.  You can populate this collection during your script or via the Dockable window.
+To save any data added to this collection call MyMeta.SaveUserMetaData(). See <a class="xref" href="MyMeta.IProperty.html">IProperty</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection GlobalProperties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_LanguageType.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.LanguageType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L103">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_LanguageType_" data-uid="MyMeta.IResultColumn.LanguageType*"></a>
+  <h4 id="MyMeta_IResultColumn_LanguageType" data-uid="MyMeta.IResultColumn.LanguageType">LanguageType</h4>
+  <div class="markdown level1 summary"><p>The Language Mappings window is where these are entered and they are stored in 'Languages.xml'.
+If your DMBS system is Microsoft SQL and your language is C# then nvarchar will be mapped to a C# 'string'.
+Anytime that you need to expose this columns value to your programming language use this value.
+See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_DbTargetType">DbTargetType</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string LanguageType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_Name.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L79">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_Name_" data-uid="MyMeta.IResultColumn.Name*"></a>
+  <h4 id="MyMeta_IResultColumn_Name" data-uid="MyMeta.IResultColumn.Name">Name</h4>
+  <div class="markdown level1 summary"><p>This is the physical table name as stored in your DBMS system. See <a class="xref" href="MyMeta.IResultColumn.html#MyMeta_IResultColumn_Alias">Alias</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_Ordinal.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.Ordinal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L115">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_Ordinal_" data-uid="MyMeta.IResultColumn.Ordinal*"></a>
+  <h4 id="MyMeta_IResultColumn_Ordinal" data-uid="MyMeta.IResultColumn.Ordinal">Ordinal</h4>
+  <div class="markdown level1 summary"><p>The ordinal of the result column. ResultColumns are numbered starting from one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int Ordinal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_Properties.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.Properties%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L47">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_Properties_" data-uid="MyMeta.IResultColumn.Properties*"></a>
+  <h4 id="MyMeta_IResultColumn_Properties" data-uid="MyMeta.IResultColumn.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>The Properties for this view. These are user defined and are typically stored in 'UserMetaData.xml' unless changed in the Default Settings dialog.
+Properties consist of key/value pairs.  You can populate this collection during your script or via the Dockable window.
+To save any data added to this collection call MyMeta.SaveUserMetaData(). See <a class="xref" href="MyMeta.IProperty.html">IProperty</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IPropertyCollection Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MyMeta.IPropertyCollection.html">IPropertyCollection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_UserDataXPath.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.UserDataXPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L64">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_UserDataXPath_" data-uid="MyMeta.IResultColumn.UserDataXPath*"></a>
+  <h4 id="MyMeta_IResultColumn_UserDataXPath" data-uid="MyMeta.IResultColumn.UserDataXPath">UserDataXPath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string UserDataXPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn_DatabaseSpecificMetaData_System_String_.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn.DatabaseSpecificMetaData(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L122">View Source</a>
+  </span>
+  <a id="MyMeta_IResultColumn_DatabaseSpecificMetaData_" data-uid="MyMeta.IResultColumn.DatabaseSpecificMetaData*"></a>
+  <h4 id="MyMeta_IResultColumn_DatabaseSpecificMetaData_System_String_" data-uid="MyMeta.IResultColumn.DatabaseSpecificMetaData(System.String)">DatabaseSpecificMetaData(String)</h4>
+  <div class="markdown level1 summary"><p>Fetch any database specific meta data through this generic interface by key. The keys will have to be defined by the specific database provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object DatabaseSpecificMetaData(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>A key identifying the type of meta data desired.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><p>A meta-data object or collection.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=MyMeta_IResultColumn.md&amp;value=---%0Auid%3A%20MyMeta.IResultColumn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/Interfaces/IResultColumn.cs/#L38" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

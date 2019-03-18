@@ -1,0 +1,1391 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VistaDBDataAdapter
+   | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VistaDBDataAdapter
+   | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Provider.VistaDB.VistaDBDataAdapter">
+  
+  
+  <h1 id="Provider_VistaDB_VistaDBDataAdapter" data-uid="Provider.VistaDB.VistaDBDataAdapter" class="text-break">Class VistaDBDataAdapter
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a set of data commands and a database connection that are used to fill the DataSet
+and update a VistaDB database. This class cannot be inherited.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">System.MarshalByRefObject</span></div>
+    <div class="level2"><span class="xref">System.ComponentModel.Component</span></div>
+    <div class="level3"><span class="xref">System.Data.Common.DataAdapter</span></div>
+    <div class="level4"><span class="xref">System.Data.Common.DbDataAdapter</span></div>
+    <div class="level5"><span class="xref">VistaDBDataAdapter</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.ComponentModel.IComponent</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">System.ICloneable</span></div>
+    <div><span class="xref">System.Data.IDbDataAdapter</span></div>
+    <div><span class="xref">System.Data.IDataAdapter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.DefaultSourceTableName</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.AddToBatch(System.Data.IDbCommand)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.ClearBatch()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.System.ICloneable.Clone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.ExecuteBatch()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.Data.IDbCommand, System.String, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType, System.Data.IDbCommand, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.Int32, System.Int32, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Int32, System.Int32, System.Data.DataTable[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable[], System.Int32, System.Int32, System.Data.IDbCommand, System.Data.CommandBehavior)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetBatchedParameter(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetBatchedRecordsAffected(System.Int32, System.Int32, System.Exception)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.GetFillParameters()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.InitializeBatching()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.TerminateBatching()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataSet)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataRow[])</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataTable)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataSet, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.Update(System.Data.DataRow[], System.Data.Common.DataTableMapping)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.FillCommandBehavior</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DbDataAdapter.UpdateBatchSize</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ShouldSerializeTableMappings()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.HasTableMappings()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.CloneInternals()</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillSchema(System.Data.DataSet, System.Data.SchemaType, System.String, System.Data.IDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillSchema(System.Data.DataTable, System.Data.SchemaType, System.Data.IDataReader)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataTable[], System.Data.IDataReader, System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.OnFillError(System.Data.FillErrorEventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.AcceptChangesDuringFill</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.AcceptChangesDuringUpdate</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ContinueUpdateOnError</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillLoadOption</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.MissingMappingAction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.MissingSchemaAction</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.ReturnProviderSpecificTypes</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.System.Data.IDataAdapter.TableMappings</span>
+    </div>
+    <div>
+      <span class="xref">System.Data.Common.DataAdapter.FillError</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.GetService(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.CanRaiseEvents</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Events</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Site</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Container</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.DesignMode</span>
+    </div>
+    <div>
+      <span class="xref">System.ComponentModel.Component.Disposed</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.MemberwiseClone(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.GetLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.InitializeLifetimeService()</span>
+    </div>
+    <div>
+      <span class="xref">System.MarshalByRefObject.CreateObjRef(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Provider.VistaDB.html">Provider.VistaDB</a></h6>
+  <h6><strong>Assembly</strong>: OpenMyMeta.dll</h6>
+  <h5 id="Provider_VistaDB_VistaDBDataAdapter_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class VistaDBDataAdapter : DbDataAdapter, IComponent, IDisposable, ICloneable, IDbDataAdapter, IDataAdapter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter__ctor.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L39">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter__ctor_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter__ctor" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor">VistaDBDataAdapter()</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBDataAdapter()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter__ctor_Provider_VistaDB_VistaDBCommand_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.%23ctor(Provider.VistaDB.VistaDBCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L48">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter__ctor_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter__ctor_Provider_VistaDB_VistaDBCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor(Provider.VistaDB.VistaDBCommand)">VistaDBDataAdapter(VistaDBCommand)</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBDataAdapter(VistaDBCommand comm)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td><span class="parametername">comm</span></td>
+        <td><p>VistaDBCommand select command object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter__ctor_System_String_Provider_VistaDB_VistaDBConnection_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.%23ctor(System.String%2CProvider.VistaDB.VistaDBConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L57">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter__ctor_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter__ctor_System_String_Provider_VistaDB_VistaDBConnection_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor(System.String,Provider.VistaDB.VistaDBConnection)">VistaDBDataAdapter(String, VistaDBConnection)</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBDataAdapter(string commText, VistaDBConnection conn)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commText</span></td>
+        <td><p>V-SQL query text</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBConnection.html">VistaDBConnection</a></td>
+        <td><span class="parametername">conn</span></td>
+        <td><p>VistaDBConnection object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L66">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter__ctor_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter__ctor_System_String_System_String_" data-uid="Provider.VistaDB.VistaDBDataAdapter.#ctor(System.String,System.String)">VistaDBDataAdapter(String, String)</h4>
+  <div class="markdown level1 summary"><p>Overloaded constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VistaDBDataAdapter(string commText, string connString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">commText</span></td>
+        <td><p>V-SQL query text</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">connString</span></td>
+        <td><p>Connectionstring to a VistaDB database</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_DeleteCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.DeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L187">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_DeleteCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.DeleteCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_DeleteCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.DeleteCommand">DeleteCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a V-SQL statement to delete records from the data set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(ComponentConverter))]
+public VistaDBCommand DeleteCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_InsertCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.InsertCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L155">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_InsertCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.InsertCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_InsertCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.InsertCommand">InsertCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a V-SQL statement to insert records into the data set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(ComponentConverter))]
+public VistaDBCommand InsertCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_SelectCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.SelectCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L139">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_SelectCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.SelectCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_SelectCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.SelectCommand">SelectCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a V-SQL statement to select records from the data set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(ComponentConverter))]
+public VistaDBCommand SelectCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_TableMappings.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.TableMappings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L314">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_TableMappings_" data-uid="Provider.VistaDB.VistaDBDataAdapter.TableMappings*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_TableMappings" data-uid="Provider.VistaDB.VistaDBDataAdapter.TableMappings">TableMappings</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the DataTableMappingCollection class. This new instance is empty
+and does not yet contain any DataTableMapping objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Browsable(true)]
+public DataTableMappingCollection TableMappings { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMappingCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_UpdateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.UpdateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L171">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_UpdateCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.UpdateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_UpdateCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.UpdateCommand">UpdateCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a V-SQL statement to update records in the data set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[TypeConverter(typeof(ComponentConverter))]
+public VistaDBCommand UpdateCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBCommand.html">VistaDBCommand</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatedEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow%2CSystem.Data.IDbCommand%2CSystem.Data.StatementType%2CSystem.Data.Common.DataTableMapping)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L209">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatedEvent_" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatedEvent*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatedEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">CreateRowUpdatedEvent(DataRow, IDbCommand, StatementType, DataTableMapping)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the RowUpdatedEventArgs class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override RowUpdatedEventArgs CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="parametername">dataRow</span></td>
+        <td><p>The DataRow used to update the data source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The IDbCommand executed during the Update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.StatementType</span></td>
+        <td><span class="parametername">statementType</span></td>
+        <td><p>Whether the command is an UPDATE, INSERT, DELETE, or SELECT statement.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMapping</span></td>
+        <td><span class="parametername">tableMapping</span></td>
+        <td><p>A DataTableMapping object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatedEventArgs</span></td>
+        <td><p>A new instance of the RowUpdatingEventArgs class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.CreateRowUpdatedEvent(System.Data.DataRow, System.Data.IDbCommand, System.Data.StatementType, System.Data.Common.DataTableMapping)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatingEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow%2CSystem.Data.IDbCommand%2CSystem.Data.StatementType%2CSystem.Data.Common.DataTableMapping)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L221">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatingEvent_" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatingEvent*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_CreateRowUpdatingEvent_System_Data_DataRow_System_Data_IDbCommand_System_Data_StatementType_System_Data_Common_DataTableMapping_" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">CreateRowUpdatingEvent(DataRow, IDbCommand, StatementType, DataTableMapping)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the RowUpdatingEventArgs class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override RowUpdatingEventArgs CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataRow</span></td>
+        <td><span class="parametername">dataRow</span></td>
+        <td><p>The DataRow used to update the data source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The IDbCommand executed during the Update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.StatementType</span></td>
+        <td><span class="parametername">statementType</span></td>
+        <td><p>Whether the command is an UPDATE, INSERT, DELETE, or SELECT statement.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMapping</span></td>
+        <td><span class="parametername">tableMapping</span></td>
+        <td><p>A DataTableMapping object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatingEventArgs</span></td>
+        <td><p>A new instance of the RowUpdatingEventArgs class.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.CreateRowUpdatingEvent(System.Data.DataRow, System.Data.IDbCommand, System.Data.StatementType, System.Data.Common.DataTableMapping)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_CreateTableMappings.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.CreateTableMappings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L247">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_CreateTableMappings_" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateTableMappings*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_CreateTableMappings" data-uid="Provider.VistaDB.VistaDBDataAdapter.CreateTableMappings">CreateTableMappings()</h4>
+  <div class="markdown level1 summary"><p>Creates a new DataTableMappingCollection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DataTableMappingCollection CreateTableMappings()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.DataTableMappingCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DataAdapter.CreateTableMappings()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L260">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Dispose_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Dispose*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Dispose_System_Boolean_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Overloaded. Releases the resources used by the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.Dispose(System.Boolean)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataSet_System_Int32_System_Int32_System_String_System_Data_IDbCommand_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataSet%2CSystem.Int32%2CSystem.Int32%2CSystem.String%2CSystem.Data.IDbCommand%2CSystem.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L271">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Fill_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataSet_System_Int32_System_Int32_System_String_System_Data_IDbCommand_System_Data_CommandBehavior_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataSet,System.Int32,System.Int32,System.String,System.Data.IDbCommand,System.Data.CommandBehavior)">Fill(DataSet, Int32, Int32, String, IDbCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataSet dataSet, int startRecord, int maxRecords, string srcTable, IDbCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">dataSet</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRecord</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxRecords</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">srcTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataSet, System.Int32, System.Int32, System.String, System.Data.IDbCommand, System.Data.CommandBehavior)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataSet_System_String_System_Data_IDataReader_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataSet%2CSystem.String%2CSystem.Data.IDataReader%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L282">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Fill_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataSet_System_String_System_Data_IDataReader_System_Int32_System_Int32_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataSet,System.String,System.Data.IDataReader,System.Int32,System.Int32)">Fill(DataSet, String, IDataReader, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataSet dataSet, string srcTable, IDataReader dataReader, int startRecord, int maxRecords)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">dataSet</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">srcTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDataReader</span></td>
+        <td><span class="parametername">dataReader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">startRecord</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxRecords</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataSet, System.String, System.Data.IDataReader, System.Int32, System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataTable_System_Data_IDataReader_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataTable%2CSystem.Data.IDataReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L293">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Fill_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataTable_System_Data_IDataReader_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataTable,System.Data.IDataReader)">Fill(DataTable, IDataReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataTable dataTable, IDataReader dataReader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td><span class="parametername">dataTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDataReader</span></td>
+        <td><span class="parametername">dataReader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DataAdapter.Fill(System.Data.DataTable, System.Data.IDataReader)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataTable_System_Data_IDbCommand_System_Data_CommandBehavior_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataTable%2CSystem.Data.IDbCommand%2CSystem.Data.CommandBehavior)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L303">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Fill_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Fill_System_Data_DataTable_System_Data_IDbCommand_System_Data_CommandBehavior_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Fill(System.Data.DataTable,System.Data.IDbCommand,System.Data.CommandBehavior)">Fill(DataTable, IDbCommand, CommandBehavior)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override int Fill(DataTable dataTable, IDbCommand command, CommandBehavior behavior)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataTable</span></td>
+        <td><span class="parametername">dataTable</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td><span class="parametername">command</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Data.CommandBehavior</span></td>
+        <td><span class="parametername">behavior</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.Fill(System.Data.DataTable, System.Data.IDbCommand, System.Data.CommandBehavior)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_Finalize.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L75">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_Finalize_" data-uid="Provider.VistaDB.VistaDBDataAdapter.Finalize*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_Finalize" data-uid="Provider.VistaDB.VistaDBDataAdapter.Finalize">Finalize()</h4>
+  <div class="markdown level1 summary"><p>VistaDBAdapter destructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_OnRowUpdated_System_Data_Common_RowUpdatedEventArgs_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L238">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_OnRowUpdated_" data-uid="Provider.VistaDB.VistaDBDataAdapter.OnRowUpdated*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_OnRowUpdated_System_Data_Common_RowUpdatedEventArgs_" data-uid="Provider.VistaDB.VistaDBDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)">OnRowUpdated(RowUpdatedEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Raises the RowUpdated event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRowUpdated(RowUpdatedEventArgs value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatedEventArgs</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>RowUpdatedEventArgs</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.OnRowUpdated(System.Data.Common.RowUpdatedEventArgs)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_OnRowUpdating_System_Data_Common_RowUpdatingEventArgs_.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L229">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_OnRowUpdating_" data-uid="Provider.VistaDB.VistaDBDataAdapter.OnRowUpdating*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_OnRowUpdating_System_Data_Common_RowUpdatingEventArgs_" data-uid="Provider.VistaDB.VistaDBDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)">OnRowUpdating(RowUpdatingEventArgs)</h4>
+  <div class="markdown level1 summary"><p>Raises the RowUpdating event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnRowUpdating(RowUpdatingEventArgs value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.Common.RowUpdatingEventArgs</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>RowUpdatingEventArgs</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Data.Common.DbDataAdapter.OnRowUpdating(System.Data.Common.RowUpdatingEventArgs)</span></div>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_RowUpdated.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.RowUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L34">View Source</a>
+  </span>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_RowUpdated" data-uid="Provider.VistaDB.VistaDBDataAdapter.RowUpdated">RowUpdated</h4>
+  <div class="markdown level1 summary"><p>Occurs during Update after a command is executed against the data source.
+The attempt to update is made, so the event fires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VistaDBRowUpdatedEventHandler RowUpdated</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBRowUpdatedEventHandler.html">VistaDBRowUpdatedEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_RowUpdating.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.RowUpdating%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L28">View Source</a>
+  </span>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_RowUpdating" data-uid="Provider.VistaDB.VistaDBDataAdapter.RowUpdating">RowUpdating</h4>
+  <div class="markdown level1 summary"><p>Occurs during Update before a command is executed against the data source.
+The attempt to update is made, so the event fires.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event VistaDBRowUpdatingEventHandler RowUpdating</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Provider.VistaDB.VistaDBRowUpdatingEventHandler.html">VistaDBRowUpdatingEventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_DeleteCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.System%23Data%23IDbDataAdapter%23DeleteCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L125">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_DeleteCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#DeleteCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_DeleteCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#DeleteCommand">IDbDataAdapter.DeleteCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the delete command object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbDataAdapter.DeleteCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_InsertCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.System%23Data%23IDbDataAdapter%23InsertCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L97">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_InsertCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#InsertCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_InsertCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#InsertCommand">IDbDataAdapter.InsertCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the insert command object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbDataAdapter.InsertCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_SelectCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.System%23Data%23IDbDataAdapter%23SelectCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L83">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_SelectCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#SelectCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_SelectCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#SelectCommand">IDbDataAdapter.SelectCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the select command object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbDataAdapter.SelectCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_UpdateCommand.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter.System%23Data%23IDbDataAdapter%23UpdateCommand%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L111">View Source</a>
+  </span>
+  <a id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_UpdateCommand_" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#UpdateCommand*"></a>
+  <h4 id="Provider_VistaDB_VistaDBDataAdapter_System_Data_IDbDataAdapter_UpdateCommand" data-uid="Provider.VistaDB.VistaDBDataAdapter.System#Data#IDbDataAdapter#UpdateCommand">IDbDataAdapter.UpdateCommand</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the update command object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDbCommand IDbDataAdapter.UpdateCommand { get; set; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.IDbCommand</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.ComponentModel.IComponent</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">System.ICloneable</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDbDataAdapter</span>
+  </div>
+  <div>
+      <span class="xref">System.Data.IDataAdapter</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/new/dev/apiSpec/new?filename=Provider_VistaDB_VistaDBDataAdapter.md&amp;value=---%0Auid%3A%20Provider.VistaDB.VistaDBDataAdapter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/src/OpenMeta/VistaDB/Source/vnDataAdapter.cs/#L15" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OpenMyMeta | OpenMyMeta &#25991;&#26723; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="OpenMyMeta | OpenMyMeta &#25991;&#26723; ">
+    <meta name="generator" content="docfx 2.40.12.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="openmymeta">OpenMyMeta</h1>
+
+<h2 id="项目简介">项目简介</h2>
+<p>OpenMyMeta 是一个关系型数据库元数据信息获取工具，把数据库-&gt;表-&gt;列，主键、外键、索引、默认值、备注、存储过程、函数、视图等抽象为对象，易于供代码生成工具生成代码使用。</p>
+<ol>
+<li><p>提供丰富的接口，能够获取常见的所有数据库元数据。能很好的获取表、索引、存储过程、函数、视图的定义。</p>
+</li>
+<li><p>使用简单，只需要一个链接字符串并指定数据库类型连接到数据库即可获取该数据库的元数据信息。</p>
+</li>
+<li><p>丰富的数据库类型支持，支持MSSQL Oracle MySQL PostgreSql Access SQLLite DB2 Firebird Interbase等主流数据库。</p>
+</li>
+<li><p>有很强的语言生成支持扩展性，可以通过外置XML映射文件对各种编程语言（C# VB.NET Java）对数据字段类型提供映射操作。通过修改配置文件可以支持新的语言或者新的数据库字段。</p>
+</li>
+</ol>
+<h2 id="项目起源">项目起源</h2>
+<p>OpenMyMeta 并不是一个独立开发的原创项目，这个项目主要代码源自 <a href="https://sourceforge.net/p/mygeneration/">Mygeneration</a>  项目的开源代码，该项目是一个优秀的开源的代码生成引擎工具，但是 <a href="https://sourceforge.net/p/mygeneration/">Mygeneration</a>  主板本已经与2008年起停止更新了。本项目主要是延续 <a href="https://sourceforge.net/p/mygeneration/">Mygeneration</a> 中的[MyMeta] 进行更新开发。</p>
+<h2 id="项目开发目标">项目开发目标</h2>
+<p>老的[MyMeta]库是基于.Net 3.5开发的，里面也大量使用了COM+技术，并且也包含了一些现在来说不常见的数据库如 VistaDB，项目无法在新的.Net Core平台上跑起来，本身没有文档和单元测试，基于上述问题，OpenMyMeta有以下开发目标</p>
+<ol>
+<li><p>项目先期升级到.Net 4.6.1,同时慢慢剥离原有库对COM+技术的依赖，项目做好准备迁移到.Net Core 3.0。</p>
+</li>
+<li><p>删除掉一些不常见数据库的支持如 VistaDB,让这个库更轻便。</p>
+</li>
+<li><p>增加丰富的单元测试功能。</p>
+</li>
+<li><p>增加完备的文档介绍。</p>
+</li>
+<li><p>增加使用例子项目。</p>
+</li>
+</ol>
+<h2 id="使用简介">使用简介</h2>
+<p>下面是一个简单的使用例子</p>
+<p>使用 <a href="images/Northwind_MSSQL.sql">数据库脚本</a> 创建SqlServer数据库</p>
+<pre><code class="lang-csharp">//初始化元数据类
+dbRoot dbRoot = new dbRoot();
+//连接到SqlServer数据库，注意必须使用oledb连接字符串
+dbRoot.Connect(dbDriver.SQL, &quot;Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; &quot;);
+//获取当前连接默认数据库
+var database = dbRoot.DefaultDatabase;
+//输出当前默认数据库名
+Console.WriteLine(&quot;当前默认数据库名:&quot;+database.Name);
+Console.WriteLine(&quot;----------------------------------------&quot;);
+//遍历循环当前数据库所有的表
+int i = 1;
+foreach (var table in database.Tables)
+{
+   //输出表名和备注
+    Console.WriteLine(&quot;表&quot;+ i.ToString(&quot;D2&quot;) + &quot;:&quot; + table.Name +&quot;,备注：&quot;+ table.Description);
+    Console.WriteLine(&quot;---------------&quot;);
+    int j = 1;
+    //遍历循环表所有的字段
+    foreach (var column in table.Columns)
+    {
+        //输出字段名和字段类型
+        Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+        Console.WriteLine(&quot;&quot;);
+        j++;
+    }
+    i++;
+}
+</code></pre>
+<p>运行代码输出以下结果</p>
+<p><img src="images/screen1.png" alt="输出结果"></p>
+<h2 id="代码调试存在的问题">代码调试存在的问题</h2>
+<ol>
+<li>项目涉及强名称编译，需要管理员方式启动VS。</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

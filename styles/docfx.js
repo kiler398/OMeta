@@ -540,7 +540,7 @@ $(function () {
   function renderAffix() {
     var hierarchy = getHierarchy();
     if (hierarchy && hierarchy.length > 0) {
-      var html = '<h5 class="title">In This Article</h5>'
+      var html = '<h5 class="title">本文内容</h5>'
       html += util.formList(hierarchy, ['nav', 'bs-docs-sidenav']);
       $("#affix").empty().append(html);
       if ($('footer').is(':visible')) {

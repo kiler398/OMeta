@@ -1,4 +1,4 @@
-# OMeta
+# OMeta 　　　　　　　　　　　　　　　　　　　　　　[文档](https://kiler398.github.io/OMeta/)
 
 ## 项目简介
 

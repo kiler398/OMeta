@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// ITable represents a table in your DBMS.

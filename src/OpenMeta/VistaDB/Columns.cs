@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Reflection;
 
-namespace MyMeta.VistaDB
+namespace OMeta.VistaDB
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

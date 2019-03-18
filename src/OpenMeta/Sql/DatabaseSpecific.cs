@@ -3,7 +3,7 @@ using System.Collections;
 
 using ADODB;
 
-namespace MyMeta.Sql
+namespace OMeta.Sql
 {
 	/// <summary>
 	/// Summary description for DatabaseSpecific.

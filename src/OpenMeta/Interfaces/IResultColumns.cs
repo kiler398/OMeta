@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// This is a MyMeta Collection. The only two methods meant for public consumption are Count and Item.

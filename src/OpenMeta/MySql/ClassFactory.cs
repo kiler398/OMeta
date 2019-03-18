@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.MySql
+namespace OMeta.MySql
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

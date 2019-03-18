@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IIndex represents an index on a table in your DBMS.

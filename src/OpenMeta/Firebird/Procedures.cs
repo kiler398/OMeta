@@ -3,7 +3,7 @@ using System.Data;
 
 using FirebirdSql.Data.FirebirdClient;
 
-namespace MyMeta.Firebird
+namespace OMeta.Firebird
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

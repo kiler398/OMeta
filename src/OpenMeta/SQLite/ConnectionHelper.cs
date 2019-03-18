@@ -1,7 +1,7 @@
 using System;
 using System.Data.SQLite;
 
-namespace MyMeta.SQLite
+namespace OMeta.SQLite
 {
 	/// <summary>
 	/// Summary description for ConnectionHelper.

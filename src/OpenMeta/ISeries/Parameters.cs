@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.ISeries
+namespace OMeta.ISeries
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

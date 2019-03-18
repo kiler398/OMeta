@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IProperty represents a key/value pair within an PropertyCollection.

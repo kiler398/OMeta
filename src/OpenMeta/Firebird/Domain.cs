@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.Firebird
+namespace OMeta.Firebird
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

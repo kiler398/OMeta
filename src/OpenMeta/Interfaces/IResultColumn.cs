@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IResultColumn represents a column in the result set returned by a Procedure.

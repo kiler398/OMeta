@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 
-namespace MyMeta.Sql
+namespace OMeta.Sql
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

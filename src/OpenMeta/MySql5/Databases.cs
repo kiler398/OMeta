@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.Common;
 using MySql.Data.MySqlClient;
 
-namespace MyMeta.MySql5
+namespace OMeta.MySql5
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

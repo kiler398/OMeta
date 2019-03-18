@@ -10,14 +10,14 @@
     <ApplicationIcon>MetaDataBrowser.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>OpenMyMeta</AssemblyName>
+    <AssemblyName>OMeta</AssemblyName>
     <AssemblyOriginatorKeyFile>OpenMyMeta.pfx</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <RootNamespace>OpenMyMeta</RootNamespace>
+    <RootNamespace>OMeta</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
@@ -40,7 +40,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE;ENTERPRISE</DefineConstants>
-    <DocumentationFile>bin\Debug\OpenMyMeta.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\OMeta.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -289,10 +289,10 @@
     <Compile Include="Columns.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="IMyMetaPluginExt.cs" />
+    <Compile Include="IOMetaPluginExt.cs" />
     <Compile Include="FileDbDriver.cs" />
-    <Compile Include="IMyMetaPluginContext.cs" />
-    <Compile Include="IMyMetaPlugin.cs" />
+    <Compile Include="IOMetaPluginContext.cs" />
+    <Compile Include="IOMetaPlugin.cs" />
     <Compile Include="Interfaces\IProperty.cs" />
     <Compile Include="Interfaces\IPropertyCollection.cs" />
     <Compile Include="Interfaces\ITabularEntity.cs" />

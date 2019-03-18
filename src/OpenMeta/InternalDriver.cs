@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 using ADODB;
 
-namespace MyMeta
+namespace OMeta
 {
     public delegate string ShowOleDbDialogHandler(string connstring);
     public class InternalDriver
@@ -60,10 +60,10 @@ namespace MyMeta
             return null;
         }
 
-        public IMyMetaPlugin CreateMyMetaPluginClass()
+        public IOMetaPlugin CreateMyMetaPluginClass()
         {
-            if (factory.IsSubclassOf(typeof(IMyMetaPlugin)))
-                return factory.Assembly.CreateInstance(factory.Name) as IMyMetaPlugin;
+            if (factory.IsSubclassOf(typeof(IOMetaPlugin)))
+                return factory.Assembly.CreateInstance(factory.Name) as IOMetaPlugin;
             return null;
         }
 

@@ -1,7 +1,7 @@
 using System;
 using System.Xml;
 
-namespace MyMeta
+namespace OMeta
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

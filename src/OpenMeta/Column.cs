@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

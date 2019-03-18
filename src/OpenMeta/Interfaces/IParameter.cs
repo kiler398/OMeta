@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {	
 	/// <summary>
 	/// ParamDirection is a property on <see cref="IParameter"/>

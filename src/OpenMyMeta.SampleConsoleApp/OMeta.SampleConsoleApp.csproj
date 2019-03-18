@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2DCC0D0B-5DA1-4D1A-8A8D-5A8B015AA7BB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OpenMyMeta.SampleConsoleApp</RootNamespace>
-    <AssemblyName>OpenMyMeta.SampleConsoleApp</AssemblyName>
+    <RootNamespace>OMeta.SampleConsoleApp</RootNamespace>
+    <AssemblyName>OMeta.SampleConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenMeta\OpenMyMeta.csproj">
+    <ProjectReference Include="..\OpenMeta\OMeta.csproj">
       <Project>{72beab1c-b55f-4f0e-89af-17f71e74a452}</Project>
-      <Name>OpenMyMeta</Name>
+      <Name>OMeta</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

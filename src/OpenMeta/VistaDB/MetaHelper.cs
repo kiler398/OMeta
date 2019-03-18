@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using Provider.VistaDB;
 
-namespace MyMeta.VistaDB
+namespace OMeta.VistaDB
 {
 	/// <summary>
 	/// Summary description for MetaHelper.

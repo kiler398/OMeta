@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.SQLite;
 
-namespace MyMeta.SQLite
+namespace OMeta.SQLite
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.ISeries
+namespace OMeta.ISeries
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

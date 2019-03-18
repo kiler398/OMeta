@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Collections;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// This interface allows all the collections here to be bound to 

@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyMeta
+namespace OMeta
 {
     public class PluginDriver : InternalDriver
     {
-        private IMyMetaPlugin plugin;
-        internal PluginDriver(IMyMetaPlugin plugin)
+        private IOMetaPlugin plugin;
+        internal PluginDriver(IOMetaPlugin plugin)
             : base(plugin.GetType(),"", false)
         {
             this.plugin = plugin;
@@ -29,7 +29,7 @@ namespace MyMeta
 
         public override string BrowseConnectionString(string connstr)
         {
-            MyMetaPluginContext pluginContext = new MyMetaPluginContext(this.DriverId, connstr);
+            OMetaPluginContext pluginContext = new OMetaPluginContext(this.DriverId, connstr);
             plugin.Initialize(pluginContext);
             return plugin.GetDatabaseSpecificMetaData(null, "BrowseDatabase") as string;
         }

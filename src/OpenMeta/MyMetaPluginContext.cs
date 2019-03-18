@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace MyMeta
+namespace OMeta
 {
-    public class MyMetaPluginContext : IMyMetaPluginContext
+    public class OMetaPluginContext : IOMetaPluginContext
     {
         private bool includeSystemEntities;
         private string connectionString = string.Empty;
         private string providerName = string.Empty;
 
-        public MyMetaPluginContext(string providerName, string connectionString) 
+        public OMetaPluginContext(string providerName, string connectionString) 
         {
             this.providerName = providerName;
             this.connectionString = connectionString;

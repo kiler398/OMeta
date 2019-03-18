@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.Plugin
+namespace OMeta.Plugin
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;
@@ -11,9 +11,9 @@ namespace MyMeta.Plugin
 #endif
 	public class ClassFactory : IClassFactory
 	{
-        private IMyMetaPlugin plugin;
+        private IOMetaPlugin plugin;
 
-		public ClassFactory(IMyMetaPlugin plugin)
+		public ClassFactory(IOMetaPlugin plugin)
 		{
             this.plugin = plugin;
 		}
@@ -147,9 +147,9 @@ namespace MyMeta.Plugin
 
         public void ChangeDatabase(System.Data.IDbConnection connection, string database)
         {
-            if (plugin is IMyMetaPluginExt)
+            if (plugin is IOMetaPluginExt)
             {
-                IMyMetaPluginExt pluginext = plugin as IMyMetaPluginExt;
+                IOMetaPluginExt pluginext = plugin as IOMetaPluginExt;
                 pluginext.ChangeDatabase(connection, database);
             }
             else

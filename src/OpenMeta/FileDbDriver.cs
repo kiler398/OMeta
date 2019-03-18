@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MyMeta
+namespace OMeta
 {
     internal class FileDbDriver : InternalDriver
     {

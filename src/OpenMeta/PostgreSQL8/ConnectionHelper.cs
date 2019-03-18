@@ -1,7 +1,7 @@
 using System;
 using Npgsql;
 
-namespace MyMeta.PostgreSQL8
+namespace OMeta.PostgreSQL8
 {
 	/// <summary>
 	/// Summary description for ConnectionHelper.

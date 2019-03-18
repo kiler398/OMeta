@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.Firebird
+namespace OMeta.Firebird
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

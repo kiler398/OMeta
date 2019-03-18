@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.Advantage
+namespace OMeta.Advantage
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

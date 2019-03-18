@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Reflection;
 
-namespace MyMeta
+namespace OMeta
 {
 
 #if ENTERPRISE

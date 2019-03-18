@@ -10,8 +10,8 @@
     <ProjectGuid>{F2C33C33-D947-4DE6-92DB-0FA32262F9DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OpenMyMeta.UnitTest</RootNamespace>
-    <AssemblyName>OpenMyMeta.UnitTest</AssemblyName>
+    <RootNamespace>OMeta.UnitTest</RootNamespace>
+    <AssemblyName>OMeta.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -81,9 +81,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyMetaMSSQLTests.cs" />
-    <Compile Include="MyMetaMYSQLTests.cs" />
-    <Compile Include="MyMetaSQLLiteTests.cs" />
+    <Compile Include="OMetaMSSQLTests.cs" />
+    <Compile Include="OMetaMYSQLTests.cs" />
+    <Compile Include="OMetaSQLLiteTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,9 +94,9 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenMeta\OpenMyMeta.csproj">
+    <ProjectReference Include="..\OpenMeta\OMeta.csproj">
       <Project>{72beab1c-b55f-4f0e-89af-17f71e74a452}</Project>
-      <Name>OpenMyMeta</Name>
+      <Name>OMeta</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

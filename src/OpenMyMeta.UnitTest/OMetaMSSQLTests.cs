@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using OMeta;
 using Xunit;
 
-namespace MyGeneration.UnitTests
+namespace OMeta.UnitTests
 {
     public class OMetaMSSQLTests
     {

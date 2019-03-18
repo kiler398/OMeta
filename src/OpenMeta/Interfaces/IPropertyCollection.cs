@@ -66,7 +66,7 @@ namespace OMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("A1DCD293-7E94-462F-ACF3-AFA9790A02B3"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("AFE4A7AA-FF41-4534-B68A-F7F93281570F"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IPropertyCollection
 	{
 		/// <summary>

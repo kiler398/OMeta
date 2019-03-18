@@ -28,7 +28,7 @@ namespace OMeta
     /// output.writeln("This Procedure returns " + objProcedure.ResultColumns.Count + " ResultColumns");
     /// </code>
     /// </example>
-    [Guid("57DD1E11-A401-4EC4-B2D6-EB766D0C9B97"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("15D7D85E-C367-4041-812A-5866C055CDC5"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IProcedure
 	{
 		// Collections

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OMeta;
 
-namespace OpenMyMeta.SampleConsoleApp
+namespace OMeta.SampleConsoleApp
 {
     class Program
     {

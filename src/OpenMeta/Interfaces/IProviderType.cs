@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace OMeta
 {
-    [Guid("C7B1A534-B355-4A06-AD0F-FFF4DBF5B374"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("6372789F-91A1-4C87-858F-597A3DBF1FF3"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IProviderType 
 	{
 		string Type { get; }

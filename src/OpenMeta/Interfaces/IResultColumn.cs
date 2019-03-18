@@ -35,7 +35,7 @@ namespace OMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("1C68CD5F-E8D5-4BA2-BD79-E4CDA8DA08D6"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("99516438-1623-4805-A87B-A297E16BB214"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IResultColumn
 	{
 		// Collections

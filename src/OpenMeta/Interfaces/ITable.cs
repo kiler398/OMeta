@@ -39,7 +39,7 @@ namespace OMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("208AC4C1-CB91-4818-BB73-E57D43D64978"),InterfaceType(ComInterfaceType.InterfaceIsDual)] 
+    [Guid("5EB376C8-C24F-4C3F-806A-08AC40936D11"),InterfaceType(ComInterfaceType.InterfaceIsDual)] 
     public interface ITable: IEquatable<ITable>
 	{
 		// Collections

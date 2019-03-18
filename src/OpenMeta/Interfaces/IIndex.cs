@@ -36,7 +36,7 @@ namespace OMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("A9888A00-338A-49FE-A5A7-77AD895D520E"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("5CA4B7AB-BC56-41B8-97F9-353E8019FE63"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IIndex
 	{
 		// Objects

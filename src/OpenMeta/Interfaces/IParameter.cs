@@ -63,7 +63,7 @@ namespace OMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("B6C01D8A-455E-421F-A20C-3EB1A70B9F18"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("D10629C8-036A-474D-B2D8-B508EFB4BDA3"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IParameter
 	{
 		/// <summary>

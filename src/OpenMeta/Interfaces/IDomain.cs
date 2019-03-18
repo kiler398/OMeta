@@ -7,7 +7,7 @@ namespace OMeta
     /// <summary>
     /// Summary description for IDomain.
     /// </summary>
-    [Guid("6EB71313-2F98-4318-B2B3-8B13B8C5753F"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("31EAF14E-BCDD-4D25-AB22-50041E659A83"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IDomain
 	{
 		/// <summary>

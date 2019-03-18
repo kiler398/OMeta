@@ -8,7 +8,7 @@ namespace OMeta
     /// <summary>
     /// This is a MyMeta Collection. The only two methods meant for public consumption are Count and Item.
     /// </summary>
-    [Guid("D7101BD2-C132-46BD-8C29-B1E5DAA41588"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("538997F5-480F-43BC-B7D7-36ED81175FF5"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface ITables : IList, IEnumerable<ITable>
 	{
 		// User Meta Data

@@ -2,16 +2,16 @@
 <package >
   <metadata>
     <id>OMeta</id>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
     <authors>kiler398</authors>
     <owners>kiler398</owners>
     <licenseUrl>https://opensource.org/licenses/mit-license.html</licenseUrl>
     <projectUrl>https://github.com/kiler398/OpenMyMeta</projectUrl>
-    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>--> 
+    <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>OMeta 是一个关系型数据库元数据信息获取工具，把数据库->表->列，主键、外键、索引、默认值、备注、存储过程、函数、视图等抽象为对象，易于供代码生成工具生成代码使用。</description>
     <releaseNotes>
-      # 0.3.0
+      # 0.3.1
 
       * 项目初始化
       * 增加部分文档
@@ -21,22 +21,6 @@
     </releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>DataBase Meta OMeta</tags>
-    <dependencies>
-      <dependency id="EntityFramework" version="6.2.0" />
-      <dependency id="FirebirdSql.Data.FirebirdClient" version="6.5.0" />
-      <dependency id="Google.Protobuf" version="3.7.0" />
-      <dependency id="MySql.Data" version="8.0.15" />
-      <dependency id="Npgsql" version="4.0.5" />
-      <dependency id="System.Buffers" version="4.5.0" />
-      <dependency id="System.Data.SQLite" version="1.0.110.0" />
-      <dependency id="System.Data.SQLite.Core" version="1.0.110.0" />
-      <dependency id="System.Data.SQLite.EF6" version="1.0.110.0" />
-      <dependency id="System.Data.SQLite.Linq" version="1.0.110.0" />
-      <dependency id="System.Memory" version="4.5.2" />
-      <dependency id="System.Numerics.Vectors" version="4.6.0-preview3.19128.7" />
-      <dependency id="System.Runtime.CompilerServices.Unsafe" version="4.6.0-preview3.19128.7" />
-      <dependency id="System.Threading.Tasks.Extensions" version="4.6.0-preview.18571.3" />
-      <dependency id="System.ValueTuple" version="4.5.0" />
-    </dependencies>
+ 
   </metadata>
 </package>

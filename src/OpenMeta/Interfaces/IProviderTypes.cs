@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
-    [Guid("A62F62DA-81F0-4FB2-83A9-F1F84CB203DD"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("9E3B6733-D96C-48C5-820B-DA3C4AEE6E31"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IProviderTypes
 	{
 		[DispId(0)]

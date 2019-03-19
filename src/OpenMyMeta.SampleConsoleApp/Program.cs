@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyMeta;
+using OMeta;
 
-namespace OpenMyMeta.SampleConsoleApp
+namespace OMeta.SampleConsoleApp
 {
     class Program
     {

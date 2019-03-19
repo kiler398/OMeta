@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IDatabase represents a databaase in your DBMS.
@@ -37,7 +37,7 @@ namespace MyMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("28390206-0D55-429D-8D17-C2DD1873AAE2"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("0926AE22-EA06-45B1-ACAB-B4BF58BCDC6C"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IDatabase
 	{
 		// Collections

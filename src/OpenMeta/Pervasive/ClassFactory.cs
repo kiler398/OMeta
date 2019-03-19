@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.Pervasive
+namespace OMeta.Pervasive
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IView represents a view in your DBMS.
@@ -38,7 +38,7 @@ namespace MyMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("3C797523-4407-4AFC-9369-2F6F8BDF5A96"),InterfaceType(ComInterfaceType.InterfaceIsDual)] 
+    [Guid("CBB55D79-6B93-4F9F-862B-CCA6F89FD43F"),InterfaceType(ComInterfaceType.InterfaceIsDual)] 
     public interface IView
 	{
 		// Collections

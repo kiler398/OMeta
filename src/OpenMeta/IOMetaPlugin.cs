@@ -4,16 +4,16 @@ using System.Text;
 using System.Data;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
 	[ComVisible(false)]
-	public interface IMyMetaPlugin
+	public interface IOMetaPlugin
     {
         /// <summary>
         /// Initialize the plugin
         /// </summary>
         /// <param name="context"></param>
-        void Initialize(IMyMetaPluginContext context);
+        void Initialize(IOMetaPluginContext context);
 
         /// <summary>
         /// The providers unique key

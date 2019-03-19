@@ -3,7 +3,7 @@ using System.Data;
 using Npgsql;
 
 
-namespace MyMeta.PostgreSQL
+namespace OMeta.PostgreSQL
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

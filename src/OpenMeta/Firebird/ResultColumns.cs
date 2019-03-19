@@ -1,7 +1,7 @@
 using System;
 using System.Data;
 
-namespace MyMeta.Firebird
+namespace OMeta.Firebird
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

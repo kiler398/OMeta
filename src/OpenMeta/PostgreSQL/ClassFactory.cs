@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.PostgreSQL
+namespace OMeta.PostgreSQL
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

@@ -4,10 +4,13 @@ using System.Text;
 using System.Data;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
+	/// <summary>
+	/// 
+	/// </summary>
 	[ComVisible(false)]
-    public interface IMyMetaPluginContext
+    public interface IOMetaPluginContext
     {
         /// <summary>
         /// Should the system tables, views, etc be included when calling the plugin for MetaData?

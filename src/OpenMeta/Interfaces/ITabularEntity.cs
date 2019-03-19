@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Collections;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// This interface allows all the collections here to be bound to 
     /// Name/Value collection type objects. with ease
     /// </summary>
-    [Guid("20236F44-585E-4CB8-984D-33960E88ECDD"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("98DE3491-69A2-46BF-B36D-2E860EFFB8BA"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface ITabularEntity
     {
         /// <summary>

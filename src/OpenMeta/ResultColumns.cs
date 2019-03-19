@@ -2,7 +2,7 @@ using System;
 using System.Xml;
 using System.Collections;
 
-namespace MyMeta
+namespace OMeta
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

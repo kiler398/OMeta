@@ -2,12 +2,12 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.Access
+namespace OMeta.Access
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
     /// <summary>
-    /// AccessÊý¾Ý¿â±íÔªÊý¾ÝÐÅÏ¢
+    /// Accessï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
     /// </summary>
     [ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITable))]
 #endif 

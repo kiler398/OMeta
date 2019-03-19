@@ -1,4 +1,4 @@
-# OMeta 　　　　　　　　　　　　　　　　　　　　　　[文档](https://kiler398.github.io/OMeta/)
+# OMeta - 简单、高效的关系数据库元数据信息提取方案　　　　　[文档](https://kiler398.github.io/OMeta/)
 
 ## 项目简介
 

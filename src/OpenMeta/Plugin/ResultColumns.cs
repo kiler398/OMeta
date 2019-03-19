@@ -3,7 +3,7 @@ using System.Collections;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.Plugin
+namespace OMeta.Plugin
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
@@ -11,9 +11,9 @@ namespace MyMeta.Plugin
 #endif 
 	public class PluginResultColumns : ResultColumns
     {
-        private IMyMetaPlugin plugin;
+        private IOMetaPlugin plugin;
 
-        public PluginResultColumns(IMyMetaPlugin plugin)
+        public PluginResultColumns(IOMetaPlugin plugin)
         {
             this.plugin = plugin;
         }

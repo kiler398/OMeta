@@ -4,17 +4,17 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyMeta;
+using OMeta;
 using Xunit;
 
-namespace MyGeneration.UnitTests
+namespace OMeta.UnitTests
 {
-    public class MyMetaMSSQLTests
+    public class OMetaMSSQLTests
     {
 
         private dbRoot dbRoot;
 
-        public MyMetaMSSQLTests()
+        public OMetaMSSQLTests()
         {
             string basePath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 

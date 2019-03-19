@@ -5,7 +5,7 @@ using System.Data.OleDb;
 using Npgsql;
 using ADODB;
 
-namespace MyMeta.PostgreSQL8
+namespace OMeta.PostgreSQL8
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

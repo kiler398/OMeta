@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IColumn represents a column or field in your DBMS. IColumn is used to represent columns for both Tables and Views.
@@ -48,7 +48,7 @@ namespace MyMeta
     /// }
     ///	</code>
     /// </example>
-    [Guid("511FCD8C-385D-4194-A424-35EDF89A5B3E"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("EBBF80B6-2A96-4D9D-8AA1-C393DAAC25D9"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IColumn : IEquatable<IColumn>
 	{
 		// Objects

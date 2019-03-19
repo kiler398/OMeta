@@ -1,7 +1,7 @@
 // #define IGNORE_VISTA // if defined in csproj compile without VISTADB
 // #define ENTERPRISE // if defined in csproj create com component
 
-// #define PLUGINS_FROM_SUBDIRS  // if defined Plugins can also live in subdirectories of the MyMeta-bin-dir
+// #define PLUGINS_FROM_SUBDIRS  // if defined Plugins can also live in subdirectories of the OMeta-bin-dir
 /*
  * PLUGINS_FROM_SUBDIRS disabled because k3b found no way to use dll-s in scrips
  *  tried <%#REFERENCE subdir\myDll.dll  %> ==> script compiler error not found
@@ -25,22 +25,22 @@ using System.Diagnostics;
 using Npgsql;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data.SQLite;
-using MyMeta.VistaDB;
 using MySql.Data.MySqlClient;
-using ClassFactory = MyMeta.Sql.ClassFactory;
+using OMeta.VistaDB;
+using ClassFactory = OMeta.Sql.ClassFactory;
 
-namespace MyMeta
+namespace OMeta
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
 	using System.EnterpriseServices;
 
     /// <summary>
-    /// MyMeta is the root of the MyMeta meta-data. MyMeta is an intrinsic object available to your script and configured based on the settings
+    /// OMeta is the root of the OMeta meta-data. OMeta is an intrinsic object available to your script and configured based on the settings
     /// you have entered in the Default Settings dialog. It is already connected before you script execution begins.
     /// </summary>
     /// <remarks>
-    ///	MyMeta has 1 Collection:
+    ///	OMeta has 1 Collection:
     /// <list type="table">
     ///		<item><term>Databases</term><description>Contains a collection of all of the databases in your system</description></item>
     ///	</list>
@@ -48,41 +48,41 @@ namespace MyMeta
     /// pairs to the User Meta Data either through the user interface of MyGeneration or 
     /// programmatically in your scripts.  User meta data is stored in XML and never writes to your database.
     ///
-    /// This can be very useful, you might need more meta data than MyMeta supplies, in fact,
-    /// MyMeta will eventually offer extended meta data using this feature as well. The current plan
-    /// is that any extended data added via MyGeneration will have a key that beings with "MyMeta.Something"
+    /// This can be very useful, you might need more meta data than OMeta supplies, in fact,
+    /// OMeta will eventually offer extended meta data using this feature as well. The current plan
+    /// is that any extended data added via MyGeneration will have a key that beings with "OMeta.Something"
     /// where 'Something' equals the description. 
     /// </remarks>
     /// <example>
     ///	VBScript - ****** NOTE ****** You never have to actually write this code, this is for education purposes only.
     ///	<code>
-    ///	MyMeta.Connect "SQL", "Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost"
+    ///	OMeta.Connect "SQL", "Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost"
     ///	
-    ///	MyMeta.DbTarget	= "SqlClient"
-    ///	MyMeta.DbTargetMappingFileName = "C:\Program Files\MyGeneration\Settings\DbTargets.xml"
+    ///	OMeta.DbTarget	= "SqlClient"
+    ///	OMeta.DbTargetMappingFileName = "C:\Program Files\MyGeneration\Settings\DbTargets.xml"
     ///	
-    /// MyMeta.Language = "VB.NET"
-    /// MyMeta.LanguageMappingFileName = "C:\Program Files\MyGeneration\Settings\Languages.xml"
+    /// OMeta.Language = "VB.NET"
+    /// OMeta.LanguageMappingFileName = "C:\Program Files\MyGeneration\Settings\Languages.xml"
     /// 
-    /// MyMeta.UserMetaDataFileName = "C:\Program Files\MyGeneration\Settings\UserMetaData.xml"
+    /// OMeta.UserMetaDataFileName = "C:\Program Files\MyGeneration\Settings\UserMetaData.xml"
     /// </code>
     ///	JScript - ****** NOTE ****** You never have to actually write this code, this is for education purposes only.
     ///	<code>
-    ///	MyMeta.Connect("SQL", "Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost")
+    ///	OMeta.Connect("SQL", "Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost")
     ///	
-    ///	MyMeta.DbTarget	= "SqlClient";
-    ///	MyMeta.DbTargetMappingFileName = "C:\Program Files\MyGeneration\Settings\DbTargets.xml";
+    ///	OMeta.DbTarget	= "SqlClient";
+    ///	OMeta.DbTargetMappingFileName = "C:\Program Files\MyGeneration\Settings\DbTargets.xml";
     ///	
-    /// MyMeta.Language = "VB.NET";
-    /// MyMeta.LanguageMappingFileName = "C:\Program Files\MyGeneration\Settings\Languages.xml";
+    /// OMeta.Language = "VB.NET";
+    /// OMeta.LanguageMappingFileName = "C:\Program Files\MyGeneration\Settings\Languages.xml";
     /// 
-    /// MyMeta.UserMetaDataFileName = "C:\Program Files\MyGeneration\Settings\UserMetaData.xml";
+    /// OMeta.UserMetaDataFileName = "C:\Program Files\MyGeneration\Settings\UserMetaData.xml";
     /// </code>
     /// The above code is done for you long before you execute your script and the values come from the Default Settings Dialog.
     /// However, you can override these defaults as many of the sample scripts do. For instance, if you have a script that is for SqlClient
-    /// only go ahead and set the MyMeta.DbTarget in your script thus overriding the Default Settings.
+    /// only go ahead and set the OMeta.DbTarget in your script thus overriding the Default Settings.
     /// </example>
-    [Guid("65D326EC-A1A8-483A-88BC-2B7C831CB0CD"),ClassInterface(ClassInterfaceType.AutoDual)]
+    [Guid("F5D4E856-6770-4CBF-A2FA-93AE095DE51E"),ClassInterface(ClassInterfaceType.AutoDual)]
     public class dbRoot : ServicedComponent
 #else
 	public class dbRoot 
@@ -142,7 +142,7 @@ namespace MyMeta
 			_languageNode = null;
 
 			UserData = new XmlDocument();
-			UserData.AppendChild(UserData.CreateNode(XmlNodeType.Element, "MyMeta", null));
+			UserData.AppendChild(UserData.CreateNode(XmlNodeType.Element, "OMeta", null));
 
 			// DbTarget
 			_dbTargetMappingFileName = string.Empty;
@@ -156,7 +156,7 @@ namespace MyMeta
             object o = null;
             if (Plugins.ContainsKey(providerName))
             {
-                o = (Plugins[providerName] as IMyMetaPlugin).GetDatabaseSpecificMetaData(null, key);
+                o = (Plugins[providerName] as IOMetaPlugin).GetDatabaseSpecificMetaData(null, key);
             }
             return o;
         }
@@ -266,25 +266,25 @@ namespace MyMeta
 			IDbConnection conn = null;
 			switch(driver.ToUpper())
 			{
-                case MyMetaDrivers.MySql2:
+                case OMetaDrivers.MySql2:
                     conn = new MySqlConnection(connectionString);
 					break;
 
-                case MyMetaDrivers.PostgreSQL:
-                case MyMetaDrivers.PostgreSQL8:
+                case OMetaDrivers.PostgreSQL:
+                case OMetaDrivers.PostgreSQL8:
 					conn = new Npgsql.NpgsqlConnection(connectionString);
 					break;
 
-                case MyMetaDrivers.Firebird:
-                case MyMetaDrivers.Interbase:
+                case OMetaDrivers.Firebird:
+                case OMetaDrivers.Interbase:
 					conn = new FirebirdSql.Data.FirebirdClient.FbConnection(connectionString);
                     break;
 
-                case MyMetaDrivers.SQLite:
+                case OMetaDrivers.SQLite:
                     conn = new SQLiteConnection(connectionString);
                     break;
 #if !IGNORE_VISTA
-                case MyMetaDrivers.VistaDB:	
+                case OMetaDrivers.VistaDB:	
 					try
 					{
 						MetaHelper mh = new MetaHelper();
@@ -311,7 +311,7 @@ namespace MyMeta
         }
 
 		/// <summary>
-		/// This is how you connect to your DBMS system using MyMeta. This is already called for you before your script beings execution.
+		/// This is how you connect to your DBMS system using OMeta. This is already called for you before your script beings execution.
 		/// </summary>
 		/// <param name="driver">A string as defined in the remarks below</param>
 		/// <param name="connectionString">A valid connection string for you DBMS</param>
@@ -338,7 +338,7 @@ namespace MyMeta
 		/// Below are some sample connection strings. However, the "Data Link" dialog available on the Default Settings dialog can help you.
 		/// <list type="table">
 		///		<item><term>"ACCESS"</term><description>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=c:\access\newnorthwind.mdb;User Id=;Password=</description></item>
-		///		<item><term>"DB2"</term><description>Provider=IBMDADB2.1;Password=sa;User ID=DB2Admin;Data Source=MyMeta;Persist Security Info=True</description></item>	
+		///		<item><term>"DB2"</term><description>Provider=IBMDADB2.1;Password=sa;User ID=DB2Admin;Data Source=OMeta;Persist Security Info=True</description></item>	
 		///		<item><term>"MYSQL"</term><description>Provider=MySQLProv;Persist Security Info=True;Data Source=test;UID=griffo;PWD=;PORT=3306</description></item>
 		///		<item><term>"MYSQL2"</term><description>Uses Database=Test;Data Source=Griffo;User Id=anonymous;</description></item>
 		///		<item><term>"ORACLE"</term><description>Provider=OraOLEDB.Oracle.1;Password=sa;Persist Security Info=True;User ID=GRIFFO;Data Source=dbMeta</description></item>
@@ -359,27 +359,27 @@ namespace MyMeta
             string driver = driverIn.ToUpper();
             switch (driver)
             {
-                case MyMetaDrivers.None:
+                case OMetaDrivers.None:
                     return true;
 #if !IGNORE_VISTA
-                case MyMetaDrivers.VistaDB:
+                case OMetaDrivers.VistaDB:
 #endif
-                case MyMetaDrivers.SQL:
-                case MyMetaDrivers.Oracle:
-                case MyMetaDrivers.Access:
-                case MyMetaDrivers.MySql:
-                case MyMetaDrivers.MySql2:
-                case MyMetaDrivers.DB2:
-                case MyMetaDrivers.ISeries:
-                case MyMetaDrivers.Pervasive:
-                case MyMetaDrivers.PostgreSQL:
-                case MyMetaDrivers.PostgreSQL8:
-                case MyMetaDrivers.Firebird:
-                case MyMetaDrivers.Interbase:
-                case MyMetaDrivers.SQLite:
-                case MyMetaDrivers.Advantage:
+                case OMetaDrivers.SQL:
+                case OMetaDrivers.Oracle:
+                case OMetaDrivers.Access:
+                case OMetaDrivers.MySql:
+                case OMetaDrivers.MySql2:
+                case OMetaDrivers.DB2:
+                case OMetaDrivers.ISeries:
+                case OMetaDrivers.Pervasive:
+                case OMetaDrivers.PostgreSQL:
+                case OMetaDrivers.PostgreSQL8:
+                case OMetaDrivers.Firebird:
+                case OMetaDrivers.Interbase:
+                case OMetaDrivers.SQLite:
+                case OMetaDrivers.Advantage:
                     return this.Connect(
-                        MyMetaDrivers.GetDbDriverFromName(driver),
+                        OMetaDrivers.GetDbDriverFromName(driver),
                         driver,
                         connectionString);
                 default:
@@ -429,7 +429,7 @@ namespace MyMeta
                     case dbDriver.SQL:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.SQL;
+                        this._driverString = OMetaDrivers.SQL;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = true;
                         ClassFactory = new Sql.ClassFactory();
@@ -438,7 +438,7 @@ namespace MyMeta
                     case dbDriver.Oracle:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.Oracle;
+                        this._driverString = OMetaDrivers.Oracle;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = true;
                         ClassFactory = new Oracle.ClassFactory();
@@ -447,7 +447,7 @@ namespace MyMeta
                     case dbDriver.Access:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.Access;
+                        this._driverString = OMetaDrivers.Access;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new Access.ClassFactory();
@@ -456,7 +456,7 @@ namespace MyMeta
                     case dbDriver.MySql:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.MySql;
+                        this._driverString = OMetaDrivers.MySql;
                         this.StripTrailingNulls = true;
                         this.requiredDatabaseName = true;
                         ClassFactory = new MySql.ClassFactory();
@@ -471,7 +471,7 @@ namespace MyMeta
                             this._defaultDatabase = mysqlconn.Database;
                         }
 
-                        this._driverString = MyMetaDrivers.MySql2;
+                        this._driverString = OMetaDrivers.MySql2;
                         this.StripTrailingNulls = true;
                         this.requiredDatabaseName = true;
                         ClassFactory = new MySql5.ClassFactory();
@@ -480,7 +480,7 @@ namespace MyMeta
                     case dbDriver.DB2:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.DB2;
+                        this._driverString = OMetaDrivers.DB2;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new DB2.ClassFactory();
@@ -489,7 +489,7 @@ namespace MyMeta
                     case dbDriver.ISeries:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.ISeries;
+                        this._driverString = OMetaDrivers.ISeries;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new ISeries.ClassFactory();
@@ -498,7 +498,7 @@ namespace MyMeta
                     case dbDriver.Pervasive:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.Pervasive;
+                        this._driverString = OMetaDrivers.Pervasive;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new Pervasive.ClassFactory();
@@ -512,7 +512,7 @@ namespace MyMeta
                             this._defaultDatabase = cn.Database;
                         }
 
-                        this._driverString = MyMetaDrivers.PostgreSQL;
+                        this._driverString = OMetaDrivers.PostgreSQL;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new PostgreSQL.ClassFactory();
@@ -526,7 +526,7 @@ namespace MyMeta
                             this._defaultDatabase = cn8.Database;
                         }
 
-                        this._driverString = MyMetaDrivers.PostgreSQL8;
+                        this._driverString = OMetaDrivers.PostgreSQL8;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new PostgreSQL8.ClassFactory();
@@ -550,7 +550,7 @@ namespace MyMeta
                         }
                         catch { }
 
-                        this._driverString = MyMetaDrivers.Firebird;
+                        this._driverString = OMetaDrivers.Firebird;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new Firebird.ClassFactory();
@@ -564,7 +564,7 @@ namespace MyMeta
                             this._defaultDatabase = cn2.Database;
                         }
 
-                        this._driverString = MyMetaDrivers.Interbase;
+                        this._driverString = OMetaDrivers.Interbase;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new Firebird.ClassFactory();
@@ -579,7 +579,7 @@ namespace MyMeta
 
                             if (!string.IsNullOrEmpty(dbName)) this._defaultDatabase = dbName;
                         }
-                        this._driverString = MyMetaDrivers.SQLite;
+                        this._driverString = OMetaDrivers.SQLite;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new SQLite.ClassFactory();
@@ -596,7 +596,7 @@ namespace MyMeta
 
                             this._defaultDatabase = dbName;
 
-                            this._driverString = MyMetaDrivers.VistaDB;
+                            this._driverString = OMetaDrivers.VistaDB;
                             this.StripTrailingNulls = false;
                             this.requiredDatabaseName = false;
                             ClassFactory = new VistaDB.ClassFactory();
@@ -611,7 +611,7 @@ namespace MyMeta
                     case dbDriver.Advantage:
 
                         ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = MyMetaDrivers.Advantage;
+                        this._driverString = OMetaDrivers.Advantage;
                         this.StripTrailingNulls = false;
                         this.requiredDatabaseName = false;
                         ClassFactory = new Advantage.ClassFactory();
@@ -621,7 +621,7 @@ namespace MyMeta
 
                     case dbDriver.Plugin:
 
-                        IMyMetaPlugin plugin;
+                        IOMetaPlugin plugin;
                         using (IDbConnection connection = this.GetConnectionFromPlugin(pluginName, _connectionString, out plugin))
                         {
                             if (connection != null)
@@ -638,7 +638,7 @@ namespace MyMeta
 
                     case dbDriver.None:
 
-                        this._driverString = MyMetaDrivers.None;
+                        this._driverString = OMetaDrivers.None;
                         break;
                 }
             }
@@ -746,7 +746,7 @@ namespace MyMeta
 		}
 
 		/// <summary>
-		/// True if MyMeta has been successfully connected to your DBMS, False if not.
+		/// True if OMeta has been successfully connected to your DBMS, False if not.
 		/// </summary>
 		public bool IsConnected
 		{
@@ -757,7 +757,7 @@ namespace MyMeta
 		}
 
 		/// <summary>
-		/// Returns MyMeta's current dbDriver enumeration value as defined by its current connection.
+		/// Returns OMeta's current dbDriver enumeration value as defined by its current connection.
 		/// </summary>
 		public dbDriver Driver
 		{
@@ -768,7 +768,7 @@ namespace MyMeta
 		}
 
 		/// <summary>
-		/// Returns MyMeta's current DriverString as defined by its current connection.
+		/// Returns OMeta's current DriverString as defined by its current connection.
 		/// </summary>
 		/// <remarks>
 		/// These are the current possible values.
@@ -888,7 +888,7 @@ namespace MyMeta
             {
                 if (Plugins.ContainsKey(providerName))
                 {
-                    o = (Plugins[providerName] as IMyMetaPlugin).GetDatabaseSpecificMetaData(null, key);
+                    o = (Plugins[providerName] as IOMetaPlugin).GetDatabaseSpecificMetaData(null, key);
                 }
             }
             catch { }
@@ -902,7 +902,7 @@ namespace MyMeta
         /// <returns></returns>
         private IDbConnection GetConnectionFromPlugin(string providerName, string pluginConnectionString)
         {
-            IMyMetaPlugin plugin;
+            IOMetaPlugin plugin;
 
             return GetConnectionFromPlugin(providerName, pluginConnectionString, out plugin);
         }
@@ -913,18 +913,18 @@ namespace MyMeta
         /// <param name="pluginConnectionString">Sample: PluginName;Provider=SQLOLEDB.1;Persist Security Info=True;User ID=sa;Data Source=localhost</param>
         /// <param name="plugin">Returns the plugin object.</param>
         /// <returns></returns>
-        private IDbConnection GetConnectionFromPlugin(string providerName, string pluginConnectionString, out IMyMetaPlugin plugin)
+        private IDbConnection GetConnectionFromPlugin(string providerName, string pluginConnectionString, out IOMetaPlugin plugin)
         {
-            MyMetaPluginContext pluginContext = new MyMetaPluginContext(providerName, pluginConnectionString);
+            OMetaPluginContext pluginContext = new OMetaPluginContext(providerName, pluginConnectionString);
 
             IDbConnection connection = null;
             if (!Plugins.ContainsKey(providerName))
             {
-                throw new Exception("MyMeta Plugin \"" + providerName + "\" not registered.");
+                throw new Exception("OMeta Plugin \"" + providerName + "\" not registered.");
             }
             else
             {
-                plugin = Plugins[providerName] as IMyMetaPlugin;
+                plugin = Plugins[providerName] as IOMetaPlugin;
                 plugin.Initialize(pluginContext);
 
                 connection = plugin.NewConnection;
@@ -951,9 +951,9 @@ namespace MyMeta
 
 #if PLUGINS_FROM_SUBDIRS
                         // k3b allow plugins to be in its own directory
-                        foreach (FileInfo dllFile in info.Directory.GetFiles("MyMeta.Plugins.*.dll",SearchOption.AllDirectories))
+                        foreach (FileInfo dllFile in info.Directory.GetFiles("OMeta.Plugins.*.dll",SearchOption.AllDirectories))
 #else                        
-                        foreach (FileInfo dllFile in info.Directory.GetFiles("MyMeta.Plugins.*.dll"))
+                        foreach (FileInfo dllFile in info.Directory.GetFiles("OMeta.Plugins.*.dll"))
 #endif                        
                         {
                         	try
@@ -993,14 +993,14 @@ namespace MyMeta
                 Type[] interfaces = type.GetInterfaces();
                 foreach (Type iface in interfaces)
                 {
-                    if (iface == typeof(IMyMetaPlugin))
+                    if (iface == typeof(IOMetaPlugin))
                     {
                         try
                         {
                             ConstructorInfo[] constructors = type.GetConstructors();
                             ConstructorInfo constructor = constructors[0];
 
-                            IMyMetaPlugin plugin = constructor.Invoke(BindingFlags.CreateInstance, null, new object[] { }, null) as IMyMetaPlugin;
+                            IOMetaPlugin plugin = constructor.Invoke(BindingFlags.CreateInstance, null, new object[] { }, null) as IOMetaPlugin;
                             InternalDriver.Register(plugin.ProviderUniqueKey,
                                                     new PluginDriver(plugin));
 
@@ -1035,7 +1035,7 @@ namespace MyMeta
 		{ 
 			get
 			{
-				return @"//MyMeta";
+				return @"//OMeta";
 			} 
 		}
 
@@ -1048,12 +1048,12 @@ namespace MyMeta
 			{
 				if(!UserData.HasChildNodes)
 				{
-					_xmlNode = UserData.CreateNode(XmlNodeType.Element, "MyMeta", null);
+					_xmlNode = UserData.CreateNode(XmlNodeType.Element, "OMeta", null);
 					UserData.AppendChild(_xmlNode);
 				}
 				else
 				{
-					_xmlNode = UserData.SelectSingleNode("./MyMeta");
+					_xmlNode = UserData.SelectSingleNode("./OMeta");
 				}
 			}
 
@@ -1121,13 +1121,13 @@ namespace MyMeta
 
             XmlDocument newDoc = new XmlDocument();
             newDoc.Load(fmInf.FullName);
-            XmlNode newDocRoot = newDoc.SelectSingleNode("//MyMeta/Databases/Database[@p='" + db1 + "']");
+            XmlNode newDocRoot = newDoc.SelectSingleNode("//OMeta/Databases/Database[@p='" + db1 + "']");
 
             XmlDocument otherDoc = new XmlDocument();
             otherDoc.Load(f2Inf.FullName);
-            XmlNode otherDocRoot = otherDoc.SelectSingleNode("//MyMeta/Databases/Database[@p='" + db2 + "']");
+            XmlNode otherDocRoot = otherDoc.SelectSingleNode("//OMeta/Databases/Database[@p='" + db2 + "']");
 
-            MergeXml(newDoc, newDocRoot, "//MyMeta/Databases/Database[@p='" + db1 + "']", otherDoc, otherDocRoot, "//MyMeta/Databases/Database[@p='" + db2 + "']");
+            MergeXml(newDoc, newDocRoot, "//OMeta/Databases/Database[@p='" + db1 + "']", otherDoc, otherDocRoot, "//OMeta/Databases/Database[@p='" + db2 + "']");
 
             newDoc.Save(fmInf.FullName);
         }
@@ -1219,7 +1219,7 @@ namespace MyMeta
 		}
 
 		/// <summary>
-		/// Returns all of the languages for a given driver, regardless of MyMeta's current connection
+		/// Returns all of the languages for a given driver, regardless of OMeta's current connection
 		/// </summary>
 		/// <returns>An array with all of the possible languages.</returns>
 		public string[] GetLanguageMappings(string driverString)
@@ -1320,7 +1320,7 @@ namespace MyMeta
 		}
 
 		/// <summary>
-		/// Returns all of the dbTargets for a given driver, regardless of MyMeta's current connection
+		/// Returns all of the dbTargets for a given driver, regardless of OMeta's current connection
 		/// </summary>
 		/// <returns>An array with all of the possible dbTargets.</returns>
 		public string[] GetDbTargetMappings(string driverString)
@@ -1418,10 +1418,10 @@ namespace MyMeta
 	}
 
     /// <summary>
-    /// The current list of support dbDrivers. Typically VBScript and JScript use the string version as defined by MyMeta.DriverString.
+    /// The current list of support dbDrivers. Typically VBScript and JScript use the string version as defined by OMeta.DriverString.
     /// </summary>
 #if ENTERPRISE
-    [Guid("79D31554-FD23-4E6B-B4F1-CA2F68B5FFEB")]
+    [Guid("20DB2841-ECDA-448C-BB7D-15F7130E169F")]
 #endif
     public enum dbDriver
 	{
@@ -1513,8 +1513,8 @@ namespace MyMeta
 		None
     }
 
-    #region MyMetaDrivers string Constants
-    public static class MyMetaDrivers
+    #region OMetaDrivers string Constants
+    public static class OMetaDrivers
     {
         public const string Access = "ACCESS";
         public const string Advantage = "ADVANTAGE";
@@ -1538,39 +1538,39 @@ namespace MyMeta
         {
             switch (name)
             {
-                case MyMetaDrivers.SQL:
+                case OMetaDrivers.SQL:
                     return dbDriver.SQL;
-                case MyMetaDrivers.Oracle:
+                case OMetaDrivers.Oracle:
                     return dbDriver.Oracle;
-                case MyMetaDrivers.Access:
+                case OMetaDrivers.Access:
                     return dbDriver.Access;
-                case MyMetaDrivers.MySql:
+                case OMetaDrivers.MySql:
                     return dbDriver.MySql;
-                case MyMetaDrivers.MySql2:
+                case OMetaDrivers.MySql2:
                     return dbDriver.MySql2;
-                case MyMetaDrivers.DB2:
+                case OMetaDrivers.DB2:
                     return dbDriver.DB2;
-                case MyMetaDrivers.ISeries:
+                case OMetaDrivers.ISeries:
                     return dbDriver.ISeries;
-                case MyMetaDrivers.Pervasive:
+                case OMetaDrivers.Pervasive:
                     return dbDriver.Pervasive;
-                case MyMetaDrivers.PostgreSQL:
+                case OMetaDrivers.PostgreSQL:
                     return dbDriver.PostgreSQL;
-                case MyMetaDrivers.PostgreSQL8:
+                case OMetaDrivers.PostgreSQL8:
                     return dbDriver.PostgreSQL8;
-                case MyMetaDrivers.Firebird:
+                case OMetaDrivers.Firebird:
                     return dbDriver.Firebird;
-                case MyMetaDrivers.Interbase:
+                case OMetaDrivers.Interbase:
                     return dbDriver.Interbase;
-                case MyMetaDrivers.SQLite:
+                case OMetaDrivers.SQLite:
                     return dbDriver.SQLite;
 #if !IGNORE_VISTA
-                case MyMetaDrivers.VistaDB:
+                case OMetaDrivers.VistaDB:
                     return dbDriver.VistaDB;
 #endif
-                case MyMetaDrivers.Advantage:
+                case OMetaDrivers.Advantage:
                     return dbDriver.Advantage;
-                case MyMetaDrivers.None:
+                case OMetaDrivers.None:
                     return dbDriver.None;
                 default:
                     return dbDriver.Plugin;

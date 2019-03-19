@@ -1,8 +1,8 @@
 using System;
-using MyMeta;
+using OMeta;
 using MySql.Data.MySqlClient;
 
-namespace MyMeta.MySql5
+namespace OMeta.MySql5
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

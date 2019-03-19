@@ -1,7 +1,7 @@
 using System;
 using System.Data;
 
-namespace MyMeta.MySql5
+namespace OMeta.MySql5
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

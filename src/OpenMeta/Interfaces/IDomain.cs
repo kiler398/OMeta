@@ -2,12 +2,12 @@ using System;
 using System.Runtime.InteropServices;
 
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// Summary description for IDomain.
     /// </summary>
-    [Guid("A67D75C9-0032-4F72-8222-0A0950216824"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("31EAF14E-BCDD-4D25-AB22-50041E659A83"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IDomain
 	{
 		/// <summary>

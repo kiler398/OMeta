@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.Plugin
+namespace OMeta.Plugin
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
@@ -10,9 +10,9 @@ namespace MyMeta.Plugin
 #endif 
 	public class PluginTables : Tables
     {
-        private IMyMetaPlugin plugin;
+        private IOMetaPlugin plugin;
 
-        public PluginTables(IMyMetaPlugin plugin)
+        public PluginTables(IOMetaPlugin plugin)
         {
             this.plugin = plugin;
 		}

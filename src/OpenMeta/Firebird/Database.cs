@@ -5,7 +5,7 @@ using FirebirdSql.Data.FirebirdClient;
 using ADODB;
 
 
-namespace MyMeta.Firebird
+namespace OMeta.Firebird
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

@@ -1,8 +1,8 @@
 using System;
 
-using MyMeta;
+using OMeta;
 
-namespace MyMeta.Oracle
+namespace OMeta.Oracle
 {
 #if ENTERPRISE
 	using System.EnterpriseServices;

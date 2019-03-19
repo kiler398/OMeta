@@ -8,7 +8,7 @@ using System.Collections;
 
 using ADODB;
 
-namespace MyMeta
+namespace OMeta
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
@@ -218,7 +218,7 @@ namespace MyMeta
 
         protected IResultColumns ResultColumnsFromSQL(string sql, IDbConnection cn)
         {
-            MyMetaPluginContext context = new MyMetaPluginContext(null, null);
+            OMetaPluginContext context = new OMetaPluginContext(null, null);
             DataTable metaData = context.CreateResultColumnsDataTable();
             Plugin.PluginResultColumns resultCols = new Plugin.PluginResultColumns(null);
             resultCols.dbRoot = dbRoot;

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IForeignKey represents an foreign key on a table in your DBMS.
@@ -37,7 +37,7 @@ namespace MyMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("B8E74CDA-CD66-4E90-844E-C0E120FEB0B5"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("5AE89A13-727D-4641-8CF7-4971DDBDC46F"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IForeignKey
 	{
 		/// <summary>

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// IProperty represents a key/value pair within an PropertyCollection.
@@ -66,7 +66,7 @@ namespace MyMeta
     /// }
     /// </code>
     /// </example>
-    [Guid("9E2A21E2-F18A-473B-91A3-466B1E29BF27"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
+    [Guid("8DBDFE41-6EB8-4CD4-AFDC-4E4AE3DCA80D"),InterfaceType(ComInterfaceType.InterfaceIsDual)]	 
     public interface IProperty
 	{
 		/// <summary>

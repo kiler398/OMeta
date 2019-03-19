@@ -4,10 +4,10 @@ using System.Text;
 using System.Data;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
 	[ComVisible(false)]
-    public interface IMyMetaPluginExt : IMyMetaPlugin
+    public interface IOMetaPluginExt : IOMetaPlugin
     {
         void ChangeDatabase(IDbConnection connection, string database);
 

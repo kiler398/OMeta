@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.Plugin
+namespace OMeta.Plugin
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;
@@ -10,7 +10,7 @@ namespace MyMeta.Plugin
 #endif 
 	public class PluginProcedures : Procedures
     {
-        private IMyMetaPlugin plugin;
+        private IOMetaPlugin plugin;
 
 		#region DataColumn Binding Stuff
 
@@ -27,7 +27,7 @@ namespace MyMeta.Plugin
 		}
 		#endregion
 
-        public PluginProcedures(IMyMetaPlugin plugin)
+        public PluginProcedures(IOMetaPlugin plugin)
         {
             this.plugin = plugin;
 		}

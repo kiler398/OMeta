@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenMyMeta.UnitTest
+namespace OMeta.UnitTest
 {
-    class MyMetaMYSQLTests
+    class OMetaSQLLiteTests
     {
     }
 }

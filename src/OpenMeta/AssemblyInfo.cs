@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("OpenMyMeta")]
-[assembly: AssemblyDescription("The OpenMyMeta Meta-Data Engine")]
+[assembly: AssemblyTitle("OMeta")]
+[assembly: AssemblyDescription("The OMeta Meta-Data Engine")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("OpenMyGeneration Development Community")]
-[assembly: AssemblyProduct("OpenMyGeneration")]
+[assembly: AssemblyCompany("OpenCodeGeneration Development Community")]
+[assembly: AssemblyProduct("OpenCodeGeneration")]
 [assembly: AssemblyCopyright("Copyright © 2019 NCC. All Rights Reserved")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,8 +19,7 @@ using System.Runtime.InteropServices;
 #if ENTERPRISE
 // This attribute allows us to say Columns[i] instead of Columns.Item[i]
 [assembly: System.Runtime.InteropServices.IDispatchImpl(IDispatchImplType.CompatibleImpl)]
-
-[assembly: Guid("e9c5abd2-d461-4017-a703-efc83c20c0f2")]
+[assembly: Guid("F6120033-BC47-4C63-8C6E-488F5CB0906E")]
 #endif
 
 //
@@ -34,8 +33,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.5.0.0")]
-
+[assembly: AssemblyVersion("0.3.0.0")]
+[assembly: AssemblyFileVersion("0.3.0.0")]
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
 // Microsoft .NET Framework documentation for more information on assembly signing.

@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.DB2
+namespace OMeta.DB2
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 
-namespace MyMeta.PostgreSQL8
+namespace OMeta.PostgreSQL8
 {
 #if ENTERPRISE
 	using System.Runtime.InteropServices;

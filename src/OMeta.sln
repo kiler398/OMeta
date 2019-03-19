@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMyMeta", "OpenMeta\OpenMyMeta.csproj", "{72BEAB1C-B55F-4F0E-89AF-17F71E74A452}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMeta", "OpenMeta\OMeta.csproj", "{72BEAB1C-B55F-4F0E-89AF-17F71E74A452}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMyMeta.UnitTest", "OpenMyMeta.UnitTest\OpenMyMeta.UnitTest.csproj", "{F2C33C33-D947-4DE6-92DB-0FA32262F9DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMeta.UnitTest", "OpenMyMeta.UnitTest\OMeta.UnitTest.csproj", "{F2C33C33-D947-4DE6-92DB-0FA32262F9DB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "thirdparty", "thirdparty", "{004F6A8B-F037-4596-9D18-CD54201F9E94}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "thirdparty", "thirdparty", 
 		thirdparty\WeifenLuo.WinFormsUI.Docking.dll = thirdparty\WeifenLuo.WinFormsUI.Docking.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMyMeta.SampleConsoleApp", "OpenMyMeta.SampleConsoleApp\OpenMyMeta.SampleConsoleApp.csproj", "{2DCC0D0B-5DA1-4D1A-8A8D-5A8B015AA7BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMeta.SampleConsoleApp", "OpenMyMeta.SampleConsoleApp\OMeta.SampleConsoleApp.csproj", "{2DCC0D0B-5DA1-4D1A-8A8D-5A8B015AA7BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{A33F4753-36E1-408B-98AC-4A4DA2276419}"
 	ProjectSection(SolutionItems) = preProject

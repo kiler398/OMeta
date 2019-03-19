@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace MyMeta
+namespace OMeta
 {
     /// <summary>
     /// This is a MyMeta Collection. The only two methods meant for public consumption are Count and Item.
     /// </summary>
-    [Guid("6C16DF67-D2D7-4B12-95F9-CA253355F398"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    [Guid("9CB26A55-F1F3-4E39-A766-9D067C8142BD"),InterfaceType(ComInterfaceType.InterfaceIsDual)]
     public interface IParameters : IList, IEnumerable<IParameter>
 	{
 		// User Meta Data

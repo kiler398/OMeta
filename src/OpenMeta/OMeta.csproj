@@ -11,7 +11,7 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>OMeta</AssemblyName>
-    <AssemblyOriginatorKeyFile>OpenMyMeta.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>OMeta.pfx</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -1352,8 +1352,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="OpenMyMeta.pfx" />
-    <None Include="Package.nuspec" />
+    <None Include="OMeta.pfx" />
+    <None Include="OMeta.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

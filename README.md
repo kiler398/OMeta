@@ -1,4 +1,6 @@
-# OMeta-简单高效的关系数据库元数据信息提取方案　　　　　
+# OMeta-简单高效的关系数据库元数据信息提取方案
+[![NuGet](https://img.shields.io/nuget/v/OMeta.svg)](https://www.nuget.org/packages/OMeta/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/mit-license.html)
 
 [文档](https://kiler398.github.io/OMeta/)
 

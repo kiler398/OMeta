@@ -1,0 +1,1 @@
+nuget pack %1  -Build -Prop Configuration=Release -o D:\nugetpackage

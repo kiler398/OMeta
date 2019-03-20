@@ -12,6 +12,9 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <!--- ... -->
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <!--- ... -->
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -55,10 +58,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenMeta\OMeta.csproj">
-      <Project>{72beab1c-b55f-4f0e-89af-17f71e74a452}</Project>
-      <Name>OMeta</Name>
-    </ProjectReference>
+    <PackageReference Include="OMeta">
+      <Version>0.3.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

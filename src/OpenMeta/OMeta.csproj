@@ -10,6 +10,9 @@
     <ApplicationIcon>MetaDataBrowser.ico</ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
+        <!--- ... -->
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <!--- ... -->
     <AssemblyName>OMeta</AssemblyName>
     <AssemblyOriginatorKeyFile>OMeta.pfx</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>

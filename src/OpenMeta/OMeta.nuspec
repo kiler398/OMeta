@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
@@ -20,7 +20,16 @@
       * 项目重命名
       * 整体项目升级到.Net Framework 4.6.1
     </releaseNotes>
+
     <copyright>Copyright 2019</copyright>
     <tags>DataBase Meta OMeta</tags>
+    <dependencies>
+      <dependency id="FirebirdSql.Data.FirebirdClient" version="6.5.0" />
+      <dependency id="MySql.Data" version="8.0.15" />
+      <dependency id="Npgsql" version="4.0.5" />
+      <dependency id="System.Data.SQLite" version="1.0.110" />
+    </dependencies>
   </metadata>
 </package>
+
+ 

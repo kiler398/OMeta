@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>OMeta</id>
-    <version>0.3.1</version>
-    <authors>kiler398</authors>
-    <owners>kiler398</owners>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
     <licenseUrl>https://opensource.org/licenses/mit-license.html</licenseUrl>
     <projectUrl>https://github.com/kiler398/OpenMyMeta</projectUrl>
     <!--<iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>-->
@@ -21,6 +22,5 @@
     </releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>DataBase Meta OMeta</tags>
- 
   </metadata>
 </package>

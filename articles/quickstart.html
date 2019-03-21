@@ -69,6 +69,112 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="快速入门">快速入门</h1>
 
+<p>OMeta使用涉及第三方组件库比较多，建议使用Nuget方式安装使用。</p>
+<h3 id="nuget-安装">NuGet 安装</h3>
+<p>你可以运行以下下命令在你的项目中安装 OMeta。</p>
+<pre><code>PM&gt; Install-Package OMeta
+</code></pre>
+<h3 id="使用数据库脚本创建mssql数据库">使用数据库脚本创建MSSQL数据库</h3>
+<p>使用脚本创建MSSQL数据库</p>
+<h3 id="初始化ometa对象">初始化OMeta对象</h3>
+<p>首先需要初始化OMeta对象并进行配置：</p>
+<pre><code class="lang-c#">static void Main(string[] args)
+{
+    //初始化元数据类
+    var dbRoot = new dbRoot();
+    //连接到SqlServer数据库，注意必须使用oledb连接字符串
+    dbRoot.Connect(dbDriver.SQL, &quot;Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; &quot;);
+}
+
+</code></pre>
+<h3 id="读取数据库信息">读取数据库信息</h3>
+<pre><code class="lang-c#">   //获取当前连接默认数据库
+   var database = dbRoot.DefaultDatabase;
+   //输出当前默认数据库名
+   Console.WriteLine(&quot;当前默认数据库名:&quot;+database.Name);
+   Console.WriteLine(&quot;----------------------------------------&quot;);
+</code></pre>
+<h3 id="读取指定名称数据库信息">读取指定名称数据库信息</h3>
+<pre><code class="lang-c#">   //获取指定名称数据库（当前用户有权访问的数据库）
+   var database2 = dbRoot.Databases[&quot;Northwind&quot;];
+   //输出当前默认数据库名
+   Console.WriteLine(&quot;数据库名:&quot; + database2.Name);
+   Console.WriteLine(&quot;----------------------------------------&quot;);
+</code></pre>
+<h3 id="读取表-字段信息">读取表 字段信息</h3>
+<pre><code class="lang-c#">   //遍历循环当前数据库所有的表
+   int i = 1;
+   foreach (var table in database.Tables)
+   {
+       //输出表名和备注
+       Console.WriteLine(&quot;表&quot;+ i.ToString(&quot;D2&quot;) + &quot;:&quot; + table.Name +&quot;,备注：&quot;+ table.Description);
+       Console.WriteLine(&quot;---------------&quot;);
+       int j = 1;
+       //遍历循环表所有的字段
+       foreach (var column in table.Columns)
+       {
+           //输出字段名和字段类型
+           Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+       i++;
+   }
+</code></pre>
+<h3 id="读取视图-字段信息">读取视图 字段信息</h3>
+<pre><code class="lang-c#">   int k = 1;
+   foreach (var view in database.Views)
+   {
+       //输出视图名和备注
+       Console.WriteLine(&quot;视图&quot; + i.ToString(&quot;D2&quot;) + &quot;:&quot; + view.Name + &quot;,备注：&quot; + view.Description);
+       Console.WriteLine(&quot;---------------&quot;);
+       //输出存储过程脚本
+       Console.WriteLine(&quot;视图过程脚本:&quot; + view.ViewText);
+       Console.WriteLine(&quot;---------------&quot;);
+       int j = 1;
+       //遍历循环视图所有的字段
+       foreach (var column in view.Columns)
+       {
+           //输出字段名和字段类型
+           Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+       k++;
+   }
+</code></pre>
+<h3 id="读取存储过程-参数-结果字段信息">读取存储过程 参数 结果字段信息</h3>
+<pre><code class="lang-c#">   int l = 1;
+   foreach (var procedure in database.Procedures)
+   {
+       //输出存储过程名和备注
+       Console.WriteLine(&quot;存储过程&quot; + i.ToString(&quot;D2&quot;) + &quot;:&quot; + procedure.Name + &quot;,备注：&quot; + procedure.Description);
+       Console.WriteLine(&quot;---------------&quot;);
+       //输出存储过程脚本
+       Console.WriteLine(&quot;存储过程脚本:&quot; + procedure.ProcedureText);
+       Console.WriteLine(&quot;---------------&quot;);
+       int j = 1;
+       //遍历循环存储过程所有的参数
+       foreach (var parameter in procedure.Parameters)
+       {
+           //输出参数名和参数类型
+           Console.Write(&quot;参数&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + parameter.Name + &quot;,&quot; + parameter.DataTypeNameComplete);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+
+       j = 1;
+       //遍历循环存储过程所有的结果
+       foreach (IResultColumn column in procedure.ResultColumns)
+       {
+           //输出字段名和字段类型
+           Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+       l++;
+   }
+</code></pre>
 </article>
           </div>
           
@@ -77,7 +183,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/articles/quickstart.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
+                    <a href="https://github.com/kiler398/OMeta/blob/dev/articles/quickstart.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
                   </li>
                 </ul>
               </div>

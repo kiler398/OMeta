@@ -70,6 +70,115 @@
 <h1 id="adonet-dbtarget-映射">ADO.Net DbTarget 映射</h1>
 
 <p>DbTarget 映射允许你通过一个xml配置文件来定义数据库字段和ADO.Net DbTarget字段类型（SqlDbType.Int  SqlDbType.Text等）的对应关系。</p>
+<p>OMeta中表或者视图的字段对象<code>IColumn</code>有一个属性<code>DbTargetType</code>,默认使用情况下访问这个属性会返回Unknown，如果给OMeta库指定一个特定的配置文件以后。这个属性就会返回数据库字段对应到ADO.Net DbTarget字段类型。</p>
+<p><code>DbTargetType</code> 主要常用于生成存储过程或者sql参数化查询的参数类型</p>
+<p>映射文件如下</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;DbTargets&gt;
+	&lt;DbTarget From=&quot;SQL&quot; To=&quot;SqlClient&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;SqlDbType.BigInt&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;SqlDbType.Binary&quot; /&gt;
+		&lt;Type From=&quot;bit&quot; To=&quot;SqlDbType.Bit&quot; /&gt;
+		&lt;Type From=&quot;char&quot; To=&quot;SqlDbType.Char&quot; /&gt;
+		&lt;Type From=&quot;datetime&quot; To=&quot;SqlDbType.DateTime&quot; /&gt;
+		&lt;Type From=&quot;decimal&quot; To=&quot;SqlDbType.Decimal&quot; /&gt;
+		&lt;Type From=&quot;float&quot; To=&quot;SqlDbType.Float&quot; /&gt;
+		&lt;Type From=&quot;image&quot; To=&quot;SqlDbType.Image&quot; /&gt;
+		&lt;Type From=&quot;int&quot; To=&quot;SqlDbType.Int&quot; /&gt;
+		&lt;Type From=&quot;money&quot; To=&quot;SqlDbType.Money&quot; /&gt;
+		&lt;Type From=&quot;nchar&quot; To=&quot;SqlDbType.NChar&quot; /&gt;
+		&lt;Type From=&quot;ntext&quot; To=&quot;SqlDbType.NText&quot; /&gt;
+		&lt;Type From=&quot;numeric&quot; To=&quot;SqlDbType.Decimal&quot; /&gt;
+		&lt;Type From=&quot;nvarchar&quot; To=&quot;SqlDbType.NVarChar&quot; /&gt;
+		&lt;Type From=&quot;real&quot; To=&quot;SqlDbType.Real&quot; /&gt;
+		&lt;Type From=&quot;smalldatetime&quot; To=&quot;SqlDbType.SmallDateTime&quot; /&gt;
+		&lt;Type From=&quot;smallint&quot; To=&quot;SqlDbType.SmallInt&quot; /&gt;
+		&lt;Type From=&quot;smallmoney&quot; To=&quot;SqlDbType.SmallMoney&quot; /&gt;
+		&lt;Type From=&quot;text&quot; To=&quot;SqlDbType.Text&quot; /&gt;
+		&lt;Type From=&quot;timestamp&quot; To=&quot;SqlDbType.Timestamp&quot; /&gt;
+		&lt;Type From=&quot;tinyint&quot; To=&quot;SqlDbType.TinyInt&quot; /&gt;
+		&lt;Type From=&quot;uniqueidentifier&quot; To=&quot;SqlDbType.UniqueIdentifier&quot; /&gt;
+		&lt;Type From=&quot;varbinary&quot; To=&quot;SqlDbType.VarBinary&quot; /&gt;
+		&lt;Type From=&quot;varchar&quot; To=&quot;SqlDbType.VarChar&quot; /&gt;
+		&lt;Type From=&quot;xml&quot; To=&quot;SqlDbType.Xml&quot; /&gt;
+		&lt;Type From=&quot;sql_variant&quot; To=&quot;SqlDbType.Variant&quot; /&gt;
+	&lt;/DbTarget&gt;
+	&lt;DbTarget From=&quot;SQL&quot; To=&quot;OleDb&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;OleDbType.BigInt&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;OleDbType.Binary&quot; /&gt;
+		&lt;Type From=&quot;bit&quot; To=&quot;OleDbType.Boolean&quot; /&gt;
+		&lt;Type From=&quot;char&quot; To=&quot;OleDbType.Char&quot; /&gt;
+		&lt;Type From=&quot;datetime&quot; To=&quot;OleDbType.DBTimeStamp&quot; /&gt;
+		&lt;Type From=&quot;decimal&quot; To=&quot;OleDbType.Numeric&quot; /&gt;
+		&lt;Type From=&quot;float&quot; To=&quot;OleDbType.Double&quot; /&gt;
+		&lt;Type From=&quot;image&quot; To=&quot;OleDbType.LongVarBinary&quot; /&gt;
+		&lt;Type From=&quot;int&quot; To=&quot;OleDbType.Integer&quot; /&gt;
+		&lt;Type From=&quot;money&quot; To=&quot;OleDbType.Currency&quot; /&gt;
+		&lt;Type From=&quot;nchar&quot; To=&quot;OleDbType.WChar&quot; /&gt;
+		&lt;Type From=&quot;ntext&quot; To=&quot;OleDbType.LongVarWChar&quot; /&gt;
+		&lt;Type From=&quot;numeric&quot; To=&quot;OleDbType.Numeric&quot; /&gt;
+		&lt;Type From=&quot;nvarchar&quot; To=&quot;OleDbType.VarWChar&quot; /&gt;
+		&lt;Type From=&quot;real&quot; To=&quot;OleDbType.Single&quot; /&gt;
+		&lt;Type From=&quot;smalldatetime&quot; To=&quot;OleDbType.DBTimeStamp&quot; /&gt;
+		&lt;Type From=&quot;smallint&quot; To=&quot;OleDbType.SmallInt&quot; /&gt;
+		&lt;Type From=&quot;smallmoney&quot; To=&quot;OleDbType.Currency&quot; /&gt;
+		&lt;Type From=&quot;text&quot; To=&quot;OleDbType.LongVarChar&quot; /&gt;
+		&lt;Type From=&quot;timestamp&quot; To=&quot;OleDbType.DBTimeStamp&quot; /&gt;
+		&lt;Type From=&quot;tinyint&quot; To=&quot;OleDbType.UnsignedTinyInt&quot; /&gt;
+		&lt;Type From=&quot;uniqueidentifier&quot; To=&quot;OleDbType.Guid&quot; /&gt;
+		&lt;Type From=&quot;varbinary&quot; To=&quot;OleDbType.VarBinary&quot; /&gt;
+		&lt;Type From=&quot;varchar&quot; To=&quot;OleDbType.VarChar&quot; /&gt;
+		&lt;Type From=&quot;xml&quot; To=&quot;OleDbType.Xml&quot; /&gt;
+		&lt;Type From=&quot;sql_variant&quot; To=&quot;OleDbType.Variant&quot; /&gt;
+	&lt;/DbTarget&gt;
+&lt;/DbTargets&gt;
+</code></pre>
+<p>我们截取其中的一个片段来看看</p>
+<pre><code class="lang-xml">
+...
+
+	&lt;DbTarget From=&quot;SQL&quot; To=&quot;SqlClient&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;SqlDbType.BigInt&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;SqlDbType.Binary&quot; /&gt;
+
+...
+
+</code></pre>
+<p><code>&lt;DbTarget From=&quot;SQL&quot; To=&quot;SqlClient&quot;&gt;</code> 代表一个配置组 配置MSSQL（SqlServer）和SqlClient驱动类型的映射关系</p>
+<p><code>&lt;Type From=&quot;bigint&quot; To=&quot;SqlDbType.BigInt&quot; /&gt;</code> 代表一个配置项 配置MSSQL（SqlServer）的bigint类型字段对应到SqlClient驱动的SqlDbType.BigInt类型</p>
+<p>当指定了上述xml配置文件以后并且指明当前使用驱动类型为SqlClient，之前提到的<code>DbTargetType</code>属性就生效了。</p>
+<p>我们来看下配置代码：</p>
+<pre><code class="lang-c#">   //初始化元数据类
+   var dbRoot = new dbRoot();
+   //连接到SqlServer数据库，注意必须使用oledb连接字符串
+   dbRoot.Connect(dbDriver.SQL, &quot;Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; &quot;);
+   
+   //指定当前驱动类型
+   dbRoot.DbTarget	= &quot;SqlClient&quot;;
+   //指定当前DbTarget映射文件路径
+   dbRoot.DbTargetMappingFileName = &quot;D:\Settings\DbTargets.xml&quot;
+
+   //遍历循环当前数据库所有的表
+   int i = 1;
+   foreach (var table in database.Tables)
+   {
+       //输出表名和备注
+       Console.WriteLine(&quot;表&quot;+ i.ToString(&quot;D2&quot;) + &quot;:&quot; + table.Name +&quot;,备注：&quot;+ table.Description);
+       Console.WriteLine(&quot;---------------&quot;);
+       int j = 1;
+       //遍历循环表所有的字段
+       foreach (var column in table.Columns)
+       {
+           //输出字段名和字段类型
+           Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+           //如果上面指定了驱动类型是SqlClient 数据库是SQL（SqlServer） 当前字段是bigint的话 这里的DbTarget属性会输出 SqlDbType.BigInt
+           Console.Write(&quot;DbTarget类型：&quot; + column.DbTarget);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+       i++;
+   }
+</code></pre>
 </article>
           </div>
           
@@ -78,7 +187,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/articles/dbtragetmaping.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
+                    <a href="https://github.com/kiler398/OMeta/blob/dev/articles/dbtragetmaping.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
                   </li>
                 </ul>
               </div>

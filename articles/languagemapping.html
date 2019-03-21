@@ -70,6 +70,118 @@
 <h1 id="语言映射">语言映射</h1>
 
 <p>语言映射允许你通过一个xml配置文件来定义数据库字段和语言（C#，VB.Net等）的对应关系。</p>
+<p>OMeta中表或者视图的字段对象<code>IColumn</code>有一个属性<code>LanguageType</code>,默认使用情况下访问这个属性会返回Unknown，如果给OMeta库指定一个特定的配置文件以后。这个属性就会返回数据库字段对应到编程语言类型。</p>
+<p><code>LanguageType</code>主要用于生成实体类的属性类型</p>
+<p>映射文件如下</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;Languages&gt;
+	&lt;Language From=&quot;SQL&quot; To=&quot;C#&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;long&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;object&quot; /&gt;
+		&lt;Type From=&quot;bit&quot; To=&quot;bool&quot; /&gt;
+		&lt;Type From=&quot;char&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;datetime&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;datetime2&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;date&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;time&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;timestamp&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;decimal&quot; To=&quot;decimal&quot; /&gt;
+		&lt;Type From=&quot;float&quot; To=&quot;double&quot; /&gt;
+		&lt;Type From=&quot;image&quot; To=&quot;byte[]&quot; /&gt;
+		&lt;Type From=&quot;int&quot; To=&quot;int&quot; /&gt;
+		&lt;Type From=&quot;money&quot; To=&quot;decimal&quot; /&gt;
+		&lt;Type From=&quot;nchar&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;ntext&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;numeric&quot; To=&quot;decimal&quot; /&gt;
+		&lt;Type From=&quot;nvarchar&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;real&quot; To=&quot;float&quot; /&gt;
+		&lt;Type From=&quot;smalldatetime&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;smallint&quot; To=&quot;short&quot; /&gt;
+		&lt;Type From=&quot;smallmoney&quot; To=&quot;decimal&quot; /&gt;
+		&lt;Type From=&quot;text&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;tinyint&quot; To=&quot;byte&quot; /&gt;
+		&lt;Type From=&quot;uniqueidentifier&quot; To=&quot;Guid&quot; /&gt;
+		&lt;Type From=&quot;varbinary&quot; To=&quot;byte[]&quot; /&gt;
+		&lt;Type From=&quot;varchar&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;xml&quot; To=&quot;string&quot; /&gt;
+		&lt;Type From=&quot;sql_variant&quot; To=&quot;object&quot; /&gt;
+	&lt;/Language&gt;
+    &lt;Language From=&quot;SQL&quot; To=&quot;VB.NET&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;Long&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;Object&quot; /&gt;
+		&lt;Type From=&quot;bit&quot; To=&quot;Boolean&quot; /&gt;
+		&lt;Type From=&quot;char&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;datetime&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;decimal&quot; To=&quot;Decimal&quot; /&gt;
+		&lt;Type From=&quot;float&quot; To=&quot;Double&quot; /&gt;
+		&lt;Type From=&quot;image&quot; To=&quot;Byte()&quot; /&gt;
+		&lt;Type From=&quot;int&quot; To=&quot;Integer&quot; /&gt;
+		&lt;Type From=&quot;money&quot; To=&quot;Decimal&quot; /&gt;
+		&lt;Type From=&quot;nchar&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;ntext&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;numeric&quot; To=&quot;Decimal&quot; /&gt;
+		&lt;Type From=&quot;nvarchar&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;real&quot; To=&quot;Single&quot; /&gt;
+		&lt;Type From=&quot;smalldatetime&quot; To=&quot;DateTime&quot; /&gt;
+		&lt;Type From=&quot;smallint&quot; To=&quot;Short&quot; /&gt;
+		&lt;Type From=&quot;smallmoney&quot; To=&quot;Decimal&quot; /&gt;
+		&lt;Type From=&quot;text&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;timestamp&quot; To=&quot;Byte()&quot; /&gt;
+		&lt;Type From=&quot;tinyint&quot; To=&quot;Byte&quot; /&gt;
+		&lt;Type From=&quot;uniqueidentifier&quot; To=&quot;Guid&quot; /&gt;
+		&lt;Type From=&quot;varbinary&quot; To=&quot;Byte()&quot; /&gt;
+		&lt;Type From=&quot;varchar&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;xml&quot; To=&quot;String&quot; /&gt;
+		&lt;Type From=&quot;sql_variant&quot; To=&quot;Object&quot; /&gt;
+	&lt;/Language&gt;
+&lt;/Languages&gt;
+</code></pre>
+<p>我们截取其中的一个片段来看看</p>
+<pre><code class="lang-xml">
+...
+
+	&lt;Language From=&quot;SQL&quot; To=&quot;C#&quot;&gt;
+		&lt;Type From=&quot;bigint&quot; To=&quot;long&quot; /&gt;
+		&lt;Type From=&quot;binary&quot; To=&quot;object&quot; /&gt;
+
+...
+
+</code></pre>
+<p><code>&lt;Language From=&quot;SQL&quot; To=&quot;C#&quot;&gt;</code> 代表一个配置组 配置MSSQL（SqlServer）和C#语言的映射关系</p>
+<p><code>&lt;Type From=&quot;bigint&quot; To=&quot;long&quot; /&gt;</code> 代表一个配置项 配置MSSQL（SqlServer）的bigint类型字段对应到C#语言的long数据类型</p>
+<p>当指定了上述xml配置文件以后并且指明当前使用语言为C#，之前提到的<code>LanguageType</code>属性就生效了。</p>
+<p>我们来看下配置代码：</p>
+<pre><code class="lang-c#">   //初始化元数据类
+   var dbRoot = new dbRoot();
+   //连接到SqlServer数据库，注意必须使用oledb连接字符串
+   dbRoot.Connect(dbDriver.SQL, &quot;Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; &quot;);
+   
+   //指定当前编程语言
+   dbRoot.Language = &quot;C#&quot;
+   //指定当前语言映射文件路径
+   dbRoot.LanguageMappingFileName = &quot;D:\Settings\Languages.xml&quot;
+
+   //遍历循环当前数据库所有的表
+   int i = 1;
+   foreach (var table in database.Tables)
+   {
+       //输出表名和备注
+       Console.WriteLine(&quot;表&quot;+ i.ToString(&quot;D2&quot;) + &quot;:&quot; + table.Name +&quot;,备注：&quot;+ table.Description);
+       Console.WriteLine(&quot;---------------&quot;);
+       int j = 1;
+       //遍历循环表所有的字段
+       foreach (var column in table.Columns)
+       {
+           //输出字段名和字段类型
+           Console.Write(&quot;字段&quot; + j.ToString(&quot;D2&quot;) + &quot;:&quot; + column.Name + &quot;,&quot; + column.DataTypeNameComplete);
+           //如果上面指定了编程语言是C# 数据库是SQL（SqlServer） 当前字段是bigint的话 这里的LanguageType属性会输出 long
+           Console.Write(&quot;字段语言类型：&quot; + column.LanguageType);
+           Console.WriteLine(&quot;&quot;);
+           j++;
+       }
+       i++;
+   }
+</code></pre>
 </article>
           </div>
           
@@ -78,7 +190,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/kiler398/OpenMyMeta/blob/dev/articles/languagemapping.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
+                    <a href="https://github.com/kiler398/OMeta/blob/dev/articles/languagemapping.md/#L1" class="contribution-link">&#25991;&#26723;&#25913;&#36827;&#24314;&#35758;</a>
                   </li>
                 </ul>
               </div>

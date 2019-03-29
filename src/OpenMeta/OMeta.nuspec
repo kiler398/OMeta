@@ -12,24 +12,24 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>OMeta 是一个关系型数据库元数据信息获取工具，把数据库->表->列，主键、外键、索引、默认值、备注、存储过程、函数、视图等抽象为对象，易于供代码生成工具生成代码使用。</description>
     <releaseNotes>
-      # 0.3.1
+      # $version$
 
-      * 项目初始化
-      * 增加部分文档
-      * 增加单元测试
-      * 项目重命名
-      * 整体项目升级到.Net Framework 4.6.1
+      * 修复Nuget包引用问题
     </releaseNotes>
 
     <copyright>Copyright 2019</copyright>
     <tags>DataBase Meta OMeta</tags>
     <dependencies>
+      <dependency id="ADODB" version="7.10.3077" />
       <dependency id="FirebirdSql.Data.FirebirdClient" version="6.5.0" />
       <dependency id="MySql.Data" version="8.0.15" />
       <dependency id="Npgsql" version="4.0.5" />
       <dependency id="System.Data.SQLite" version="1.0.110" />
     </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.EnterpriseServices" targetFramework="net40" />
+      <frameworkAssembly assemblyName="System.Transactions" targetFramework="net40" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="net40" />
+    </frameworkAssemblies>
   </metadata>
 </package>
-
- 

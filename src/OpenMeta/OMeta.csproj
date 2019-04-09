@@ -14,7 +14,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <!--- ... -->
     <AssemblyName>OMeta</AssemblyName>
-    <AssemblyOriginatorKeyFile>OMeta.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -1307,7 +1308,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="OMeta.pfx" />
     <None Include="OMeta.nuspec" />
   </ItemGroup>
   <ItemGroup>

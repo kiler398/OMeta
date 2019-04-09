@@ -1142,6 +1142,7 @@
     <Compile Include="Tables.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Utils.cs" />
     <Compile Include="View.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -1,0 +1,5 @@
+
+# @version@
+
+	* 实现一键上传nuget脚本
+	* 实现自动更新releasenotes.txt以及nuget包更新记录

@@ -5,6 +5,7 @@ using System.IO;
 using System.Data;
 using System.Collections;
 using System.Data.OleDb;
+using OpenMeta.Meta;
 
 
 namespace OMeta
@@ -270,6 +271,8 @@ namespace OMeta
 
 			return oRS;
 		}
+
+
 
 		protected DataTypeEnum GetADOType(string sType)
 		{

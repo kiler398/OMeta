@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenMeta.Meta
+namespace OMeta.Meta
 {
     public enum DataTypeEnum
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Xml;
 using System.Collections;
-using OpenMeta.Meta;
+using OMeta.Meta;
 
 namespace OMeta
 {

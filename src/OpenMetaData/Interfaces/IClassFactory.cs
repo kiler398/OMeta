@@ -1,7 +1,7 @@
 using System.Data;
 using OMeta;
 
-namespace OpenMeta.Interfaces
+namespace OMeta.Interfaces
 {
  
 	public interface IClassFactory 

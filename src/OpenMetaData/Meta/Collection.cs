@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using OMeta;
 
-namespace OpenMeta.Meta
+namespace OMeta.Meta
 {
 	/// <summary>
 	/// Summary description for Collection.

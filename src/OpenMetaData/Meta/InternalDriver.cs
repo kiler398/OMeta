@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using OpenMeta.Interfaces;
+using OMeta.Interfaces;
 
 
 namespace OMeta

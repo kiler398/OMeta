@@ -15,7 +15,7 @@ using Npgsql;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data.SQLite;
 using MySql.Data.MySqlClient;
-using OpenMeta.Interfaces;
+using OMeta.Interfaces;
 using ClassFactory = OMeta.Sql.ClassFactory;
 
 namespace OMeta

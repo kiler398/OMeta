@@ -1,7 +1,7 @@
 using System;
 
 using OMeta;
-using OpenMeta.Interfaces;
+using OMeta.Interfaces;
 
 namespace OMeta.PostgreSQL8
 {

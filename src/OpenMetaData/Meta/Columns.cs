@@ -3,7 +3,7 @@ using System.Xml;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using OpenMeta.Meta;
+using OMeta.Meta;
 
 namespace OMeta
 {

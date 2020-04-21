@@ -1,7 +1,7 @@
 using System;
 using OMeta;
 using MySql.Data.MySqlClient;
-using OpenMeta.Interfaces;
+using OMeta.Interfaces;
 
 namespace OMeta.MySql5
 {

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
-using OpenMeta.Meta;
+using OMeta.Meta;
 
 namespace OMeta
 {

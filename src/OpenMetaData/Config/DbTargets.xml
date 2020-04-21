@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DbTargets>
+	<DbTarget From="SQL" To="SqlClient">
+		<Type From="bigint" To="SqlDbType.BigInt" />
+		<Type From="binary" To="SqlDbType.Binary" />
+		<Type From="bit" To="SqlDbType.Bit" />
+		<Type From="char" To="SqlDbType.Char" />
+		<Type From="datetime" To="SqlDbType.DateTime" />
+		<Type From="decimal" To="SqlDbType.Decimal" />
+		<Type From="float" To="SqlDbType.Float" />
+		<Type From="image" To="SqlDbType.Image" />
+		<Type From="int" To="SqlDbType.Int" />
+		<Type From="money" To="SqlDbType.Money" />
+		<Type From="nchar" To="SqlDbType.NChar" />
+		<Type From="ntext" To="SqlDbType.NText" />
+		<Type From="numeric" To="SqlDbType.Decimal" />
+		<Type From="nvarchar" To="SqlDbType.NVarChar" />
+		<Type From="real" To="SqlDbType.Real" />
+		<Type From="smalldatetime" To="SqlDbType.SmallDateTime" />
+		<Type From="smallint" To="SqlDbType.SmallInt" />
+		<Type From="smallmoney" To="SqlDbType.SmallMoney" />
+		<Type From="text" To="SqlDbType.Text" />
+		<Type From="timestamp" To="SqlDbType.Timestamp" />
+		<Type From="tinyint" To="SqlDbType.TinyInt" />
+		<Type From="uniqueidentifier" To="SqlDbType.UniqueIdentifier" />
+		<Type From="varbinary" To="SqlDbType.VarBinary" />
+		<Type From="varchar" To="SqlDbType.VarChar" />
+		<Type From="xml" To="SqlDbType.Xml" />
+		<Type From="sql_variant" To="SqlDbType.Variant" />
+	</DbTarget>
+	<DbTarget From="SQLCE" To="SqlServerCe">
+		<Type From="bigint" To="SqlDbType.BigInt" />
+		<Type From="binary" To="SqlDbType.Binary" />
+		<Type From="bit" To="SqlDbType.Bit" />
+		<Type From="char" To="SqlDbType.Char" />
+		<Type From="datetime" To="SqlDbType.DateTime" />
+		<Type From="decimal" To="SqlDbType.Decimal" />
+		<Type From="float" To="SqlDbType.Float" />
+		<Type From="image" To="SqlDbType.Image" />
+		<Type From="int" To="SqlDbType.Int" />
+		<Type From="money" To="SqlDbType.Money" />
+		<Type From="nchar" To="SqlDbType.NChar" />
+		<Type From="ntext" To="SqlDbType.NText" />
+		<Type From="numeric" To="SqlDbType.Decimal" />
+		<Type From="nvarchar" To="SqlDbType.NVarChar" />
+		<Type From="real" To="SqlDbType.Real" />
+		<Type From="smalldatetime" To="SqlDbType.SmallDateTime" />
+		<Type From="smallint" To="SqlDbType.SmallInt" />
+		<Type From="smallmoney" To="SqlDbType.SmallMoney" />
+		<Type From="text" To="SqlDbType.Text" />
+		<Type From="timestamp" To="SqlDbType.Timestamp" />
+		<Type From="tinyint" To="SqlDbType.TinyInt" />
+		<Type From="uniqueidentifier" To="SqlDbType.UniqueIdentifier" />
+		<Type From="varbinary" To="SqlDbType.VarBinary" />
+		<Type From="varchar" To="SqlDbType.VarChar" />
+		<Type From="xml" To="SqlDbType.Xml" />
+		<Type From="sql_variant" To="SqlDbType.Variant" />
+	</DbTarget>
+	<DbTarget From="SQL" To="OleDb">
+		<Type From="bigint" To="OleDbType.BigInt" />
+		<Type From="binary" To="OleDbType.Binary" />
+		<Type From="bit" To="OleDbType.Boolean" />
+		<Type From="char" To="OleDbType.Char" />
+		<Type From="datetime" To="OleDbType.DBTimeStamp" />
+		<Type From="decimal" To="OleDbType.Numeric" />
+		<Type From="float" To="OleDbType.Double" />
+		<Type From="image" To="OleDbType.LongVarBinary" />
+		<Type From="int" To="OleDbType.Integer" />
+		<Type From="money" To="OleDbType.Currency" />
+		<Type From="nchar" To="OleDbType.WChar" />
+		<Type From="ntext" To="OleDbType.LongVarWChar" />
+		<Type From="numeric" To="OleDbType.Numeric" />
+		<Type From="nvarchar" To="OleDbType.VarWChar" />
+		<Type From="real" To="OleDbType.Single" />
+		<Type From="smalldatetime" To="OleDbType.DBTimeStamp" />
+		<Type From="smallint" To="OleDbType.SmallInt" />
+		<Type From="smallmoney" To="OleDbType.Currency" />
+		<Type From="text" To="OleDbType.LongVarChar" />
+		<Type From="timestamp" To="OleDbType.DBTimeStamp" />
+		<Type From="tinyint" To="OleDbType.UnsignedTinyInt" />
+		<Type From="uniqueidentifier" To="OleDbType.Guid" />
+		<Type From="varbinary" To="OleDbType.VarBinary" />
+		<Type From="varchar" To="OleDbType.VarChar" />
+		<Type From="xml" To="OleDbType.Xml" />
+		<Type From="sql_variant" To="OleDbType.Variant" />
+	</DbTarget>
+	<DbTarget From="SQL" To="AllDbClient">
+		<Type From="bigint" To="AllDbType.Int64" />
+		<Type From="binary" To="AllDbType.Binary" />
+		<Type From="bit" To="AllDbType.Boolean" />
+		<Type From="char" To="AllDbType.AnsiStringFixedLength" />
+		<Type From="datetime" To="AllDbType.DateTime" />
+		<Type From="decimal" To="AllDbType.Decimal" />
+		<Type From="float" To="AllDbType.Double" />
+		<Type From="image" To="AllDbType.Binary" />
+		<Type From="int" To="AllDbType.Int32" />
+		<Type From="money" To="AllDbType.Currency" />
+		<Type From="nchar" To="AllDbType.StringFixedLength" />
+		<Type From="ntext" To="AllDbType.String" />
+		<Type From="numeric" To="AllDbType.Decimal" />
+		<Type From="nvarchar" To="AllDbType.String" />
+		<Type From="real" To="AllDbType.Single" />
+		<Type From="smalldatetime" To="AllDbType.DateTime" />
+		<Type From="smallint" To="AllDbType.Int16" />
+		<Type From="smallmoney" To="AllDbType.Currency" />
+		<Type From="text" To="AllDbType.AnsiString" />
+		<Type From="timestamp" To="AllDbType.Binary" />
+		<Type From="tinyint" To="AllDbType.Byte" />
+		<Type From="uniqueidentifier" To="AllDbType.Guid" />
+		<Type From="varbinary" To="AllDbType.Binary" />
+		<Type From="varchar" To="AllDbType.AnsiString" />
+		<Type From="sql_variant" To="AllDbType.Object" />
+	</DbTarget>
+	<DbTarget From="SQL" To="ADODB">
+		<Type From="bigint" To="adBigInt" />
+		<Type From="binary" To="adBinary" />
+		<Type From="bit" To="adBoolean" />
+		<Type From="char" To="adChar" />
+		<Type From="datetime" To="adDBTimeStamp" />
+		<Type From="decimal" To="adNumeric" />
+		<Type From="float" To="adDouble" />
+		<Type From="image" To="adLongVarBinary" />
+		<Type From="int" To="adInteger" />
+		<Type From="money" To="adCurrency" />
+		<Type From="nchar" To="adWChar" />
+		<Type From="ntext" To="adLongVarWChar" />
+		<Type From="numeric" To="adNumeric" />
+		<Type From="nvarchar" To="adVarWChar" />
+		<Type From="real" To="adSingle" />
+		<Type From="smalldatetime" To="adDBTimeStamp" />
+		<Type From="smallint" To="adSmallInt" />
+		<Type From="smallmoney" To="adCurrency" />
+		<Type From="text" To="adLongVarChar" />
+		<Type From="timestamp" To="adBinary" />
+		<Type From="tinyint" To="adUnsignedTinyInt" />
+		<Type From="uniqueidentifier" To="adGuid" />
+		<Type From="varbinary" To="adVarBinary" />
+		<Type From="varchar" To="adVarChar" />
+		<Type From="sql_variant" To="adVariant" />
+	</DbTarget>
+	<DbTarget From="ACCESS" To="OleDb">
+		<Type From="Text" To="OleDbType.VarWChar" />
+		<Type From="Memo" To="OleDbType.LongVarWChar" />
+		<Type From="DateTime" To="OleDbType.Date" />
+		<Type From="Currency" To="OleDbType.Currency" />
+		<Type From="Yes/No" To="OleDbType.Boolean" />
+		<Type From="OLE Object" To="OleDbType.LongVarBinary" />
+		<Type From="Hyperlink" To="OleDbType.LongVarWChar" />
+		<Type From="Double" To="OleDbType.Double" />
+		<Type From="Replication ID" To="OleDbType.Guid" />
+		<Type From="Long" To="OleDbType.Numeric" />
+		<Type From="Single" To="OleDbType.Single" />
+		<Type From="Decimal" To="OleDbType.Numeric" />
+		<Type From="Byte" To="OleDbType.UnsignedTinyInt" />
+		<Type From="Integer" To="OleDbType.SmallInt" />
+	</DbTarget>
+	<DbTarget From="ACCESS" To="AllDbClient">
+		<Type From="Text" To="AllDbType.String" />
+		<Type From="Memo" To="AllDbType.String" />
+		<Type From="DateTime" To="AllDbType.DateTime" />
+		<Type From="Currency" To="AllDbType.Currency" />
+		<Type From="Yes/No" To="AllDbType.Boolean" />
+		<Type From="OLE Object" To="AllDbType.Binary" />
+		<Type From="Hyperlink" To="AllDbType.String" />
+		<Type From="Double" To="AllDbType.Double" />
+		<Type From="Replication ID" To="AllDbType.Guid" />
+		<Type From="Long" To="OleDbType.Numeric" />
+		<Type From="Single" To="AllDbType.Single" />
+		<Type From="Decimal" To="AllDbType.Decimal" />
+		<Type From="Byte" To="AllDbType.Byte" />
+		<Type From="Integer" To="AllDbType.Int16" />
+	</DbTarget>
+	<DbTarget From="ACCESS" To="ADODB">
+		<Type From="Text" To="ADODB.adVarWChar" />
+		<Type From="Memo" To="ADODB.adLongVarWChar" />
+		<Type From="DateTime" To="ADODB.adDate" />
+		<Type From="Currency" To="ADODB.adCurrency" />
+		<Type From="Yes/No" To="ADODB.adBoolean" />
+		<Type From="OLE Object" To="ADODB.adLongVarBinary" />
+		<Type From="Hyperlink" To="ADODB.adLongVarWChar" />
+		<Type From="Double" To="ADODB.adDouble" />
+		<Type From="Replication ID" To="ADODB.adGUID" />
+		<Type From="Long" To="ADODB.adInteger" />
+		<Type From="Single" To="ADODB.adSingle" />
+		<Type From="Decimal" To="ADODB.adNumeric" />
+		<Type From="Byte" To="ADODB.adUnsignedTinyInt" />
+		<Type From="Integer" To="ADODB.adSmallInt" />
+	</DbTarget>
+	<DbTarget From="ACCESS" To="DAO">
+		<Type From="Text" To="DAO.dbText" />
+		<Type From="Memo" To="DAO.dbMemo" />
+		<Type From="DateTime" To="DAO.dbDate" />
+		<Type From="Currency" To="DAO.dbCurrency" />
+		<Type From="Yes/No" To="DAO.dbBoolean" />
+		<Type From="OLE Object" To="DAO.dbLongBinary" />
+		<Type From="Hyperlink" To="DAO.dbMemo" />
+		<Type From="Double" To="DAO.dbDouble" />
+		<Type From="Replication ID" To="DAO.dbGUID" />
+		<Type From="Long" To="DAO.dbLong" />
+		<Type From="Single" To="DAO.dbSingle" />
+		<Type From="Decimal" To="DAO.dbDecimal" />
+		<Type From="Byte" To="DAO.dbByte" />
+		<Type From="Integer" To="DAO.dbInteger" />
+	</DbTarget>
+	<DbTarget From="ORACLE" To="OracleClient">
+		<Type From="ANYDATA" To="object" />
+		<Type From="BFILE" To="OracleType.BFile" />
+		<Type From="BLOB" To="OracleType.Blob" />
+		<Type From="CHAR" To="OracleType.Char" />
+		<Type From="CLOB" To="OracleType.Clob" />
+		<Type From="DATE" To="OracleType.DateTime" />
+		<Type From="FLOAT" To="OracleType.Float" />
+		<Type From="INTEGER" To="OracleType.Int32" />
+		<Type From="INTERVAL YEAR TO MONTH" To="OracleType.IntervalYearToMonth" />
+		<Type From="INTERVAL DAY TO SECOND" To="OracleType.IntervalDayToSecond" />
+		<Type From="LONG" To="OracleType.LongVarChar" />
+		<Type From="LONGRAW" To="OracleType.LongRaw" />
+		<Type From="NCHAR" To="OracleType.NChar" />
+		<Type From="NCLOB" To="OracleType.NClob" />
+		<Type From="NUMBER" To="OracleType.Number" />
+		<Type From="NVARCHAR2" To="OracleType.NVarChar" />
+		<Type From="RAW" To="OracleType.Raw" />
+		<Type From="ROWID" To="OracleType.RowId" />
+		<Type From="UROWID" To="OracleType.RowId" />
+		<Type From="TIMESTAMP" To="OracleType.Timestamp" />
+		<Type From="TIMESTAMP WITH TIME ZONE" To="OracleType.TimestampLocal" />
+		<Type From="TIMESTAMP WITH LOCAL TIME ZONE" To="OracleType.TimestampWithTZ" />
+		<Type From="UNSIGNEDINTEGER" To="OracleType.UInt32" />
+		<Type From="VARCHAR2" To="OracleType.VarChar" />
+	</DbTarget>
+	<DbTarget From="FIREBIRD" To="FirebirdSql">
+		<Type From="INTEGER" To="FbDbType.Integer" />
+		<Type From="BIGINT" To="FbDbType.BigInt" />
+		<Type From="SMALLINT" To="FbDbType.SmallInt" />
+		<Type From="FLOAT" To="FbDbType.Float" />
+		<Type From="DOUBLE PRECISION" To="FbDbType.Double" />
+		<Type From="NUMERIC" To="FbDbType.Numeric" />
+		<Type From="DATE" To="FbDbType.Date" />
+		<Type From="TIME" To="FbDbType.Time" />
+		<Type From="TIMESTAMP" To="FbDbType.TimeStamp" />
+		<Type From="CHAR" To="FbDbType.Char" />
+		<Type From="VARCHAR" To="FbDbType.VarChar" />
+		<Type From="BLOB(TEXT)" To="FbDbType.Text" />
+		<Type From="BLOB(BINARY)" To="FbDbType.Binary" />
+		<Type From="Array" To="FbDbType.Array" />
+		<Type From="INTEGER:A" To="FbDbType.Array" />
+		<Type From="SMALLINT:A" To="FbDbType.Array" />
+		<Type From="FLOAT:A" To="FbDbType.Array" />
+		<Type From="DOUBLE PRECISION:A" To="FbDbType.Array" />
+		<Type From="NUMERIC:A" To="FbDbType.Array" />
+		<Type From="DATE:A" To="FbDbType.Array" />
+		<Type From="CHAR:A" To="FbDbType.Array" />
+		<Type From="VARCHAR:A" To="FbDbType.Array" />
+	</DbTarget>
+	<DbTarget From="INTERBASE" To="FirebirdSql">
+		<Type From="INTEGER" To="FbDbType.Integer" />
+		<Type From="BIGINT" To="FbDbType.BigInt" />
+		<Type From="SMALLINT" To="FbDbType.SmallInt" />
+		<Type From="FLOAT" To="FbDbType.Float" />
+		<Type From="DOUBLE PRECISION" To="FbDbType.Double" />
+		<Type From="NUMERIC" To="FbDbType.Numeric" />
+		<Type From="DATE" To="FbDbType.Date" />
+		<Type From="TIME" To="FbDbType.Time" />
+		<Type From="TIMESTAMP" To="FbDbType.TimeStamp" />
+		<Type From="CHAR" To="FbDbType.Char" />
+		<Type From="VARCHAR" To="FbDbType.Varchar" />
+		<Type From="BLOB(TEXT)" To="FbDbType.Text" />
+		<Type From="BLOB(BINARY)" To="FbDbType.Binary" />
+		<Type From="Array" To="FbDbType.Array" />
+		<Type From="INTEGER:A" To="FbDbType.Array" />
+		<Type From="SMALLINT:A" To="FbDbType.Array" />
+		<Type From="FLOAT:A" To="FbDbType.Array" />
+		<Type From="DOUBLE PRECISION:A" To="FbDbType.Array" />
+		<Type From="NUMERIC:A" To="FbDbType.Array" />
+		<Type From="DATE:A" To="FbDbType.Array" />
+		<Type From="CHAR:A" To="FbDbType.Array" />
+		<Type From="VARCHAR:A" To="FbDbType.Array" />
+	</DbTarget>
+	<DbTarget From="DB2" To="DB2.NET">
+		<Type From="BIGINT" To="DB2Type.BigInt" />
+		<Type From="BLOB" To="DB2Type.BLOB" />
+		<Type From="CLOB" To="DB2Type.CLOB" />
+		<Type From="CHARACTER" To="DB2Type.Char" />
+		<Type From="CHARACTER FOR BIT DATA" To="DB2Type.Binary" />
+		<Type From="DATE" To="DB2Type.Date" />
+		<Type From="DECIMAL" To="DB2Type.Decimal" />
+		<Type From="DOUBLE" To="DB2Type.Double" />
+		<Type From="FLOAT" To="DB2Type.Float" />
+		<Type From="GRAPHIC" To="DB2Type.Graphic" />
+		<Type From="INTEGER" To="DB2Type.Integer" />
+		<Type From="LONG VARCHAR" To="DB2Type.VarChar" />
+		<Type From="LONG VARCHAR FOR BIT DATA" To="DB2Type.VarBinary" />
+		<Type From="REAL" To="DB2Type.Real" />
+		<Type From="SMALLINT" To="DB2Type.SmallInt" />
+		<Type From="TIME" To="DB2Type.Time" />
+		<Type From="TIMESTAMP" To="DB2Type.Timestamp" />
+		<Type From="VARCHAR" To="DB2Type.VarChar" />
+		<Type From="VARCHAR FOR BIT DATA" To="DB2Type.VarBinary" />
+		<Type From="VARGRAPHIC" To="DB2Type.VarGraphic" />
+	</DbTarget>
+	<DbTarget From="VISTADB" To="VistaDB.NET">
+		<Type From="Blob" To="VistaDBType.Blob" />
+		<Type From="Boolean" To="VistaDBType.Boolean" />
+		<Type From="Character" To="VistaDBType.Character" />
+		<Type From="Currency" To="VistaDBType.Currency" />
+		<Type From="Date" To="VistaDBType.Date" />
+		<Type From="DateTime" To="VistaDBType.DateTime" />
+		<Type From="Double" To="VistaDBType.Double" />
+		<Type From="Guid" To="VistaDBType.Guid" />
+		<Type From="Int32" To="VistaDBType.Int32" />
+		<Type From="Int64" To="VistaDBType.Int64" />
+		<Type From="Memo" To="VistaDBType.Memo" />
+		<Type From="Picture" To="VistaDBType.Picture" />
+		<Type From="Varchar" To="VistaDBType.Varchar" />
+	</DbTarget>
+	<DbTarget From="VISTADB3X" To="VistaDB.Provider">
+		<Type From="BigInt" To="VistaDBType.BigInt" />
+		<Type From="Bit" To="VistaDBType.Bit" />
+		<Type From="Char" To="VistaDBType.Char" />
+		<Type From="DateTime" To="VistaDBType.DateTime" />
+		<Type From="Decimal" To="VistaDBType.Decimal" />
+		<Type From="Float" To="VistaDBType.Float" />
+		<Type From="Image" To="VistaDBType.Image" />
+		<Type From="Int" To="VistaDBType.Int" />
+		<Type From="Money" To="VistaDBType.Money" />
+		<Type From="NChar" To="VistaDBType.NChar" />
+		<Type From="NText" To="VistaDBType.NText" />
+		<Type From="NVarChar" To="VistaDBType.NVarChar" />
+		<Type From="Real" To="VistaDBType.Real" />
+		<Type From="SmallDateTime" To="VistaDBType.SmallDateTime" />
+		<Type From="SmallInt" To="VistaDBType.SmallInt" />
+		<Type From="SmallMoney" To="VistaDBType.SmallMoney" />
+		<Type From="Text" To="VistaDBType.Text" />
+		<Type From="Timestamp" To="VistaDBType.Timestamp" />
+		<Type From="TinyInt" To="VistaDBType.TinyInt" />
+		<Type From="UniqueIdentifier" To="VistaDBType.UniqueIdentifier" />
+		<Type From="VarBinary" To="VistaDBType.VarBinary" />
+		<Type From="VarChar" To="VistaDBType.VarChar" />
+	</DbTarget>
+	<DbTarget From="SQLITE" To="SQLite.NET v2.x">
+		<Type From="CHAR" To="DbType.String" />
+		<Type From="DATETIME" To="DbType.DateTime" />
+		<Type From="DATE" To="DbType.DateTime" />
+		<Type From="TIMESTAMP" To="DbType.DateTime" />
+		<Type From="TIME" To="DbType.Time" />
+		<Type From="DECIMAL" To="DbType.Decimal" />
+		<Type From="VARCHAR" To="DbType.String" />
+		<Type From="NVARCHAR" To="DbType.String" />
+		<Type From="TEXT" To="DbType.String" />
+		<Type From="INTEGER" To="DbType.Int32" />
+		<Type From="INT" To="DbType.Int32" />
+		<Type From="FLOAT" To="DbType.Single" />
+		<Type From="BOOLEAN" To="DbType.Boolean" />
+		<Type From="CLOB" To="DbType.String" />
+		<Type From="BLOB" To="DbType.Binary" />
+		<Type From="NUMERIC" To="DbType.Decimal" />
+		<Type From="VARYINGCHARACTER" To="DbType.String" />
+		<Type From="NATIONALVARYINGCHARACTER" To="DbType.String" />
+	</DbTarget>
+	<DbTarget From="SQLITE" To="SQLite.NET v3.x">
+		<Type From="CHAR" To="DbType.String" />
+		<Type From="DATETIME" To="DbType.DateTime" />
+		<Type From="DATE" To="DbType.DateTime" />
+		<Type From="TIMESTAMP" To="DbType.DateTime" />
+		<Type From="TIME" To="DbType.Time" />
+		<Type From="DECIMAL" To="DbType.Decimal" />
+		<Type From="VARCHAR" To="DbType.String" />
+		<Type From="NVARCHAR" To="DbType.String" />
+		<Type From="TEXT" To="DbType.String" />
+		<Type From="INTEGER" To="DbType.Int64" />
+		<Type From="INT" To="DbType.Int32" />
+		<Type From="FLOAT" To="DbType.Single" />
+		<Type From="BOOLEAN" To="DbType.Boolean" />
+		<Type From="CLOB" To="DbType.String" />
+		<Type From="BLOB" To="DbType.Binary" />
+		<Type From="NUMERIC" To="DbType.Decimal" />
+		<Type From="VARYINGCHARACTER" To="DbType.String" />
+		<Type From="NATIONALVARYINGCHARACTER" To="DbType.String" />
+	</DbTarget>
+	<DbTarget From="ADVANTAGE" To="Advantage.Net">
+		<Type From="Logical" To="DbType.Boolean" />
+		<Type From="Numeric" To="DbType.Decimal" />
+		<Type From="Date" To="DbType.DateTime" />
+		<Type From="String" To="DbType.String" />
+		<Type From="Memo" To="DbType.String" />
+		<Type From="Binary" To="DbType.Binary" />
+		<Type From="Image" To="DbType.Binary" />
+		<Type From="Varchar" To="DbType.String" />
+		<Type From="Compactdate" To="?" />
+		<Type From="Double" To="DbType.Double" />
+		<Type From="Integer" To="DbType.Int32" />
+		<Type From="ShortInt" To="DbType.Int16" />
+		<Type From="Time" To="DbType.Time" />
+		<Type From="TimeStamp" To="DbType.DateTime" />
+		<Type From="AutoInc" To="DbType.Int32" />
+		<Type From="Raw" To="DbType.Binary" />
+		<Type From="CurDouble" To="DbType.Double" />
+		<Type From="Money" To="DbType.Decimal" />
+		<Type From="LongLong" To="?" />
+		<Type From="CIString" To="?" />
+	</DbTarget>
+	<DbTarget From="POSTGRESQL" To="Npgsql">
+		<Type From="SET" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="abstime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="aclitem" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bool" To="NpgsqlTypes.NpgsqlDbType.Boolean" />
+		<Type From="bpchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bytea" To="NpgsqlTypes.NpgsqlDbType.Bytea" />
+		<Type From="char" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="cid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="cidr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="circle" To="NpgsqlTypes.NpgsqlCircle" />
+		<Type From="date" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="float4" To="NpgsqlTypes.NpgsqlDbType.Real" />
+		<Type From="float8" To="NpgsqlTypes.NpgsqlDbType.Double" />
+		<Type From="inet" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="int2" To="NpgsqlTypes.NpgsqlDbType.Smallint" />
+		<Type From="int4" To="NpgsqlTypes.NpgsqlDbType.Integer" />
+		<Type From="int8" To="NpgsqlTypes.NpgsqlDbType.Bigint" />
+		<Type From="interval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="macaddr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="money" To="NpgsqlTypes.NpgsqlDbType.Money" />
+		<Type From="numeric" To="NpgsqlTypes.NpgsqlDbType.Numeric" />
+		<Type From="oid" To="NpgsqlTypes.NpgsqlDbType.Bigint" />
+		<Type From="path" To="NpgsqlTypes.NpgsqlPath" />
+		<Type From="polygon" To="NpgsqlTypes.NpgsqlPolygon" />
+		<Type From="refcursor" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regclass" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regoper" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regoperator" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regproc" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regprocedure" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regtype" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="reltime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="smgr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="text" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="tid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="time" To="NpgsqlTypes.NpgsqlDbType.Time" />
+		<Type From="timestamp" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="timestamptz" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="timetz" To="NpgsqlTypes.NpgsqlDbType.Time" />
+		<Type From="tinterval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="unknown" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="varbit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="varchar" To="NpgsqlTypes.NpgsqlDbType.Varchar" />
+		<Type From="xid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_abstime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_aclitem" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bool" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_box" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bpchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bytea" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_char" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_cid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_cidr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_circle" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_date" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_float4" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_float8" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_inet" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int2" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int2vector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int4" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int8" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_interval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_line" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_lseg" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_macaddr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_money" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_name" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_numeric" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_oid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_oidvector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_path" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_point" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_polygon" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_refcursor" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regclass" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regoper" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regoperator" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regproc" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regprocedure" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regtype" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_reltime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_text" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_tid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_time" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timestamp" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timestamptz" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timetz" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_tinterval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_varbit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_varchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_xid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="box" To="NpgsqlTypes.NpgsqlBox" />
+		<Type From="int2vector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="line" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="lseg" To="NpgsqlTypes.NpgsqlLSeg" />
+		<Type From="name" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="oidvector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="point" To="NpgsqlTypes.NpgsqlPoint" />
+	</DbTarget>
+	<DbTarget From="POSTGRESQL8" To="Npgsql">
+		<Type From="SET" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="abstime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="aclitem" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bool" To="NpgsqlTypes.NpgsqlDbType.Boolean" />
+		<Type From="bpchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="bytea" To="NpgsqlTypes.NpgsqlDbType.Bytea" />
+		<Type From="char" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="cid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="cidr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="circle" To="NpgsqlTypes.NpgsqlCircle" />
+		<Type From="date" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="float4" To="NpgsqlTypes.NpgsqlDbType.Real" />
+		<Type From="float8" To="NpgsqlTypes.NpgsqlDbType.Double" />
+		<Type From="inet" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="int2" To="NpgsqlTypes.NpgsqlDbType.Smallint" />
+		<Type From="int4" To="NpgsqlTypes.NpgsqlDbType.Integer" />
+		<Type From="int8" To="NpgsqlTypes.NpgsqlDbType.Bigint" />
+		<Type From="interval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="macaddr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="money" To="NpgsqlTypes.NpgsqlDbType.Money" />
+		<Type From="numeric" To="NpgsqlTypes.NpgsqlDbType.Numeric" />
+		<Type From="oid" To="NpgsqlTypes.NpgsqlDbType.Bigint" />
+		<Type From="path" To="NpgsqlTypes.NpgsqlPath" />
+		<Type From="polygon" To="NpgsqlTypes.NpgsqlPolygon" />
+		<Type From="refcursor" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regclass" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regoper" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regoperator" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regproc" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regprocedure" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="regtype" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="reltime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="smgr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="text" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="tid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="time" To="NpgsqlTypes.NpgsqlDbType.Time" />
+		<Type From="timestamp" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="timestamptz" To="NpgsqlTypes.NpgsqlDbType.Timestamp" />
+		<Type From="timetz" To="NpgsqlTypes.NpgsqlDbType.Time" />
+		<Type From="tinterval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="unknown" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="varbit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="varchar" To="NpgsqlTypes.NpgsqlDbType.Varchar" />
+		<Type From="xid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_abstime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_aclitem" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bool" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_box" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bpchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_bytea" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_char" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_cid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_cidr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_circle" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_date" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_float4" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_float8" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_inet" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int2" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int2vector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int4" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_int8" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_interval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_line" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_lseg" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_macaddr" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_money" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_name" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_numeric" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_oid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_oidvector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_path" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_point" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_polygon" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_refcursor" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regclass" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regoper" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regoperator" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regproc" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regprocedure" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_regtype" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_reltime" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_text" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_tid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_time" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timestamp" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timestamptz" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_timetz" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_tinterval" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_varbit" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_varchar" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="_xid" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="box" To="NpgsqlTypes.NpgsqlBox" />
+		<Type From="int2vector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="line" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="lseg" To="NpgsqlTypes.NpgsqlLSeg" />
+		<Type From="name" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="oidvector" To="NpgsqlTypes.NpgsqlDbType.Text" />
+		<Type From="point" To="NpgsqlTypes.NpgsqlPoint" />
+	</DbTarget>
+	<DbTarget From="MYSQL2" To="MySQL Connector/Net">
+		<Type From="BIT" To="MySqlDbType.Byte" />
+		<Type From="BIGINT" To="MySqlDbType.Int64" />
+		<Type From="INT" To="MySqlDbType.Int32" />
+		<Type From="MEDIUMINT" To="MySqlDbType.Int24" />
+		<Type From="SMALLINT" To="MySqlDbType.Int16" />
+		<Type From="TINYINT" To="MySqlDbType.Byte" />
+		<Type From="BIGINT UNSIGNED" To="MySqlDbType.Int64" />
+		<Type From="INT UNSIGNED" To="MySqlDbType.Int32" />
+		<Type From="MEDIUMINT UNSIGNED" To="MySqlDbType.Int24" />
+		<Type From="SMALLINT UNSIGNED" To="MySqlDbType.Int16" />
+		<Type From="TINYINT UNSIGNED" To="MySqlDbType.Byte" />
+		<Type From="FLOAT" To="MySqlDbType.Float" />
+		<Type From="FLOAT UNSIGNED" To="MySqlDbType.Float" />
+		<Type From="DECIMAL" To="MySqlDbType.Decimal" />
+		<Type From="DECIMAL UNSIGNED" To="MySqlDbType.Decimal" />
+		<Type From="NUMERIC" To="MySqlDbType.Decimal" />
+		<Type From="NUMERIC UNSIGNED" To="MySqlDbType.Decimal" />
+		<Type From="DOUBLE UNSIGNED" To="MySqlDbType.Double" />
+		<Type From="DOUBLE" To="MySqlDbType.Double" />
+		<Type From="REAL" To="MySqlDbType.Double" />
+		<Type From="REAL UNSIGNED" To="MySqlDbType.Double" />
+		<Type From="VARCHAR" To="MySqlDbType.VarChar" />
+		<Type From="CHAR" To="MySqlDbType.String" />
+		<Type From="TIMESTAMP" To="MySqlDbType.Timestamp" />
+		<Type From="DATETIME" To="MySqlDbType.Datetime" />
+		<Type From="DATE" To="MySqlDbType.Date" />
+		<Type From="BLOB" To="MySqlDbType.Blob" />
+		<Type From="LONGBLOB" To="MySqlDbType.Blob" />
+		<Type From="TINYBLOB" To="MySqlDbType.Blob" />
+		<Type From="MEDIUMBLOB" To="MySqlDbType.Blob" />
+		<Type From="TEXT" To="MySqlDbType.Blob" />
+		<Type From="TIME" To="MySqlDbType.Time" />
+		<Type From="LONGTEXT" To="MySqlDbType.Blob" />
+		<Type From="MEDIUMTEXT" To="MySqlDbType.MediumBlob" />
+		<Type From="TINYTEXT" To="MySqlDbType.TinyBlob" />
+		<Type From="SET" To="MySqlDbType.Set" />
+		<Type From="ENUM" To="MySqlDbType.Enum" />
+	</DbTarget>
+	<DbTarget From="SQL" To="DbType">
+		<Type From="bigint" To="DbType.Int64"/>
+		<Type From="binary" To="DbType.Binary"/>
+		<Type From="bit" To="DbType.Boolean"/>
+		<Type From="char" To="DbType.AnsiStringFixedLength"/>
+		<Type From="datetime" To="DbType.DateTime"/>
+		<Type From="decimal" To="DbType.Decimal"/>
+		<Type From="float" To="DbType.Double"/>
+		<Type From="image" To="DbType.Binary"/>
+		<Type From="int" To="DbType.Int32"/>
+		<Type From="money" To="DbType.Currency"/>
+		<Type From="nchar" To="DbType.StringFixedLength"/>
+		<Type From="ntext" To="DbType.String"/>
+		<Type From="numeric" To="DbType.Decimal"/>
+		<Type From="nvarchar" To="DbType.String"/>
+		<Type From="real" To="DbType.Single"/>
+		<Type From="smalldatetime" To="DbType.DateTime"/>
+		<Type From="smallint" To="DbType.Int16"/>
+		<Type From="smallmoney" To="DbType.Currency"/>
+		<Type From="text" To="DbType.AnsiString"/>
+		<Type From="timestamp" To="DbType.Binary"/>
+		<Type From="tinyint" To="DbType.Byte"/>
+		<Type From="uniqueidentifier" To="DbType.Guid"/>
+		<Type From="varbinary" To="DbType.Binary"/>
+		<Type From="varchar" To="DbType.AnsiString"/>
+		<Type From="sql_variant" To="DbType.Object"/>
+		<Type From="xml" To="DbType.Xml"/>
+	</DbTarget>
+	<DbTarget From="ACCESS" To="DbType">
+		<Type From="Text" To="DbType.String" />
+		<Type From="Memo" To="DbType.String" />
+		<Type From="DateTime" To="DbType.DateTime" />
+		<Type From="Currency" To="DbType.Currency" />
+		<Type From="Yes/No" To="DbType.Boolean" />
+		<Type From="OLE Object" To="DbType.Binary" />
+		<Type From="Hyperlink" To="DbType.String" />
+		<Type From="Double" To="DbType.Double" />
+		<Type From="Replication ID" To="DbType.Guid" />
+		<Type From="Long" To="DbType.Int32" />
+		<Type From="Single" To="DbType.Single" />
+		<Type From="Decimal" To="DbType.Decimal" />
+		<Type From="Byte" To="DbType.Byte" />
+		<Type From="Integer" To="DbType.Int16" />
+	</DbTarget>
+	<DbTarget From="ORACLE" To="DbType">
+		<Type From="ANYDATA" To="DbType.Object" />
+		<Type From="BFILE" To="DbType.Binary" />
+		<Type From="BLOB" To="DbType.Binary" />
+		<Type From="CHAR" To="DbType.AnsiStringFixedLength" />
+		<Type From="CLOB" To="DbType.AnsiString" />
+		<Type From="DATE" To="DbType.DateTime" />
+		<Type From="FLOAT" To="DbType.Decimal" />
+		<Type From="INTEGER" To="DbType.Decimal" />
+		<Type From="INTERVAL YEAR TO MONTH" To="DbType.Int32" />
+		<Type From="INTERVAL DAY TO SECOND" To="DbType.Time" />
+		<Type From="LONG" To="DbType.String" />
+		<Type From="LONGRAW" To="DbType.Binary" />
+		<Type From="NCHAR" To="DbType.StringFixedLength" />
+		<Type From="NCLOB" To="DbType.String" />
+		<Type From="NUMBER" To="DbType.Decimal" />
+		<Type From="NVARCHAR2" To="DbType.String" />
+		<Type From="RAW" To="DbType.Binary" />
+		<Type From="ROWID" To="DbType.String" />
+		<Type From="UROWID" To="DbType.String" />
+		<Type From="TIMESTAMP" To="DbType.DateTime" />
+		<Type From="TIMESTAMP WITH TIME ZONE" To="DbType.DateTime" />
+		<Type From="TIMESTAMP WITH LOCAL TIME ZONE" To="DbType.DateTime" />
+		<Type From="UNSIGNEDINTEGER" To="DbType.Decimal" />
+		<Type From="VARCHAR2" To="DbType.AnsiString" />
+	</DbTarget>
+	<DbTarget From="PERVASIVE" To="PsqlDbType">
+		<Type From="BFLOAT4" To="PsqlDbType.BFloat4" />
+		<Type From="BFLOAT8" To="PsqlDbType.Double" />
+		<Type From="BIGINT" To="PsqlDbType.BigInt" />
+		<Type From="BINARY" To="PsqlDbType.Binary" />
+		<Type From="BIT" To="PsqlDbType.Bit" />
+		<Type From="CHAR" To="PsqlDbType.Char" />
+		<Type From="CURRENCY" To="PsqlDbType.Decimal" />
+		<Type From="DATE" To="PsqlDbType.Date" />
+		<Type From="DECIMAL" To="PsqlDbType.Decimal" />
+		<Type From="DOUBLE" To="PsqlDbType.Double" />
+		<Type From="FLOAT" To="PsqlDbType.Double" />
+		<Type From="IDENTITY" To="PsqlDbType.Integer" />
+		<Type From="INTEGER" To="PsqlDbType.Integer" />
+		<Type From="MONEY" To="PsqlDbType.Decimal" />
+		<Type From="NUMERIC" To="PsqlDbType.Decimal" />
+		<Type From="NUMERICSA" To="PsqlDbType.Decimal" />
+		<Type From="NUMERICSTS" To="PsqlDbType.Decimal" />
+		<Type From="REAL" To="PsqlDbType.BFloat4" />
+		<Type From="SMALLIDENTITY" To="PsqlDbType.SmallInt" />
+		<Type From="SMALLINT" To="PsqlDbType.SmallInt" />
+		<Type From="TIME" To="PsqlDbType.Time" />
+		<Type From="TIMESTAMP" To="PsqlDbType.Timestamp" />
+		<Type From="TINYINT" To="PsqlDbType.TinyInt" />
+		<Type From="UBIGINT" To="PsqlDbType.UBigInt" />
+		<Type From="UINTEGER" To="PsqlDbType.UInteger" />
+		<Type From="USMALLINT" To="PsqlDbType.USmallInt" />
+		<Type From="UTINYINT" To="PsqlDbType.UTinyInt" />
+		<Type From="VARCHAR" To="PsqlDbType.VarChar" />
+		<Type From="LONGVARBINARY" To="PsqlDbType.LongVarBinary" />
+		<Type From="LONGVARCHAR" To="PsqlDbType.LongVarChar" />
+	</DbTarget>
+	<DbTarget From="ISERIES" To="iDB2Client">
+		<Type From="BIGINT" To="iDB2DbType.iDB2BigInt" />
+		<Type From="BINARY" To="iDB2DbType.iDB2Binary" />
+		<Type From="BLOB" To="iDB2DbType.iDB2Blob" />
+		<Type From="CHAR" To="iDB2DbType.iDB2Char" />
+		<Type From="CHAR FOR BIT DATA" To="iDB2DbType.iDB2CharBitData" />
+		<Type From="CLOB" To="iDB2DbType.iDB2Clob" />
+		<Type From="DATE" To="iDB2DbType.iDB2Date" />
+		<Type From="DBCLOB" To="iDB2DbType.iDB2DbClob" />
+		<Type From="DECIMAL" To="iDB2DbType.iDB2Decimal" />
+		<Type From="DOUBLE" To="iDB2DbType.iDB2Double" />
+		<Type From="GRAPHIC" To="iDB2DbType.iDB2Graphic" />
+		<Type From="INTEGER" To="iDB2DbType.iDB2Integer" />
+		<Type From="NUMERIC" To="iDB2DbType.iDB2Numeric" />
+		<Type From="REAL" To="iDB2DbType.iDB2Real" />
+		<Type From="ROWID" To="iDB2DbType.iDB2Rowid" />
+		<Type From="SMALLINT" To="iDB2DbType.iDB2SmallInt" />
+		<Type From="TIME" To="iDB2DbType.iDB2Time" />
+		<Type From="TIMESTAMP" To="iDB2DbType.iDB2TimeStamp" />
+		<Type From="VARBINARY" To="iDB2DbType.iDB2VarBinary" />
+		<Type From="VARCHAR" To="iDB2DbType.iDB2VarChar" />
+		<Type From="VARCHAR FOR BIT DATA" To="iDB2DbType.iDB2VarCharBitData" />
+		<Type From="VARGRAPHIC" To="iDB2DbType.iDB2VarGraphic" />
+	</DbTarget>
+	<DbTarget From="ISERIES" To="DbType">
+		<Type From="BIGINT" To="DbType.Int64" />
+		<Type From="BINARY" To="DbType.Binary" />
+		<Type From="BLOB" To="DbType.Binary" />
+		<Type From="CHAR" To="DbType.AnsiStringFixedLength" />
+		<Type From="CHAR FOR BIT DATA" To="DbType.Binary" />
+		<Type From="CLOB" To="DbType.AnsiString" />
+		<Type From="DATE" To="DbType.Date" />
+		<Type From="DBCLOB" To="DbType.String" />
+		<Type From="DECIMAL" To="DbType.Decimal" />
+		<Type From="DOUBLE" To="DbType.Double" />
+		<Type From="GRAPHIC" To="DbType.StringFixedLength" />
+		<Type From="INTEGER" To="DbType.Int32" />
+		<Type From="NUMERIC" To="DbType.Decimal" />
+		<Type From="REAL" To="DbType.Single" />
+		<Type From="ROWID" To="DbType.Binary" />
+		<Type From="SMALLINT" To="DbType.Int16" />
+		<Type From="TIME" To="DbType.Time" />
+		<Type From="TIMESTAMP" To="DbType.DateTime" />
+		<Type From="VARBINARY" To="DbType.Binary" />
+		<Type From="VARCHAR" To="DbType.AnsiString" />
+		<Type From="VARCHAR FOR BIT DATA" To="DbType.Binary" />
+		<Type From="VARGRAPHIC" To="DbType.String" />
+	</DbTarget>
+	<DbTarget From="ISERIES" To="OleDb">
+		<Type From="BIGINT" To="OleDbType.BigInt" />
+		<Type From="BINARY" To="OleDbType.LongVarBinary" />
+		<Type From="BLOB" To="OleDbType.LongVarBinary" />
+		<Type From="CHAR" To="OleDbType.Char" />
+		<Type From="CHAR FOR BIT DATA" To="OleDbType.Binary" />
+		<Type From="CLOB" To="OleDbType.LongVarChar" />
+		<Type From="DATE" To="OleDbType.DBTimeStamp" />
+		<Type From="DBCLOB" To="OleDbType.LongVarChar" />
+		<Type From="DECIMAL" To="OleDbType.Decimal" />
+		<Type From="DOUBLE" To="OleDbType.Double" />
+		<Type From="GRAPHIC" To="OleDbType.LongChar" />
+		<Type From="INTEGER" To="OleDbType.Integer" />
+		<Type From="NUMERIC" To="OleDbType.Numeric" />
+		<Type From="REAL" To="OleDbType.Single" />
+		<Type From="ROWID" To="OleDbType.Binary" />
+		<Type From="SMALLINT" To="OleDbType.SmallInt" />
+		<Type From="TIME" To="OleDbType.DBTimeStamp" />
+		<Type From="TIMESTAMP" To="OleDbType.DBTimeStamp" />
+		<Type From="VARBINARY" To="OleDbType.VarBinary" />
+		<Type From="VARCHAR" To="OleDbType.VarChar" />
+		<Type From="VARCHAR FOR BIT DATA" To="OleDbType.VarBinary" />
+		<Type From="VARGRAPHIC" To="OleDbType.LongVarChar" />
+	</DbTarget>
+	<DbTarget From="SYBASEASA" To="DbType">
+		<Type From="CHAR" To="DbType.AnsiString" />
+		<Type From="VARCHAR" To="DbType.AnsiString" />
+		<Type From="LONG VARCHAR" To="DbType.AnsiString" />
+		<Type From="TEXT" To="DbType.AnsiString" />
+		<Type From="UNIQUEIDENTIFIERSTR" To="DBType.Guid" />
+		<Type From="XML" To="DbType.AnsiString" />
+		<Type From="BIGINT" To="DBType.Int64" />
+		<Type From="SMALLINT" To="DBType.Int32" />
+		<Type From="TINYINT" To="DBType.Int16" />
+		<Type From="DECIMAL" To="DBType.Decimal" />
+		<Type From="DOUBLE" To="DBType.Double" />
+		<Type From="FLOAT" To="DBType.Double" />
+		<Type From="INT" To="DBType.Int32" />
+		<Type From="NUMERIC" To="DBType.Decimal" />
+		<Type From="REAL" To="DBType.Single" />
+		<Type From="MONEY" To="DBType.Decimal" />
+		<Type From="BIT" To="DBType.Boolean" />
+		<Type From="DATE" To="DBType.DateTime" />
+		<Type From="DATETIME" To="DBType.DateTime" />
+		<Type From="SMALLDATETIME" To="DBType.DateTime" />
+		<Type From="TIME" To="DBType.DateTime" />
+		<Type From="TIMESTAMP" To="DBType.DateTime" />
+		<Type From="BINARY" To="DBType.Binary" />
+		<Type From="LONG BINARY" To="DBType.Binary" />
+		<Type From="VARBINARY" To="DBType.Binary" />
+		<Type From="IMAGE" To="DBType.Binary" />
+		<Type From="UNIQUEIDENTIFIER" To="DBType.Binary" />
+	</DbTarget>
+	<DbTarget From="XSD3B" To="SqlClient">
+		<Type From="bigint" To="SqlDbType.BigInt" />
+		<Type From="binary" To="SqlDbType.Binary" />
+		<Type From="bit" To="SqlDbType.Bit" />
+		<Type From="char" To="SqlDbType.Char" />
+		<Type From="datetime" To="SqlDbType.DateTime" />
+		<Type From="decimal" To="SqlDbType.Decimal" />
+		<Type From="float" To="SqlDbType.Float" />
+		<Type From="image" To="SqlDbType.Image" />
+		<Type From="int" To="SqlDbType.Int" />
+		<Type From="money" To="SqlDbType.Money" />
+		<Type From="nchar" To="SqlDbType.NChar" />
+		<Type From="ntext" To="SqlDbType.NText" />
+		<Type From="numeric" To="SqlDbType.Decimal" />
+		<Type From="nvarchar" To="SqlDbType.NVarChar" />
+		<Type From="real" To="SqlDbType.Real" />
+		<Type From="smalldatetime" To="SqlDbType.SmallDateTime" />
+		<Type From="smallint" To="SqlDbType.SmallInt" />
+		<Type From="smallmoney" To="SqlDbType.SmallMoney" />
+		<Type From="text" To="SqlDbType.Text" />
+		<Type From="timestamp" To="SqlDbType.Timestamp" />
+		<Type From="tinyint" To="SqlDbType.TinyInt" />
+		<Type From="uniqueidentifier" To="SqlDbType.UniqueIdentifier" />
+		<Type From="varbinary" To="SqlDbType.VarBinary" />
+		<Type From="varchar" To="SqlDbType.VarChar" />
+		<Type From="xml" To="SqlDbType.Xml" />
+		<Type From="sql_variant" To="SqlDbType.Variant" />
+	</DbTarget>
+	<DbTarget From="XSD3B" To="OleDb">
+		<Type From="bigint" To="OleDbType.BigInt" />
+		<Type From="binary" To="OleDbType.Binary" />
+		<Type From="bit" To="OleDbType.Boolean" />
+		<Type From="char" To="OleDbType.Char" />
+		<Type From="datetime" To="OleDbType.DBTimeStamp" />
+		<Type From="decimal" To="OleDbType.Numeric" />
+		<Type From="float" To="OleDbType.Double" />
+		<Type From="image" To="OleDbType.LongVarBinary" />
+		<Type From="int" To="OleDbType.Integer" />
+		<Type From="money" To="OleDbType.Currency" />
+		<Type From="nchar" To="OleDbType.WChar" />
+		<Type From="ntext" To="OleDbType.LongVarWChar" />
+		<Type From="numeric" To="OleDbType.Numeric" />
+		<Type From="nvarchar" To="OleDbType.VarWChar" />
+		<Type From="real" To="OleDbType.Single" />
+		<Type From="smalldatetime" To="OleDbType.DBTimeStamp" />
+		<Type From="smallint" To="OleDbType.SmallInt" />
+		<Type From="smallmoney" To="OleDbType.Currency" />
+		<Type From="text" To="OleDbType.LongVarChar" />
+		<Type From="timestamp" To="OleDbType.DBTimeStamp" />
+		<Type From="tinyint" To="OleDbType.UnsignedTinyInt" />
+		<Type From="uniqueidentifier" To="OleDbType.Guid" />
+		<Type From="varbinary" To="OleDbType.VarBinary" />
+		<Type From="varchar" To="OleDbType.VarChar" />
+		<Type From="xml" To="OleDbType.Xml" />
+		<Type From="sql_variant" To="OleDbType.Variant" />
+	</DbTarget>
+	<DbTarget From="XSD3B" To="AllDbClient">
+		<Type From="bigint" To="AllDbType.Int64" />
+		<Type From="binary" To="AllDbType.Binary" />
+		<Type From="bit" To="AllDbType.Boolean" />
+		<Type From="char" To="AllDbType.AnsiStringFixedLength" />
+		<Type From="datetime" To="AllDbType.DateTime" />
+		<Type From="decimal" To="AllDbType.Decimal" />
+		<Type From="float" To="AllDbType.Double" />
+		<Type From="image" To="AllDbType.Binary" />
+		<Type From="int" To="AllDbType.Int32" />
+		<Type From="money" To="AllDbType.Currency" />
+		<Type From="nchar" To="AllDbType.StringFixedLength" />
+		<Type From="ntext" To="AllDbType.String" />
+		<Type From="numeric" To="AllDbType.Decimal" />
+		<Type From="nvarchar" To="AllDbType.String" />
+		<Type From="real" To="AllDbType.Single" />
+		<Type From="smalldatetime" To="AllDbType.DateTime" />
+		<Type From="smallint" To="AllDbType.Int16" />
+		<Type From="smallmoney" To="AllDbType.Currency" />
+		<Type From="text" To="AllDbType.AnsiString" />
+		<Type From="timestamp" To="AllDbType.Binary" />
+		<Type From="tinyint" To="AllDbType.Byte" />
+		<Type From="uniqueidentifier" To="AllDbType.Guid" />
+		<Type From="varbinary" To="AllDbType.Binary" />
+		<Type From="varchar" To="AllDbType.AnsiString" />
+		<Type From="sql_variant" To="AllDbType.Object" />
+	</DbTarget>
+	<DbTarget From="XSD3B" To="ADODB">
+		<Type From="bigint" To="adBigInt" />
+		<Type From="binary" To="adBinary" />
+		<Type From="bit" To="adBoolean" />
+		<Type From="char" To="adChar" />
+		<Type From="datetime" To="adDBTimeStamp" />
+		<Type From="decimal" To="adNumeric" />
+		<Type From="float" To="adDouble" />
+		<Type From="image" To="adLongVarBinary" />
+		<Type From="int" To="adInteger" />
+		<Type From="money" To="adCurrency" />
+		<Type From="nchar" To="adWChar" />
+		<Type From="ntext" To="adLongVarWChar" />
+		<Type From="numeric" To="adNumeric" />
+		<Type From="nvarchar" To="adVarWChar" />
+		<Type From="real" To="adSingle" />
+		<Type From="smalldatetime" To="adDBTimeStamp" />
+		<Type From="smallint" To="adSmallInt" />
+		<Type From="smallmoney" To="adCurrency" />
+		<Type From="text" To="adLongVarChar" />
+		<Type From="timestamp" To="adBinary" />
+		<Type From="tinyint" To="adUnsignedTinyInt" />
+		<Type From="uniqueidentifier" To="adGuid" />
+		<Type From="varbinary" To="adVarBinary" />
+		<Type From="varchar" To="adVarChar" />
+		<Type From="sql_variant" To="adVariant" />
+	</DbTarget>
+	<DbTarget From="INGRES2006ODBC" To="ODBC">
+		<Type From="varchar" To="OdbcType.VarChar" />
+		<Type From="char" To="OdbcType.Char" />
+		<Type From="text" To="OdbcType.VarChar" />
+		<Type From="long varchar" To="OdbcType.VarChar" />
+		<Type From="nvarchar" To="OdbcType.VarChar" />
+		<Type From="nchar" To="OdbcType.Char" />
+		<Type From="long nvarchar" To="OdbcType.VarChar" />
+		<Type From="tinyint" To="OdbcType.Int" />
+		<Type From="smallint" To="OdbcType.Int" />
+		<Type From="integer" To="OdbcType.Int" />
+		<Type From="bigint" To="OdbcType.Int" />
+		<Type From="decimal" To="OdbcType.Decimal" />
+		<Type From="float" To="OdbcType.Decimal" />
+		<Type From="float4" To="OdbcType.Decimal" />
+		<Type From="real" To="OdbcType.Decimal" />
+		<Type From="date" To="OdbcType.DateTime" />
+		<Type From="int" To="OdbcType.Integer" />
+	</DbTarget>
+</DbTargets>

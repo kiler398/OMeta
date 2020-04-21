@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DefaultSettings Version="1.3.0.9" FirstTime="true">
+  <Setting Name="VersionRSSUrl" value="http://sourceforge.net/export/rss2_projfiles.php?group_id=198893" />
+  <Setting Name="TemplateBrowserExecAsync" value="True" />
+  <Setting Name="ConsoleWriteGeneratedDetails" value="False" />
+  <Setting Name="DocStyleSettings" value="False" />
+  <Setting Name="FontFamily" value="" />
+  <Setting Name="DbDriver" value="SQL" />
+  <Setting Name="ConnectionString" value="Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Data Source=localhost" />
+  <Setting Name="LanguageMappingFile" value="C:\Program Files (x86)\MyGeneration13\Settings\Languages.xml" />
+  <Setting Name="Language" value="C#" />
+  <Setting Name="DbTargetMappingFile" value="C:\Program Files (x86)\MyGeneration13\Settings\DbTargets.xml" />
+  <Setting Name="DbTarget" value="SqlClient" />
+  <Setting Name="UserMetaDataFileName" value="C:\Program Files (x86)\MyGeneration13\Settings\UserMetaData.xml" />
+  <Setting Name="EnableLineNumbering" value="False" />
+  <Setting Name="EnableClipboard" value="True" />
+  <Setting Name="CodePage" value="-1" />
+  <Setting Name="Tabs" value="4" />
+  <Setting Name="ScriptTimeout" value="-1" />
+  <Setting Name="DefaultTemplateDirectory" value="C:\Program Files (x86)\MyGeneration13\Templates\" />
+  <Setting Name="DefaultOutputDirectory" value="C:\Program Files (x86)\MyGeneration13\GeneratedCode\" />
+  <Setting Name="UseProxyServer" value="False" />
+  <Setting Name="ProxyServerUri" value="" />
+  <Setting Name="ProxyAuthUsername" value="" />
+  <Setting Name="ProxyAuthPassword" value="" />
+  <Setting Name="ProxyAuthDomain" value="" />
+  <Setting Name="WindowState" value="Normal" />
+  <Setting Name="WindowPosTop" value="50" />
+  <Setting Name="WindowPosLeft" value="50" />
+  <Setting Name="WindowPosWidth" value="800" />
+  <Setting Name="WindowPosHeight" value="600" />
+  <Setting Name="CheckForNewBuild" value="True" />
+  <Setting Name="CompactMemoryOnStartup" value="True" />
+  <Setting Name="DomainOverride" value="True" />
+</DefaultSettings>

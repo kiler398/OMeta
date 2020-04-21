@@ -14,8 +14,10 @@ namespace OMeta.ConsoleTest
             dbRoot.Connect(dbDriver.SQL, "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; ");
             //获取当前连接默认数据库
             var database = dbRoot.DefaultDatabase;
+
             //输出当前默认数据库名
             Console.WriteLine("当前默认数据库名:" + database.Name);
+            Console.WriteLine("当前默认数据库架构名:" + database.SchemaName);
             Console.WriteLine("----------------------------------------");
             //遍历循环当前数据库所有的表
             int i = 1;

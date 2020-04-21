@@ -5,11 +5,7 @@ using OpenMeta.Interfaces;
 
 namespace OMeta.Plugin
 {
-#if ENTERPRISE
-	using System.EnterpriseServices;
-	using System.Runtime.InteropServices;
-	[ComVisible(false)]
-#endif
+ 
 	public class ClassFactory : IClassFactory
 	{
         private IOMetaPlugin plugin;

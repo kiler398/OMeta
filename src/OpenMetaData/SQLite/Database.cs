@@ -3,14 +3,11 @@ using System.Data;
 using System.Data.OleDb;
 
 using System.Data.SQLite;
-using ADODB;
+ 
 
 namespace OMeta.SQLite
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IDatabase))]
-#endif 
+ 
 	public class SQLiteDatabase : Database
 	{
 		internal string _name = "";
@@ -36,7 +33,7 @@ namespace OMeta.SQLite
 			}
 		}
 
-		override public ADODB.Recordset ExecuteSql(string sql)
+		override public DataSet ExecuteSql(string sql)
 		{
 			SQLiteConnection cn = ConnectionHelper.CreateConnection(dbRoot);
 

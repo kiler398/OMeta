@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.Oracle
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IDatabase))]
-#endif 
+ 
 	public class OracleDatabase : Database
 	{
 		public OracleDatabase()
@@ -15,7 +12,7 @@ namespace OMeta.Oracle
 
 		}
 
-		override public ADODB.Recordset ExecuteSql(string sql)
+		override public DataSet ExecuteSql(string sql)
 		{
 			OleDbConnection cn = new OleDbConnection(dbRoot.ConnectionString);
 			cn.Open();

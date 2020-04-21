@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.PostgreSQL
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IProcedure))]
-#endif 
+ 
 	public class PostgreSQLProcedure : Procedure
 	{
 		internal string param_types = "";

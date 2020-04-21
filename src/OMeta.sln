@@ -3,31 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "thirdparty", "thirdparty", "{004F6A8B-F037-4596-9D18-CD54201F9E94}"
-	ProjectSection(SolutionItems) = preProject
-		thirdparty\ADODB.dll = thirdparty\ADODB.dll
-		thirdparty\CollapsibleSplitter.dll = thirdparty\CollapsibleSplitter.dll
-		thirdparty\Dl3bak.Xsd3b.dll = thirdparty\Dl3bak.Xsd3b.dll
-		thirdparty\Dl3bak.Xsd3b.Uml14Xmi12Import.dll = thirdparty\Dl3bak.Xsd3b.Uml14Xmi12Import.dll
-		thirdparty\Dl3bak.Xsd3b.Xsd.dll = thirdparty\Dl3bak.Xsd3b.Xsd.dll
-		thirdparty\Dl3bak.Xsd3b.Xslt.dll = thirdparty\Dl3bak.Xsd3b.Xslt.dll
-		thirdparty\EffiProz.dll = thirdparty\EffiProz.dll
-		thirdparty\FirebirdSql.Data.FirebirdClient.dll = thirdparty\FirebirdSql.Data.FirebirdClient.dll
-		thirdparty\Interop.ADODB.dll = thirdparty\Interop.ADODB.dll
-		thirdparty\Interop.ADOX.dll = thirdparty\Interop.ADOX.dll
-		thirdparty\Interop.MSDASC.dll = thirdparty\Interop.MSDASC.dll
-		thirdparty\Interop.MSScriptControl.dll = thirdparty\Interop.MSScriptControl.dll
-		thirdparty\Interop.Scripting.dll = thirdparty\Interop.Scripting.dll
-		thirdparty\Mono.Security.dll = thirdparty\Mono.Security.dll
-		thirdparty\MySql.Data.dll = thirdparty\MySql.Data.dll
-		thirdparty\Npgsql.dll = thirdparty\Npgsql.dll
-		thirdparty\SciLexer.dll = thirdparty\SciLexer.dll
-		thirdparty\ScintillaNET.dll = thirdparty\ScintillaNET.dll
-		thirdparty\System.Data.SQLite.dll = thirdparty\System.Data.SQLite.dll
-		thirdparty\System.Data.SQLite.Linq.dll = thirdparty\System.Data.SQLite.Linq.dll
-		thirdparty\WeifenLuo.WinFormsUI.Docking.dll = thirdparty\WeifenLuo.WinFormsUI.Docking.dll
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{A33F4753-36E1-408B-98AC-4A4DA2276419}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
@@ -43,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{3949E3
 		Images\screen1.png = Images\screen1.png
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMeta", "OpenMetaData\OpenMeta.csproj", "{42ACBEEB-C96B-4895-AED5-CC9F550D50F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMeta", "OpenMetaData\OMeta.csproj", "{42ACBEEB-C96B-4895-AED5-CC9F550D50F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

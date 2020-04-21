@@ -6,10 +6,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IParameters))]
-#endif 
+ 
 	public class FirebirdParameters : Parameters
 	{
 		internal DataColumn f_TypeNameComplete	= null;

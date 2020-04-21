@@ -5,45 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Access\**" />
-    <Compile Remove="Advantage\**" />
-    <Compile Remove="DB2\**" />
-    <Compile Remove="Firebird\**" />
-    <Compile Remove="ISeries\**" />
-    <Compile Remove="MySql5\**" />
-    <Compile Remove="MySql\**" />
-    <Compile Remove="Oracle\**" />
     <Compile Remove="Pervasive\**" />
-    <Compile Remove="Plugin\**" />
-    <Compile Remove="PostgreSQL8\**" />
-    <Compile Remove="PostgreSQL\**" />
-    <Compile Remove="SQLite\**" />
-    <EmbeddedResource Remove="Access\**" />
-    <EmbeddedResource Remove="Advantage\**" />
-    <EmbeddedResource Remove="DB2\**" />
-    <EmbeddedResource Remove="Firebird\**" />
-    <EmbeddedResource Remove="ISeries\**" />
-    <EmbeddedResource Remove="MySql5\**" />
-    <EmbeddedResource Remove="MySql\**" />
-    <EmbeddedResource Remove="Oracle\**" />
     <EmbeddedResource Remove="Pervasive\**" />
-    <EmbeddedResource Remove="Plugin\**" />
-    <EmbeddedResource Remove="PostgreSQL8\**" />
-    <EmbeddedResource Remove="PostgreSQL\**" />
-    <EmbeddedResource Remove="SQLite\**" />
-    <None Remove="Access\**" />
-    <None Remove="Advantage\**" />
-    <None Remove="DB2\**" />
-    <None Remove="Firebird\**" />
-    <None Remove="ISeries\**" />
-    <None Remove="MySql5\**" />
-    <None Remove="MySql\**" />
-    <None Remove="Oracle\**" />
     <None Remove="Pervasive\**" />
-    <None Remove="Plugin\**" />
-    <None Remove="PostgreSQL8\**" />
-    <None Remove="PostgreSQL\**" />
-    <None Remove="SQLite\**" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,10 +3,7 @@ using System.Data;
 
 namespace OMeta.MySql5
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IProcedures))]
-#endif 
+ 
 	public class MySql5Procedures : Procedures
 	{
 		public MySql5Procedures()

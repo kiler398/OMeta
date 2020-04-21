@@ -4,10 +4,7 @@ using System.Data;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IParameter))]
-#endif 
+ 
 	public class FirebirdParameter : Parameter
 	{
 		public FirebirdParameter()

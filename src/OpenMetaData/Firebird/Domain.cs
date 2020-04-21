@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IDomain))]
-#endif 
+ 
 	public class FirebirdDomain : Domain
 	{
 		public FirebirdDomain()

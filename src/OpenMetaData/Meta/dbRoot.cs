@@ -74,7 +74,6 @@ namespace OMeta
     {
 		public dbRoot()
 		{
-            OpenMeta.Access.ClassFactory.Register();
             Advantage.ClassFactory.Register();
             DB2.ClassFactory.Register();
             Firebird.ClassFactory.Register();
@@ -82,7 +81,7 @@ namespace OMeta
             MySql.ClassFactory.Register();
             MySql5.ClassFactory.Register();
             Oracle.ClassFactory.Register();
-            Pervasive.ClassFactory.Register();
+            //Pervasive.ClassFactory.Register();
             PostgreSQL.ClassFactory.Register();
             PostgreSQL8.ClassFactory.Register();
             Sql.ClassFactory.Register();
@@ -331,12 +330,12 @@ namespace OMeta
                     return true;
                 case OMetaDrivers.SQL:
                 case OMetaDrivers.Oracle:
-                case OMetaDrivers.Access:
+                //case OMetaDrivers.Access:
                 case OMetaDrivers.MySql:
                 case OMetaDrivers.MySql2:
                 case OMetaDrivers.DB2:
                 case OMetaDrivers.ISeries:
-                case OMetaDrivers.Pervasive:
+                //case OMetaDrivers.Pervasive:
                 case OMetaDrivers.PostgreSQL:
                 case OMetaDrivers.PostgreSQL8:
                 case OMetaDrivers.Firebird:
@@ -408,16 +407,7 @@ namespace OMeta
                         this.requiredDatabaseName = true;
                         ClassFactory = new Oracle.ClassFactory();
                         break;
-
-                    case dbDriver.Access:
-
-                        ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = OMetaDrivers.Access;
-                        this.StripTrailingNulls = false;
-                        this.requiredDatabaseName = false;
-                        ClassFactory = new OpenMeta.Access.ClassFactory();
-                        break;
-
+ 
                     case dbDriver.MySql:
 
                         ConnectUsingOleDb(_driver, _connectionString);
@@ -459,16 +449,7 @@ namespace OMeta
                         this.requiredDatabaseName = false;
                         ClassFactory = new ISeries.ClassFactory();
                         break;
-
-                    case dbDriver.Pervasive:
-
-                        ConnectUsingOleDb(_driver, _connectionString);
-                        this._driverString = OMetaDrivers.Pervasive;
-                        this.StripTrailingNulls = false;
-                        this.requiredDatabaseName = false;
-                        ClassFactory = new Pervasive.ClassFactory();
-                        break;
-
+ 
                     case dbDriver.PostgreSQL:
 
                         using (NpgsqlConnection cn = new Npgsql.NpgsqlConnection(_connectionString))
@@ -665,16 +646,16 @@ namespace OMeta
 
 			switch(driver)
 			{
-				case dbDriver.Access:
+				//case dbDriver.Access:
 
-					int i = cn.DataSource.LastIndexOf(@"\");
+				//	int i = cn.DataSource.LastIndexOf(@"\");
 
-					if(i == -1) 
-						databaseName = cn.DataSource;
-					else
-						databaseName = cn.DataSource.Substring(++i);
+				//	if(i == -1) 
+				//		databaseName = cn.DataSource;
+				//	else
+				//		databaseName = cn.DataSource.Substring(++i);
 
-					break;
+				//	break;
 
 				default:
 
@@ -1372,10 +1353,10 @@ namespace OMeta
 		/// </summary>
 		Oracle,
 
-		/// <summary>
-		/// String form is "ACCESS" for DriverString property
-		/// </summary>
-		Access,
+		///// <summary>
+		///// String form is "ACCESS" for DriverString property
+		///// </summary>
+		//Access,
 
 		/// <summary>
 		/// String form is "MYSQL" for DriverString property
@@ -1397,10 +1378,10 @@ namespace OMeta
 		/// </summary>
 		ISeries,
 
-		/// <summary>
-		/// String form is "PERVASIVE" for DriverString property
-		/// </summary>
-		Pervasive,
+		///// <summary>
+		///// String form is "PERVASIVE" for DriverString property
+		///// </summary>
+		//Pervasive,
 
 		/// <summary>
 		/// String form is "POSTGRESQL" for DriverString property
@@ -1448,7 +1429,7 @@ namespace OMeta
     #region OMetaDrivers string Constants
     public static class OMetaDrivers
     {
-        public const string Access = "ACCESS";
+        //public const string Access = "ACCESS";
         public const string Advantage = "ADVANTAGE";
         public const string DB2 = "DB2";
         public const string Firebird = "FIREBIRD";
@@ -1458,7 +1439,7 @@ namespace OMeta
         public const string MySql2 = "MYSQL2";
         public const string None = "NONE";
         public const string Oracle = "ORACLE";
-        public const string Pervasive = "PERVASIVE";
+        //public const string Pervasive = "PERVASIVE";
         public const string PostgreSQL = "POSTGRESQL";
         public const string PostgreSQL8 = "POSTGRESQL8";
         public const string SQLite = "SQLITE";
@@ -1472,8 +1453,6 @@ namespace OMeta
                     return dbDriver.SQL;
                 case OMetaDrivers.Oracle:
                     return dbDriver.Oracle;
-                case OMetaDrivers.Access:
-                    return dbDriver.Access;
                 case OMetaDrivers.MySql:
                     return dbDriver.MySql;
                 case OMetaDrivers.MySql2:
@@ -1482,8 +1461,6 @@ namespace OMeta
                     return dbDriver.DB2;
                 case OMetaDrivers.ISeries:
                     return dbDriver.ISeries;
-                case OMetaDrivers.Pervasive:
-                    return dbDriver.Pervasive;
                 case OMetaDrivers.PostgreSQL:
                     return dbDriver.PostgreSQL;
                 case OMetaDrivers.PostgreSQL8:

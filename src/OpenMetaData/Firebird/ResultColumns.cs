@@ -3,10 +3,7 @@ using System.Data;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IResultColumns))]
-#endif 
+ 
 	public class FirebirdResultColumns : ResultColumns
 	{
 		public FirebirdResultColumns()

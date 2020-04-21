@@ -57,20 +57,11 @@ namespace OMeta.Sql
 			
 			if (rs?.Tables?.Count>0 && rs?.Tables[0].Rows?.Count>0) 
 			{
-                foreach (var dataRow in rs.Tables[0].Rows)
+                foreach (DataRow dataRow in rs.Tables[0].Rows)
                 {
-					hash.AddKeyValue(dataRow["name"].ToString(), dataRow["value"].Value.ToString());
+                    hash.AddKeyValue(dataRow["name"].ToString(), dataRow["value"].ToString());
 				}
-
-				rs.MoveFirst();
-
-				while (!rs.EOF && !rs.BOF)
-				{
-					hash.AddKeyValue( rs.Fields["name"].Value.ToString(), rs.Fields["value"].Value.ToString());
-					rs.MoveNext();
-				}
-				rs.Close();
-				rs = null;
+                rs = null;
 			}
 			return hash;
 		}

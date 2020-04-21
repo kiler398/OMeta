@@ -4,10 +4,7 @@ using Npgsql;
 
 namespace OMeta.PostgreSQL8
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITables))]
-#endif 
+ 
 	public class PostgreSQL8Tables : Tables
 	{
 		public PostgreSQL8Tables()

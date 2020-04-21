@@ -6,10 +6,7 @@ using System.Collections;
 
 namespace OMeta.MySql
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IColumns))]
-#endif 
+ 
 	public class MySqlColumns : Columns
 	{
 		public MySqlColumns()

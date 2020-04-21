@@ -5,10 +5,7 @@ using Npgsql;
 
 namespace OMeta.PostgreSQL8
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IProcedures))]
-#endif 
+ 
 	public class PostgreSQL8Procedures : Procedures
 	{
 		internal string _specific_name = "";

@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.ISeries
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IColumns))]
-#endif 
+ 
 	public class ISeriesColumns : Columns
 	{
 		public ISeriesColumns()

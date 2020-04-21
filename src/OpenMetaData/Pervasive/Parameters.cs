@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.Pervasive
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IParameters))]
-#endif 
+ 
 	public class PervasiveParameters : Parameters
 	{
 		public PervasiveParameters()

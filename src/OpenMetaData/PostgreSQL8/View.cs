@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.PostgreSQL8
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IView))]
-#endif 
+ 
 	public class PostgreSQL8View : View
 	{
 		public PostgreSQL8View()

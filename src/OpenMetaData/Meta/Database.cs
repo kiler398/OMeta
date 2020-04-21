@@ -182,15 +182,11 @@ namespace OMeta
                 //DataTable data;
                 string dataType, fieldname;
                 int length;
-
-                // Skip columns contains the index of any columns that we cannot handle, array types and such ...
-                Hashtable skipColumns = null;
-
+ 
                 reader.Read();
                 schema = reader.GetSchemaTable();
-
-                IProviderType provType = null;
-                int columnOrdinal = 0, numericPrecision = 0, numericScale = 0, providerTypeInt = -1, colID = 0;
+ 
+                int columnOrdinal = 0, numericPrecision = 0, numericScale = 0, providerTypeInt = -1 ;
                 bool isLong = false;
                 string dbTypeName = string.Empty, dbTypeNameComplete = string.Empty;
 
@@ -200,8 +196,7 @@ namespace OMeta
                     fieldname = row["ColumnName"].ToString();
                     dataType = row["DataType"].ToString();
                     length = 0;
-
-                    provType = null;
+ 
                     columnOrdinal = 0; 
                     numericPrecision = 0; 
                     numericScale = 0; 

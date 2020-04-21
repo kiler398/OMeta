@@ -5,11 +5,7 @@ using OpenMeta.Interfaces;
 
 namespace OMeta.SQLite
 {
-#if ENTERPRISE
-	using System.EnterpriseServices;
-	using System.Runtime.InteropServices;
-	[ComVisible(false)]
-#endif
+ 
 	public class ClassFactory : IClassFactory
 	{
         public static void Register()

@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.Plugin
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IResultColumn))]
-#endif 
+ 
 	public class PluginResultColumn : ResultColumn
     {
         private IOMetaPlugin plugin;

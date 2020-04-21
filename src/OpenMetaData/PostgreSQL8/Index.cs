@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.PostgreSQL8
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IIndex))]
-#endif 
+ 
 	public class PostgreSQL8Index : Index
 	{
 		public PostgreSQL8Index()

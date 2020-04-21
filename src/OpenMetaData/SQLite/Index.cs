@@ -7,10 +7,7 @@ using System.Data.SQLite;
 
 namespace OMeta.SQLite
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IIndex))]
-#endif 
+ 
 	public class SQLiteIndex : Index
 	{
 		//private SQLiteColumns _indexColumns;

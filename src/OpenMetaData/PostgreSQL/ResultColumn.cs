@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.PostgreSQL
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IResultColumn))]
-#endif 
+ 
 	public class PostgreSQLResultColumn : ResultColumn
 	{
 		public PostgreSQLResultColumn()

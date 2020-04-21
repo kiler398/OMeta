@@ -7,10 +7,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IForeignKeys))]
-#endif 
+ 
 	public class FirebirdForeignKeys : ForeignKeys
     {
         private static DataTable allFkData = null;

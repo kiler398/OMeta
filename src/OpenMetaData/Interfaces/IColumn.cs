@@ -101,7 +101,7 @@ namespace OMeta
 		/// You can provide an Alias the User Meta Data window. You can also set this during a script and then call MyMeta.SaveUserMetaData().
 		/// See <see cref="Name"/>
 		/// </summary>
-		[DispId(0)]
+ 
 		string Alias { get; set; }
 	
 		/// <summary>

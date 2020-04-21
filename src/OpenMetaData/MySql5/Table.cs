@@ -4,10 +4,7 @@ using System.Data.Common;
 
 namespace OMeta.MySql5
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITable))]
-#endif 
+ 
 	public class MySql5Table : Table
 	{
 		public MySql5Table()

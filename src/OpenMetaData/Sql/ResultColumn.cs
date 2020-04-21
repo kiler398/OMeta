@@ -125,7 +125,7 @@ namespace OMeta.Sql
 
 		#endregion
 
-        internal DataRow _row = null;
+        internal new DataRow _row = null;
         internal DataColumn _column = null;
 	}
 }

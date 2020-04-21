@@ -3,10 +3,7 @@ using System.Data;
 
 namespace OMeta.MySql5
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IColumn))]
-#endif 
+ 
 	public class MySql5Column : Column
 	{
 		static char[] chars = new char[] {' ', '('};

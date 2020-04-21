@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.Advantage
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITable))]
-#endif 
+ 
 	public class AdvantageTable : Table
 	{
 		public AdvantageTable()

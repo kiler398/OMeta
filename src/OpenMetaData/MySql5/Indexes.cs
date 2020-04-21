@@ -4,10 +4,7 @@ using System.Data.Common;
 
 namespace OMeta.MySql5
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IIndexes))]
-#endif 
+ 
 	public class MySql5Indexes : Indexes
 	{
 		public MySql5Indexes()

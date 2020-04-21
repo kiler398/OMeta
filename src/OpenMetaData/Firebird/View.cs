@@ -4,10 +4,7 @@ using System.Data;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IView))]
-#endif 
+ 
 	public class FirebirdView : View
 	{
 		public FirebirdView()

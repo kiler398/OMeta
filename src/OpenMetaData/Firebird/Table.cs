@@ -5,10 +5,7 @@ using FirebirdSql.Data.FirebirdClient;
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(ITable))]
-#endif 
+ 
 	public class FirebirdTable : Table
 	{
 		public FirebirdTable()

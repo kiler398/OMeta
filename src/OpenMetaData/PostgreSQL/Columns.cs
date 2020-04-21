@@ -4,10 +4,7 @@ using Npgsql;
 
 namespace OMeta.PostgreSQL
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IColumns))]
-#endif 
+ 
 	public class PostgreSQLColumns : Columns
 	{
 		static string _query = 

@@ -2,15 +2,12 @@ using System;
 using System.Data;
 using FirebirdSql.Data.FirebirdClient;
 
-using ADODB;
+ 
 
 
 namespace OMeta.Firebird
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IDatabase))]
-#endif 
+ 
 	public class FirebirdDatabase : Database
 	{
 		public FirebirdDatabase()
@@ -29,7 +26,7 @@ namespace OMeta.Firebird
             return columns;
         }
 
-		override public ADODB.Recordset ExecuteSql(string sql)
+		override public DataSet ExecuteSql(string sql)
 		{
 			FbConnection cn = new FbConnection(dbRoot.ConnectionString);
 			cn.Open();

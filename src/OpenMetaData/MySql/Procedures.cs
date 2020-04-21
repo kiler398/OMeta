@@ -4,10 +4,7 @@ using System.Data.OleDb;
 
 namespace OMeta.MySql
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IProcedures))]
-#endif 
+ 
 	public class MySqlProcedures : Procedures
 	{
 		public MySqlProcedures()

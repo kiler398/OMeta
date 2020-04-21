@@ -4,10 +4,7 @@ using Npgsql;
 
 namespace OMeta.PostgreSQL8
 {
-#if ENTERPRISE
-	using System.Runtime.InteropServices;
-	[ComVisible(true), ClassInterface(ClassInterfaceType.AutoDual), ComDefaultInterface(typeof(IForeignKeys))]
-#endif 
+ 
 	public class PostgreSQL8ForeignKeys : ForeignKeys
 	{
 		static string _query = 

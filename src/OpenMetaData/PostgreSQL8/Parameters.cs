@@ -16,11 +16,6 @@ namespace OMeta.PostgreSQL8
 
 		override internal void LoadAll()
 		{
-			try
-			{
-
-			}
-			catch {}
-		}
+        }
 	}
 }

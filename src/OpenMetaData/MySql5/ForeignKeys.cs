@@ -46,7 +46,10 @@ namespace OMeta.MySql5
 					AddMyHalf();
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		internal void AddMyHalf()
@@ -211,7 +214,10 @@ namespace OMeta.MySql5
 								}
 							}
 						}
-						catch {}
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
 					}
 				}

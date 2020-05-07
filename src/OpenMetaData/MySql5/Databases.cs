@@ -41,11 +41,17 @@ namespace OMeta.MySql5
 
                         this.Version = metaData.Rows[0][0] as string;
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.StackTrace);
+                    }
                 }
 			}
-			catch {}
-		}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
 
         static internal IDbConnection CreateConnection()
         {

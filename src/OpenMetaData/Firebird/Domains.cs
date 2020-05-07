@@ -34,7 +34,7 @@ namespace OMeta.Firebird
 			}
 			catch(Exception ex)
 			{
-				string m = ex.Message;
+                Console.WriteLine(ex.StackTrace);
 			}
 		}
 
@@ -48,7 +48,10 @@ namespace OMeta.Firebird
 					FbConnectionStringBuilder cnString = new FbConnectionStringBuilder(cn.ConnectionString);
 					dialect = cnString.Dialect;
 				}
-				catch {}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
 
 				string select = "select f.rdb$field_name, f.rdb$field_scale AS SCALE, f.rdb$field_type as FTYPE, f.rdb$field_sub_type AS SUBTYPE, f.rdb$dimensions AS DIM from rdb$fields f, rdb$types t where t.rdb$field_name='RDB$FIELD_TYPE' and f.rdb$field_type=t.rdb$type and not f.rdb$field_name starting with 'RDB$' ORDER BY f.rdb$field_name;";
 
@@ -262,7 +265,7 @@ namespace OMeta.Firebird
 			}
 			catch(Exception ex)
 			{
-				string e = ex.Message;
+                Console.WriteLine(ex.StackTrace);
 			}
 		}
 	}

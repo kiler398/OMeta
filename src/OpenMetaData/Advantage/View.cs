@@ -87,7 +87,10 @@ namespace OMeta.Advantage
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

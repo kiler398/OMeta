@@ -94,9 +94,12 @@ namespace OMeta.ISeries
 						{
 							codepage = (int)row["CCSID"];
 						}
-						catch{}
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
-						
+
 						string fulltypename = c.DataTypeName;
 						switch (fulltypename) 
 						{
@@ -149,7 +152,10 @@ namespace OMeta.ISeries
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

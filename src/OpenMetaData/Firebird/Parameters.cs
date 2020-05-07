@@ -55,7 +55,10 @@ namespace OMeta.Firebird
 					FbConnectionStringBuilder cnString = new FbConnectionStringBuilder(cn.ConnectionString);
 					dialect = cnString.Dialect;
 				}
-				catch {}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
 
 				int count = this._array.Count;
 				Parameter p = null;

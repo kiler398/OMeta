@@ -61,7 +61,10 @@ namespace OMeta.PostgreSQL8
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

@@ -38,7 +38,10 @@ namespace OMeta.MySql5
 					LoadTableDescriptions();
 				}
 			}
-			catch {	}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadTableDescriptions()
@@ -102,7 +105,10 @@ namespace OMeta.MySql5
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

@@ -31,7 +31,10 @@ namespace OMeta.Sql
 
 				PopulateArray(metaData1);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

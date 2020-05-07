@@ -25,7 +25,10 @@ namespace OMeta.MySql
 				database.Databases = this;
 				this._array.Add(database);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

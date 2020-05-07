@@ -88,7 +88,10 @@ namespace OMeta.MySql5
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

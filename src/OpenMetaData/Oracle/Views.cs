@@ -23,7 +23,10 @@ namespace OMeta.Oracle
 
 				LoadExtraData(this.Database.SchemaName);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadExtraData(string schema)
@@ -50,7 +53,10 @@ namespace OMeta.Oracle
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

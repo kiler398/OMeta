@@ -23,7 +23,10 @@ namespace OMeta.Advantage
 
 				LoadDescriptions();
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		override public IProcedure this[object name]
@@ -63,10 +66,10 @@ namespace OMeta.Advantage
 					}
 				}
 			}
-			catch
-			{
-			
-			}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

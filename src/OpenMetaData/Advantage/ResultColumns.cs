@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Text;
 
 namespace OMeta.Advantage
 {
@@ -14,66 +15,70 @@ namespace OMeta.Advantage
 
 		override internal void LoadAll()
 		{
-			try
-			{
-				string schema = "";
+            try
+            {
+                string schema = "";
 
-				if(-1 == this.Procedure.Schema.IndexOf("."))
-				{
-					schema = this.Procedure.Schema + ".";
-				}
+                if (-1 == this.Procedure.Schema.IndexOf("."))
+                {
+                    schema = this.Procedure.Schema + ".";
+                }
 
-				string select = "SET FMTONLY ON EXEC [" + this.Procedure.Database.Name + "]." + schema + 
-					this.Procedure.Name + " ";
+                StringBuilder select =
+                    new StringBuilder(
+                        $"SET FMTONLY ON EXEC [{this.Procedure.Database.Name}].{schema}{this.Procedure.Name} ");
 
-				int paramCount = this.Procedure.Parameters.Count;
+                int paramCount = this.Procedure.Parameters.Count;
 
-				if(paramCount > 0)
-				{
-					IParameters parameters = this.Procedure.Parameters;
-					IParameter param = null;
+                if (paramCount > 0)
+                {
+                    IParameters parameters = this.Procedure.Parameters;
+                    IParameter param = null;
 
-					int c = parameters.Count;
+                    int c = parameters.Count;
 
-					for(int i = 0; i < c; i++)
-					{
-						param = parameters[i];
+                    for (int i = 0; i < c; i++)
+                    {
+                        param = parameters[i];
 
-						if(param.Direction == ParamDirection.ReturnValue)
-						{
-							paramCount--;
-						}
-					}
-				}
+                        if (param.Direction == ParamDirection.ReturnValue)
+                        {
+                            paramCount--;
+                        }
+                    }
+                }
 
-				for(int i = 0; i < paramCount; i++)
-				{
-					if(i > 0) 
-					{
-						select += ",";
-					}
+                for (int i = 0; i < paramCount; i++)
+                {
+                    if (i > 0)
+                    {
+                        select.Append(",");
+                    }
 
-					select += "null";
-				}
-											 
-				OleDbDataAdapter adapter = new OleDbDataAdapter(select, this.dbRoot.ConnectionString);
-				DataTable metaData = new DataTable();
+                    select.Append("null");
+                }
 
-				adapter.Fill(metaData);
+                OleDbDataAdapter adapter = new OleDbDataAdapter(select.ToString(), this.dbRoot.ConnectionString);
+                DataTable metaData = new DataTable();
 
-				AdvantageResultColumn resultColumn = null;
+                adapter.Fill(metaData);
 
-				int count = metaData.Columns.Count;
-				for(int i = 0; i < count; i++)
-				{
-					resultColumn = this.dbRoot.ClassFactory.CreateResultColumn() as Advantage.AdvantageResultColumn;
-					resultColumn.dbRoot = this.dbRoot;
-					resultColumn.ResultColumns = this;
-					resultColumn._column = metaData.Columns[i];
-					this._array.Add(resultColumn);
-				}
-			}
-			catch {}
-		}
+                AdvantageResultColumn resultColumn = null;
+
+                int count = metaData.Columns.Count;
+                for (int i = 0; i < count; i++)
+                {
+                    resultColumn = this.dbRoot.ClassFactory.CreateResultColumn() as Advantage.AdvantageResultColumn;
+                    resultColumn.dbRoot = this.dbRoot;
+                    resultColumn.ResultColumns = this;
+                    resultColumn._column = metaData.Columns[i];
+                    this._array.Add(resultColumn);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
 	}
 }

@@ -98,7 +98,10 @@ namespace OMeta.Oracle
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 
 			try
 			{
@@ -123,7 +126,10 @@ namespace OMeta.Oracle
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

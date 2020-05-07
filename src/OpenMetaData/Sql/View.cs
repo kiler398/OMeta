@@ -177,7 +177,10 @@ order by colid;", this.Schema, this.Name);
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		public override object DatabaseSpecificMetaData(string key)

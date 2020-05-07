@@ -111,7 +111,10 @@ WHERE i.TABLE_SCHEMA = k.INDEX_SCHEMA
 
 				PopulateArray(metaData);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

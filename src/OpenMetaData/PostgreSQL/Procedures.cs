@@ -47,7 +47,10 @@ namespace OMeta.PostgreSQL
 //					}
 //				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		override public IProcedure this[object name]

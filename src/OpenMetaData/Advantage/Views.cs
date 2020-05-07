@@ -23,7 +23,10 @@ namespace OMeta.Advantage
 
 				LoadDescriptions();
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadDescriptions()
@@ -55,10 +58,10 @@ namespace OMeta.Advantage
 					}
 				}
 			}
-			catch
-			{
-			
-			}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

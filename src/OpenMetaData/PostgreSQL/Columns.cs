@@ -246,7 +246,10 @@ namespace OMeta.PostgreSQL
 				if(metaData.Columns.Contains("TYPE_NAMECOMPLETE")) f_TypeNameComplete = metaData.Columns["TYPE_NAMECOMPLETE"];
 
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		override internal void LoadForView()
@@ -281,7 +284,10 @@ namespace OMeta.PostgreSQL
 				if(metaData.Columns.Contains("TYPE_NAME"))         f_TypeName = metaData.Columns["TYPE_NAME"];
 				if(metaData.Columns.Contains("TYPE_NAMECOMPLETE")) f_TypeNameComplete = metaData.Columns["TYPE_NAMECOMPLETE"];
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

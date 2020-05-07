@@ -44,8 +44,12 @@ namespace OMeta
                 {
                     cn.ChangeDatabase(this.Name);
                 }
-                catch { } // some databases don't have the concept of catalogs. Catch this and throw it out
-                
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
+                // some databases don't have the concept of catalogs. Catch this and throw it out
+
 				OleDbCommand command = new OleDbCommand(sql, cn);
 				command.CommandType = CommandType.Text;
 

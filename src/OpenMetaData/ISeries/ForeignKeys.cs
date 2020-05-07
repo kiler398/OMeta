@@ -52,7 +52,10 @@ ORDER BY c.CONSTRAINT_SCHEMA, c.CONSTRAINT_NAME";
 					
 				PopulateArray(dataTableFk, dataTablePk);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 		
 		internal void PopulateArray(DataTable dataTableFk, DataTable dataTablePk)

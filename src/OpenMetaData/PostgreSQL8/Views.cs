@@ -29,7 +29,10 @@ namespace OMeta.PostgreSQL8
 		
 				PopulateArray(metaData);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

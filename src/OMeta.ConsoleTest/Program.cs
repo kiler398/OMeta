@@ -18,9 +18,9 @@ namespace OMeta.ConsoleTest
             dbRoot.SetCodeLanguage("C#");
 
             ////指定当前编程语言
-            //dbRoot.Language = "C#";
+            // dbRoot.Language = "C#";
             ////指定当前语言映射文件路径
-            //dbRoot.LanguageMappingFileName = @"F:\Projects\OMeta\src\OpenMetaData\Config\Languages.xml";
+            // dbRoot.LanguageMappingFileName = @"F:\Projects\OMeta\src\OpenMetaData\Config\Languages.xml";
 
             //获取当前连接默认数据库
             var database = dbRoot.DefaultDatabase;

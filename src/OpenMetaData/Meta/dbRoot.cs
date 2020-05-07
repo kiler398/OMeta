@@ -100,7 +100,7 @@ namespace OMeta
                 var fileInfo = embeddedFileProvider.GetFileInfo("Config/DbTargets.xml");
                 _dbTargetDoc = new XmlDocument();
                 _dbTargetDoc.Load(fileInfo.CreateReadStream());
-                _dbTarget = string.Empty; ;
+                _dbTarget = string.Empty;
                 _dbTargetNode = null;
             }
             else
@@ -118,7 +118,7 @@ namespace OMeta
                 var fileInfo = embeddedFileProvider.GetFileInfo("Config/Languages.xml");
                 _languageDoc = new XmlDocument();
                 _languageDoc.Load(fileInfo.CreateReadStream());
-                _language = string.Empty; ;
+                _language = string.Empty;
                 _languageNode = null;
             }
             else
@@ -238,7 +238,10 @@ namespace OMeta
                     {
                         defDatabase = dbases.GetByName(this._defaultDatabase);
                     }
-                    catch { }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.StackTrace);
+                    }
 
                     if (defDatabase == null)
                     {
@@ -246,7 +249,10 @@ namespace OMeta
                         {
                             defDatabase = dbases.GetByPhysicalName(this._defaultDatabase);
                         }
-                        catch { }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
                     }
                 }
 
@@ -534,7 +540,10 @@ namespace OMeta
                                 this._defaultDatabase = dbName.Substring(index + 1);
                             }
                         }
-                        catch { }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
                         this._driverString = OMetaDrivers.Firebird;
                         this.StripTrailingNulls = false;
@@ -852,7 +861,10 @@ namespace OMeta
                     o = (Plugins[providerName] as IOMetaPlugin).GetDatabaseSpecificMetaData(null, key);
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
             return o;
         }
 
@@ -942,12 +954,7 @@ namespace OMeta
         
 		private static void loadPlugin(string filename, Hashtable plugins)
 		{
-#if PLUGINS_FROM_SUBDIRS
-            if (System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) != System.IO.Path.GetDirectoryName(filename))
-                AppDomain.CurrentDomain.AppendPrivatePath(System.IO.Path.GetDirectoryName(filename));
-#endif
-
-            Assembly assembly = Assembly.LoadFile(filename);
+            Assembly assembly = Assembly.Load(filename);
 
             foreach (Type type in assembly.GetTypes())
             {
@@ -1163,11 +1170,14 @@ namespace OMeta
 
 					_languageDoc = new XmlDocument();
 					_languageDoc.Load(_languageMappingFileName);
-					_language = string.Empty;;
+					_language = string.Empty;
 					_languageNode = null;
 				}
-				catch {}
-			}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
+            }
 		}
 
 		/// <summary>
@@ -1264,11 +1274,14 @@ namespace OMeta
 
 					_dbTargetDoc = new XmlDocument();
 					_dbTargetDoc.Load(_dbTargetMappingFileName);
-					_dbTarget = string.Empty;;
+					_dbTarget = string.Empty;
 					_dbTargetNode = null;
 				}
-				catch {}
-			}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
+            }
 		}
 
 		/// <summary>

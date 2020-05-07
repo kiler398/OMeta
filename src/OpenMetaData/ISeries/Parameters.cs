@@ -22,7 +22,10 @@ namespace OMeta.ISeries
 
 				LoadExtraData();
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadExtraData()
@@ -76,9 +79,12 @@ namespace OMeta.ISeries
 						{
 							codepage = (int)row["CCSID"];
 						}
-						catch{}
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
-						
+
 						string fulltypename = p.TypeName;
 						switch (fulltypename) 
 						{
@@ -131,7 +137,10 @@ namespace OMeta.ISeries
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

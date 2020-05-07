@@ -25,7 +25,10 @@ namespace OMeta.DB2
 
 				LoadExtraData();
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadExtraData()
@@ -59,9 +62,12 @@ namespace OMeta.DB2
 						{
 							codepage = (short)row["CODEPAGE"];
 						}
-						catch{}
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
-						if(codepage == 0)
+						if (codepage == 0)
 						{
 							// Check for "bit data"
 							switch(p.TypeName)
@@ -77,7 +83,10 @@ namespace OMeta.DB2
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

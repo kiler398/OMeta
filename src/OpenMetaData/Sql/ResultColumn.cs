@@ -75,7 +75,10 @@ namespace OMeta.Sql
                 {
                     return Convert.ToInt32(_row["ColumnSize"]);
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
                 return 0;
             }
         }
@@ -104,7 +107,10 @@ namespace OMeta.Sql
                     int i = Convert.ToInt32(_row["NumericPrecision"]);
                     if (i < 255) return i;
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
                 return 0;
             }
         }
@@ -118,7 +124,10 @@ namespace OMeta.Sql
                     int i = Convert.ToInt32(_row["NumericScale"]);
                     if (i < 255) return i;
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
                 return 0;
             }
         }

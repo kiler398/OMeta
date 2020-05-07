@@ -36,8 +36,8 @@ namespace OMeta.Firebird
 			}
 			catch(Exception ex)
 			{
-				string m = ex.Message;
-			}
+				Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		override internal void LoadForView()
@@ -55,7 +55,7 @@ namespace OMeta.Firebird
 			}
 			catch(Exception ex)
 			{
-				string m = ex.Message;
+                Console.WriteLine(ex.StackTrace);
 			}
 		}
 
@@ -72,10 +72,13 @@ namespace OMeta.Firebird
 					FbConnectionStringBuilder cnString = new FbConnectionStringBuilder(cn.ConnectionString);
 					dialect = cnString.Dialect;
 				}
-				catch {}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
 
 				// AutoKey Data
-                Dictionary<string, object[]> autoKeyFields = new Dictionary<string, object[]>();
+				Dictionary<string, object[]> autoKeyFields = new Dictionary<string, object[]>();
                 DataTable triggers = cn.GetSchema("Triggers", new string[] {null, null, name});
                 foreach (DataRow row in triggers.Rows)
                 {
@@ -200,26 +203,29 @@ namespace OMeta.Firebird
 								continue;
 							}
 						}
-						catch {}
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.StackTrace);
+                        }
 
-//		public const int blr_text		= 14;
-//		public const int blr_text2		= 15;
-//		public const int blr_short		= 7;
-//		public const int blr_long		= 8;
-//		public const int blr_quad		= 9;
-//		public const int blr_int64		= 16;
-//		public const int blr_float		= 10;
-//		public const int blr_double		= 27;
-//		public const int blr_d_float	= 11;
-//		public const int blr_timestamp	= 35;
-//		public const int blr_varying	= 37;
-//		public const int blr_varying2	= 38;
-//		public const int blr_blob		= 261;
-//		public const int blr_cstring	= 40;
-//		public const int blr_cstring2	= 41;
-//		public const int blr_blob_id	= 45;
-//		public const int blr_sql_date	= 12;
-//		public const int blr_sql_time	= 13;
+						//		public const int blr_text		= 14;
+						//		public const int blr_text2		= 15;
+						//		public const int blr_short		= 7;
+						//		public const int blr_long		= 8;
+						//		public const int blr_quad		= 9;
+						//		public const int blr_int64		= 16;
+						//		public const int blr_float		= 10;
+						//		public const int blr_double		= 27;
+						//		public const int blr_d_float	= 11;
+						//		public const int blr_timestamp	= 35;
+						//		public const int blr_varying	= 37;
+						//		public const int blr_varying2	= 38;
+						//		public const int blr_blob		= 261;
+						//		public const int blr_cstring	= 40;
+						//		public const int blr_cstring2	= 41;
+						//		public const int blr_blob_id	= 45;
+						//		public const int blr_sql_date	= 12;
+						//		public const int blr_sql_time	= 13;
 
 						// Step 1: DataTypeName
 						ftype = (short)rows[index]["FTYPE"];
@@ -394,76 +400,10 @@ namespace OMeta.Firebird
 			}
 			catch(Exception ex)
 			{
-				string e = ex.Message;
+                Console.WriteLine(ex.StackTrace);
 			}
 		}
-
-
-		//function ibfieldtypetosource(value:integer;size:integer;scale:integer;dialect:integer):string;
-		//begin
-		// case value of
-		//  7:
-		//   Result:='SMALLINT';
-		//  8:
-		//   Result:='INTEGER';
-		//  9:
-		//   Result:='QUAD';
-		//  10:
-		//   Result:='FLOAT';
-		//  11:
-		//   Result:='DOUBLE PRECISION';
-		//  12:
-		//   Result:='DATE';
-		//  13:
-		//   Result:='TIME';
-		//  14:
-		//   Result:='CHAR('+inttostr(size)+')';
-		//  16:
-		//   // INT64
-		//   Result:='NUMERIC';
-		//  27:
-		//   Result:='DOUBLE PRECISION';
-		//  35:
-		//   if Dialect>2 then
-		//    Result:='TIMESTAMP'
-		//   else
-		//    Result:='DATE';
-		//  37:
-		//   Result:='VARCHAR('+inttostr(size)+')';
-		//  40:
-		//   Result:='CSTRING('+inttostr(size)+')';
-		//  261:
-		//   begin
-		//    Result:='BLOB';
-		//   end;
-		//  else
-		//   Result:='';
-		// end;
-		// if scale<0 then
-		// begin
-		//  Result:='NUMERIC';
-		//  case size of
-		//   2:
-		//    REsult:=Result+'('+Inttostr(4)+','+inttostr(-scale)+')';
-		//   4:
-		//    REsult:=Result+'('+Inttostr(9)+','+inttostr(-scale)+')';
-		//   8:
-		//    begin
-		//     if dialect=1 then
-		//      REsult:=Result+'('+Inttostr(15)+','+inttostr(-scale)+')'
-		//     else
-		//      REsult:=Result+'('+Inttostr(18)+','+inttostr(-scale)+')'
-		//    end;
-		//   else
-		//     REsult:=Result+'('+Inttostr(15)+','+inttostr(-scale)+')';
-		//  end;
-		// end
-		// else
-		// begin
-		//  if Result='NUMERIC' then
-		//   Result:='NUMERIC(18,0)';
-		// end;
-		//end;
+ 
 
 
 
@@ -471,277 +411,3 @@ namespace OMeta.Firebird
 	}
 }
 
-// Fills the IBAccess Fields Grid on the table definition
-
-//procedure Filldatasetwithdomainsinfo(base:TIBDatabase;viewsystem:boolean;data:TDataset;fprogres:TFFetching);
-//var
-// Tran1:TIBTransaction;
-// QDomain:TIBSQL;
-// QSearch:TIBSQL;
-// dinfo:TIBDefDomain;
-//begin
-// Tran1:=TIBTransaction.create(Application);
-// try
-//  tran1.DefaultDatabase:=base;
-//  QDomain:=TIBSQL.Create(Application);
-//  QSearch:=TIBSQL.Create(Application);
-//  try
-//   QSearch.database:=base;
-//   QSearch.transaction:=tran1;
-//   QDomain.database:=base;
-//   QDomain.transaction:=tran1;
-//   tran1.StartTransaction;
-//   try
-//    QDomain.SQL.TExt:='SELECT RDB$FIELD_NAME DOMINI,RDB$VALIDATION_SOURCE VALIDA,RDB$COMPUTED_SOURCE CALCULA,'+
-//     'RDB$DEFAULT_SOURCE OMISION,RDB$FIELD_LENGTH TAMANY,RDB$SEGMENT_LENGTH SEGLEN,'+
-//     'RDB$FIELD_SCALE ESCALA,RDB$NULL_FLAG NONULO,'+
-//     'RDB$CHARACTER_SET_ID CHARSET,RDB$COLLATION_ID ORDRE,'+
-//      'RDB$FIELD_TYPE TIPO,RDB$FIELD_SUB_TYPE SUBTIPO,'+
-//     'RDB$DIMENSIONS DIMENSIO,RDB$CHARACTER_LENGTH CHARLEN'+
-//     ' FROM RDB$FIELDS ';
-//    if Not viewsystem then
-//     QDomain.SQL.TExt:=QDomain.SQL.TExt+' WHERE ( (RDB$SYSTEM_FLAG=0) or (RDB$SYSTEM_FLAG IS NULL) ) ';
-//    QDomain.SQL.TExt:=QDomain.SQL.TExt+'ORDER BY 1';
-//    QDomain.ExecQuery;
-//    try
-//     While Not QDomain.EOF do
-//     begin
-//      dinfo:=FillDomainFromQuerys(QDomain,QSearch,base.sqldialect,fprogres);
-//      data.Append;
-//      try
-//       data.FieldByName('FIELDNAME').Value:=dinfo.name;
-//       data.FieldByName('DESCRIP').Value:=ibfieldtypetosource(dinfo.basetype,dinfo.size,dinfo.scale,base.sqldialect)
-//        +dinfo.arraysource;
-//       if dinfo.Notnull then
-//        data.FieldByName('NULLS').Value:=SRpNo
-//       else
-//        data.FieldByName('NULLS').Value:=SRpYes;
-//       data.FieldByName('CHECK').Value:=dinfo.check;
-//       data.FieldByName('DEFAULT').Value:=dinfo.default;
-//       data.FieldByName('COMPUTED').Value:=dinfo.computed;
-//       data.FieldByName('CHARACTER_SET').Value:=dinfo.character_set;
-//       data.FieldByName('COLLATION').Value:=dinfo.collation;
-//       data.FieldByName('SUBTYPE').Value:=dinfo.subtype;
-//       data.FieldByName('SEGSIZE').Value:=dinfo.segmentsize;
-//       data.FieldByName('SIZEBYTES').Value:=dinfo.sizebytes;
-//       data.post;
-//      except
-//       data.cancel;
-//       raise;
-//      end;
-//      QDomain.Next;
-//      if assigned(fprogres)then
-//      begin
-//       fprogres.IncFetch(1);
-//      end;
-//     end;
-//    finally
-//     QDomain.CLose;
-//    end;
-//    tran1.commitretaining;
-//   except
-//    tran1.rollback;
-//    raise;
-//   end;
-//  finally
-//   QSearch.free;
-//   QDomain.free;
-//  end;
-// finally
-//  tran1.free;
-// end;
-//end;
-//
-//function ibfieldtypetosource(value:integer;size:integer;scale:integer;dialect:integer):string;
-//begin
-// case value of
-//  7:
-//   Result:='SMALLINT';
-//  8:
-//   Result:='INTEGER';
-//  9:
-//   Result:='QUAD';
-//  10:
-//   Result:='FLOAT';
-//  11:
-//   Result:='DOUBLE PRECISION';
-//  12:
-//   Result:='DATE';
-//  13:
-//   Result:='TIME';
-//  14:
-//   Result:='CHAR('+inttostr(size)+')';
-//  16:
-//   // INT64
-//   Result:='NUMERIC';
-//  27:
-//   Result:='DOUBLE PRECISION';
-//  35:
-//   if Dialect>2 then
-//    Result:='TIMESTAMP'
-//   else
-//    Result:='DATE';
-//  37:
-//   Result:='VARCHAR('+inttostr(size)+')';
-//  40:
-//   Result:='CSTRING('+inttostr(size)+')';
-//  261:
-//   begin
-//    Result:='BLOB';
-//   end;
-//  else
-//   Result:='';
-// end;
-// if scale<0 then
-// begin
-//  Result:='NUMERIC';
-//  case size of
-//   2:
-//    REsult:=Result+'('+Inttostr(4)+','+inttostr(-scale)+')';
-//   4:
-//    REsult:=Result+'('+Inttostr(9)+','+inttostr(-scale)+')';
-//   8:
-//    begin
-//     if dialect=1 then
-//      REsult:=Result+'('+Inttostr(15)+','+inttostr(-scale)+')'
-//     else
-//      REsult:=Result+'('+Inttostr(18)+','+inttostr(-scale)+')'
-//    end;
-//   else
-//     REsult:=Result+'('+Inttostr(15)+','+inttostr(-scale)+')';
-//  end;
-// end
-// else
-// begin
-//  if Result='NUMERIC' then
-//   Result:='NUMERIC(18,0)';
-// end;
-//end;
-//
-//function ibfieldtypetostringtype(value:integer;scale:integer;dialect:integer):string;
-//begin
-// case value of
-//  7:
-//   Result:='SMALLINT';
-//  8:
-//   Result:='INTEGER';
-//  9:
-//   Result:='QUAD';
-//  10:
-//   Result:='FLOAT';
-//  11:
-//   Result:='DOUBLE PRECISION';
-//  12:
-//   Result:='DATE';
-//  13:
-//   Result:='TIME';
-//  14:
-//   Result:='CHAR';
-//  16:
-//   // INT64
-//   Result:='NUMERIC';
-//  27:
-//   Result:='DOUBLE PRECISION';
-//  35:
-//   if Dialect>2 then
-//    Result:='TIMESTAMP'
-//   else
-//    Result:='DATE';
-//  37:
-//   Result:='VARCHAR';
-//  40:
-//   Result:='CSTRING';
-//  261:
-//   begin
-//    Result:='BLOB';
-//   end;
-//  else
-//   Result:='';
-// end;
-// if scale<0 then
-//  result:='NUMERIC';
-//end;
-//
-//function ibfieldtypetosourcescale(value:integer;size:integer;scale:integer;var precision,precscale:variant;dialect:integer):string;
-//begin
-// precision:=null;
-// precscale:=null;
-// case value of
-//  7:
-//   Result:='SMALLINT';
-//  8:
-//   Result:='INTEGER';
-//  9:
-//   Result:='QUAD';
-//  10:
-//   Result:='FLOAT';
-//  11:
-//   Result:='DOUBLE PRECISION';
-//  12:
-//   Result:='DATE';
-//  13:
-//   Result:='TIME';
-//  14:
-//   begin
-//    Result:='CHAR';
-//   end;
-//  16:
-//   // INT64
-//   Result:='NUMERIC';
-//  27:
-//   Result:='DOUBLE PRECISION';
-//  35:
-//   if Dialect>2 then
-//    Result:='TIMESTAMP'
-//   else
-//    Result:='DATE';
-//  37:
-//   begin
-//    Result:='VARCHAR';
-//   end;
-//  40:
-//   begin
-//    Result:='CSTRING';
-//   end;
-//  261:
-//   begin
-//    Result:='BLOB';
-//   end;
-//  else
-//   Result:='';
-// end;
-// if scale<0 then
-// begin
-//  Result:='NUMERIC';
-//  case size of
-//   2:
-//    begin
-//     precision:=4;
-//     precscale:=-scale;
-//    end;
-//   4:
-//    begin
-//     precision:=9;
-//     precscale:=-scale;
-//    end;
-//   8:
-//    begin
-//     if dialect=1 then
-//      precision:=15
-//     else
-//      precision:=18;
-//     precscale:=-scale;
-//    end;
-//   else
-//    begin
-//     precision:=15;
-//     precscale:=-scale;
-//    end;
-//  end;
-// end
-// else
-// begin
-//  if Result='NUMERIC' then
-//   Result:='NUMERIC(18,0)';
-// end;
-//end;

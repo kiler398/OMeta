@@ -144,7 +144,10 @@ namespace OMeta.Sql
 				}
 
 			}
-			catch {}
-		}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+        }
 	}
 }

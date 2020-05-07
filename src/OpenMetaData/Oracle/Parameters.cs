@@ -21,7 +21,10 @@ namespace OMeta.Oracle
 
 				PopulateArray(metaData);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

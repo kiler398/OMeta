@@ -73,7 +73,10 @@ namespace OMeta.PostgreSQL
 					this._array.Add(resultColumn);
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

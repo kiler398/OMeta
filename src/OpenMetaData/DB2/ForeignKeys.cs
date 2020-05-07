@@ -34,7 +34,10 @@ namespace OMeta.DB2
 
 				PopulateArray(metaData1);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

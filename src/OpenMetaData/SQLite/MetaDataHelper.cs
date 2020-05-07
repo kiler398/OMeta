@@ -39,7 +39,7 @@ namespace OMeta.SQLite
 			command.CommandType = CommandType.Text;
 			command.CommandText = @"SELECT [type], [name], [tbl_name], [rootpage], [sql] FROM [sqlite_master]";
 
-			IDataReader reader = command.ExecuteReader() as SQLiteDataReader;
+			var reader = command.ExecuteReader() as SQLiteDataReader;
 
 			string[] items;
 			while (reader.Read()) 

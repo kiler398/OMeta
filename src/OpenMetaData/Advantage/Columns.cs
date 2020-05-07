@@ -59,7 +59,7 @@ namespace OMeta.Advantage
 
 					for( int index = 0; index < count; index++)
 					{
-						c = (Column)this.GetByPhysicalName((string)(rows[index]["Name"]));
+						c = this.GetByPhysicalName((string)(rows[index]["Name"]));
 
 						switch((System.Int16)rows[index]["Field_Type"])
 						{
@@ -90,7 +90,10 @@ namespace OMeta.Advantage
 					}
 				}
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

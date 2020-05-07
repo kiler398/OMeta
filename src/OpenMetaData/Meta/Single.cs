@@ -1,8 +1,5 @@
 using System;
-using System.Xml;
-using System.Xml.XPath;
 using System.Data;
-using System.Data.OleDb;
 
 namespace OMeta
 {
@@ -151,18 +148,8 @@ namespace OMeta
 
 		protected System.Byte[] GetByteArray(DataColumn col)
 		{
-			if(null != col)
-			{
-				object o = _row[col];
-
-				if(DBNull.Value == o)
-					return null;
-				else
-					return null;
-			}
-
-			return null;
-		}
+            return null;
+        }
 
 		#endregion
 

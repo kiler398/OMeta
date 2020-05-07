@@ -41,7 +41,10 @@ namespace OMeta.PostgreSQL
 		
 				PopulateArray(metaData);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

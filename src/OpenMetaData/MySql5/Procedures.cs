@@ -20,7 +20,10 @@ namespace OMeta.MySql5
 //
 //				PopulateArray(metaData);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

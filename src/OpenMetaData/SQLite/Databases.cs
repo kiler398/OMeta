@@ -25,7 +25,10 @@ namespace OMeta.SQLite
 				database._name = (cn.Database.Length == 0 ? "main" : cn.Database);
 				this._array.Add(database);
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

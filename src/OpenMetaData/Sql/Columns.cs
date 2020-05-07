@@ -109,7 +109,10 @@ and character_maximum_length=-1 and character_octet_length=-1;";
                     cn.Close();
                 }
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadDescriptions()

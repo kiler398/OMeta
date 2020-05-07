@@ -124,7 +124,10 @@ namespace OMeta
                     schema = (DBNull.Value == row[f_FKTableSchema]) ? string.Empty : (row[f_FKTableSchema] as string);
                     key.AddForeignColumn(catalog, schema, (string)row[f_FKTableName], (string)row["FK_COLUMN_NAME"], false);
 				}
-				catch {}
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.StackTrace);
+                }
 			}
 		}
 

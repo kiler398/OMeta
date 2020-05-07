@@ -38,7 +38,10 @@ namespace OMeta.Sql
 
 				LoadDescriptions();
 			}
-			catch {}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 
 		private void LoadDescriptions()
@@ -70,10 +73,10 @@ namespace OMeta.Sql
 					}
 				}
 			}
-			catch
-			{
-			
-			}
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
 		}
 	}
 }

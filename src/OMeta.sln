@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{3949E3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMeta", "OpenMetaData\OMeta.csproj", "{42ACBEEB-C96B-4895-AED5-CC9F550D50F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMeta.ConsoleTest", "OMeta.ConsoleTest\OMeta.ConsoleTest.csproj", "{1785A23F-A850-4596-B905-CDCDB75EAA36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMeta.ConsoleTest", "OMeta.ConsoleTest\OMeta.ConsoleTest.csproj", "{1785A23F-A850-4596-B905-CDCDB75EAA36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

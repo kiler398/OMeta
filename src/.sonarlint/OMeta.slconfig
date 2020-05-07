@@ -1,0 +1,12 @@
+{
+  "ServerUri": "http://120.92.169.203:9167/",
+  "Organization": null,
+  "ProjectKey": "OMeta",
+  "ProjectName": "OMeta",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AXHt1qLFeKl2KzvFdxbg",
+      "ProfileTimestamp": "2020-05-07T06:33:18Z"
+    }
+  }
+}

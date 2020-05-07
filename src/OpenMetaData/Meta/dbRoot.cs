@@ -14,6 +14,8 @@ using System.Diagnostics;
 using Npgsql;
 using FirebirdSql.Data.FirebirdClient;
 using System.Data.SQLite;
+using System.Threading.Tasks;
+using Microsoft.Extensions.FileProviders;
 using MySql.Data.MySqlClient;
 using OMeta.Interfaces;
 using ClassFactory = OMeta.Sql.ClassFactory;
@@ -88,9 +90,47 @@ namespace OMeta
             SQLite.ClassFactory.Register();
  
 			Reset();
-		}
+        }
 
-		private void Reset()
+        public void SetDbTarget(string dbTarget,string dbTargetMappingFileName = null)
+        {
+            if (string.IsNullOrEmpty(dbTargetMappingFileName))
+            {
+                var embeddedFileProvider = new EmbeddedFileProvider(Assembly.GetExecutingAssembly());
+                var fileInfo = embeddedFileProvider.GetFileInfo("Config/DbTargets.xml");
+                _dbTargetDoc = new XmlDocument();
+                _dbTargetDoc.Load(fileInfo.CreateReadStream());
+                _dbTarget = string.Empty; ;
+                _dbTargetNode = null;
+            }
+            else
+            {
+                this.DbTargetMappingFileName = dbTargetMappingFileName;
+            }
+            this.DbTarget = dbTarget;
+        }
+ 
+        public void SetCodeLanguage(string language, string languageMappingFileName = null)
+        {
+            if (string.IsNullOrEmpty(languageMappingFileName))
+            {
+                var embeddedFileProvider = new EmbeddedFileProvider(Assembly.GetExecutingAssembly());
+                var fileInfo = embeddedFileProvider.GetFileInfo("Config/Languages.xml");
+                _languageDoc = new XmlDocument();
+                _languageDoc.Load(fileInfo.CreateReadStream());
+                _language = string.Empty; ;
+                _languageNode = null;
+            }
+            else
+            {
+                this.LanguageMappingFileName = languageMappingFileName;
+            }
+            this.Language = language;
+        }
+
+ 
+
+        private void Reset()
 		{
 			UserData = null;
 

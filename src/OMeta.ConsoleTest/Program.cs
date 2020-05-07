@@ -12,6 +12,16 @@ namespace OMeta.ConsoleTest
             dbRoot = new dbRoot();
             //连接到SqlServer数据库，注意必须使用oledb连接字符串
             dbRoot.Connect(dbDriver.SQL, "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; ");
+
+            //设置内置的数据库Ado.Net驱动，以及输出语言
+            dbRoot.SetDbTarget("SqlClient");
+            dbRoot.SetCodeLanguage("C#");
+
+            ////指定当前编程语言
+            //dbRoot.Language = "C#";
+            ////指定当前语言映射文件路径
+            //dbRoot.LanguageMappingFileName = @"F:\Projects\OMeta\src\OpenMetaData\Config\Languages.xml";
+
             //获取当前连接默认数据库
             var database = dbRoot.DefaultDatabase;
 
@@ -33,6 +43,7 @@ namespace OMeta.ConsoleTest
                     //输出字段名和字段类型
                     Console.Write("字段" + j.ToString("D2") + ":" + column.Name + "," + column.DataTypeNameComplete);
                     Console.WriteLine("");
+                    Console.Write("语言类型："  +  column.LanguageType);
                     j++;
                 }
                 i++;

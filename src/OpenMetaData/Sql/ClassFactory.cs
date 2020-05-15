@@ -1,5 +1,5 @@
 using System;
-
+using System.Text;
 using OMeta;
 using OMeta.Interfaces;
 
@@ -142,5 +142,7 @@ namespace OMeta.Sql
         {
             connection.ChangeDatabase(database);
         }
+
+  
     }
 }

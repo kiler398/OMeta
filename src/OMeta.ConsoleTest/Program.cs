@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.OleDb;
+using OMeta.Builders;
 
 namespace OMeta.ConsoleTest
 {
@@ -11,8 +13,12 @@ namespace OMeta.ConsoleTest
             //初始化元数据类
             dbRoot = new dbRoot();
             //连接到SqlServer数据库，注意必须使用oledb连接字符串
-            dbRoot.Connect(dbDriver.SQL, "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; ");
-
+            SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder();
+            connectionStringBuilder.SetHost("(local)");
+            connectionStringBuilder.SetDataBase("Northwind");
+            connectionStringBuilder.SetAuthType(SqlAuthType.Window);
+            dbRoot.Connect(dbDriver.SQL, connectionStringBuilder.Builder(dbDriver.SQL));
+ 
             //设置内置的数据库Ado.Net驱动，以及输出语言
             dbRoot.SetDbTarget("SqlClient");
             dbRoot.SetCodeLanguage("C#");

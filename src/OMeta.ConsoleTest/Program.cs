@@ -22,12 +22,7 @@ namespace OMeta.ConsoleTest
             //设置内置的数据库Ado.Net驱动，以及输出语言
             dbRoot.SetDbTarget("SqlClient");
             dbRoot.SetCodeLanguage("C#");
-
-            ////指定当前编程语言
-            // dbRoot.Language = "C#";
-            ////指定当前语言映射文件路径
-            // dbRoot.LanguageMappingFileName = @"F:\Projects\OMeta\src\OpenMetaData\Config\Languages.xml";
-
+ 
             //获取当前连接默认数据库
             var database = dbRoot.DefaultDatabase;
 

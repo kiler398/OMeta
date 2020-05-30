@@ -52,41 +52,45 @@ PM> Install-Package OMeta
 使用 [数据库脚本](src/DbScripts/Northwind_MSSQL.sql) 创建SqlServer数据库
 
 ```csharp
-//初始化元数据类
-dbRoot dbRoot = new dbRoot();
-//连接到SqlServer数据库，注意必须使用oledb连接字符串
-dbRoot.Connect(dbDriver.SQL, "Provider=sqloledb;Data Source=(local);Initial Catalog=Northwind;Integrated Security = SSPI; ");
-//设置数据库Ado.Net驱动，注意必须放在Connect方法的后面
-dbRoot.SetDbTarget("SqlClient");
-//设置输出语言的类型，注意必须放在Connect方法的后面
-dbRoot.SetCodeLanguage("C#");
-//获取当前连接默认数据库
-var database = dbRoot.DefaultDatabase;
-//输出当前默认数据库名
-Console.WriteLine("当前默认数据库名:"+database.Name);
-Console.WriteLine("----------------------------------------");
-//遍历循环当前数据库所有的表
-int i = 1;
-foreach (var table in database.Tables)
-{
-   //输出表名和备注
-    Console.WriteLine("表"+ i.ToString("D2") + ":" + table.Name +",备注："+ table.Description);
-    Console.WriteLine("---------------");
-    int j = 1;
-    //遍历循环表所有的字段
-    foreach (var column in table.Columns)
-    {
-        //输出字段名和字段类型
-        Console.Write("字段" + j.ToString("D2") + ":" + column.Name + "," + column.DataTypeNameComplete);
-        //如果上面指定了编程语言是C# 数据库是SQL（SqlServer） 当前字段是bigint的话 这里的LanguageType属性会输出 long ，没有指定输出 Unknown
-        Console.Write("字段语言类型：" + column.LanguageType);
-        //如果上面指定了驱动类型是SqlClient 数据库是SQL（SqlServer） 当前字段是bigint的话 这里的DbTarget属性会输出 SqlDbType.BigInt ，没有指定输出 Unknown
-        Console.Write("DbTarget类型：" + column.DbTarget);
-        Console.WriteLine("");
-        j++;
-    }
-    i++;
-}
+            //初始化元数据类
+            dbRoot = new dbRoot();
+            //连接到SqlServer数据库，注意必须使用oledb连接字符串
+            SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder();
+            connectionStringBuilder.SetHost("(local)");
+            connectionStringBuilder.SetDataBase("Northwind");
+            connectionStringBuilder.SetAuthType(SqlAuthType.Window);
+            dbRoot.Connect(dbDriver.SQL, connectionStringBuilder.Builder(dbDriver.SQL));
+ 
+            //设置内置的数据库Ado.Net驱动，以及输出语言
+            dbRoot.SetDbTarget("SqlClient");
+            dbRoot.SetCodeLanguage("C#");
+ 
+            //获取当前连接默认数据库
+            var database = dbRoot.DefaultDatabase;
+
+            //输出当前默认数据库名
+            Console.WriteLine("当前默认数据库名:" + database.Name);
+            Console.WriteLine("当前默认数据库架构名:" + database.SchemaName);
+            Console.WriteLine("----------------------------------------");
+            //遍历循环当前数据库所有的表
+            int i = 1;
+            foreach (var table in database.Tables)
+            {
+                //输出表名和备注
+                Console.WriteLine("表" + i.ToString("D2") + ":" + table.Name + ",备注：" + table.Description);
+                Console.WriteLine("---------------");
+                int j = 1;
+                //遍历循环表所有的字段
+                foreach (var column in table.Columns)
+                {
+                    //输出字段名和字段类型
+                    Console.Write("字段" + j.ToString("D2") + ":" + column.Name + "," + column.DataTypeNameComplete);
+                    Console.WriteLine("");
+                    Console.Write("语言类型："  +  column.LanguageType);
+                    j++;
+                }
+                i++;
+            }
 ```
 运行代码输出以下结果
 
